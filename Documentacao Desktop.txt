@@ -1,0 +1,95 @@
+********************* Documentação desenvolvimento telas *********************
+Formulário: FrmCadCliente.cs
+Tabela: Tb_Clientes
+Pendência: Incluir modo de pesquisa
+
+Formulário: FrmCadCliente.cs
+Tabela: Tb_Contatos
+Pendência: Incluir na tabela campo e-mail, telefone e celular. Incluído no formulário de cliente
+as informações de nome do contato e celular.
+
+Formulário: FrmCadCentroCusto.cs ######
+Tabela: Tb_CentroCustos
+Pendência: incluido checkbox e combobox para pesquisa
+
+Formulário: FrmCadCidade.cs
+Tabela: Tb_Cidades
+Pendência: incluido checkbox e combobox para pesquisa
+
+Formulário: FrmClientes
+Tabela: Tb_Clientes
+Pendência: tela de pesquisa de cliente, colocar filtro de pesquisa
+
+Formulário: FrmCadCondutores.cs
+Tabela: Tb_Condutores
+Pendência: falta tela de pesquisa
+
+Formulário: FrmCadContatoCliente.cs
+Tabela: Tb_Contatos 
+Pendência: incluir fitro de pesquisa
+
+Formulário: FrmCadEstados.cs
+Tabela: Tb_Estados
+Pendência: incluir filtro de pesquisa
+
+Formulário: FrmCadFinanceiro.cs
+Tabela: Tb_Financeiro
+Pendência: pensar em como separar contas a pagar e receber, pode ser um tipo
+
+Formulário: FrmCadLocacao.cs
+Tabela: Tb_Locacoes
+Pendência: colocar filtro de pesquisa e foto de carro
+
+Formulário: FrmLog.cs
+Tabela: Tb_Logs
+Pendência: colocar filtro, nao existe gravar e deletar
+
+Formulário: FrmCadManutencao.cs
+Tabela: Tb_Manutencao
+Pendência: nao terminei, colocar filtro tambem
+
+Formulário: FrmCadMontadora.cs
+Tabela: Tb_Montadoras
+Pendência: colocar pesquisa
+
+Formulário: FrmCadPerfilUsuario.cs
+Tabela: Tb_PerfilUsuarios
+Pendência: colocar pesquisa
+
+Formulário: FrmCadPlanoContas.cs
+Tabela: Tb_PlanoContas
+Pendência:  colocar filtro de pesquisa
+
+Formulário: FrmPrincipal
+Tabela: 
+Pendência: Tela principal, colocar atalho locação, novo cliente, manutenção carro. Menus devem chamar tela de cadastro, nela colocar botão "inclui"
+
+Formulário: FrmCadSeguro.cs
+Tabela: Tb_Seguros
+Pendência: colocar fitro de pesquisa. não permitir deletar seguro que possua locação
+
+Formulário: FrmCadTpCliente.cs
+Tabela: Tb_TipoCliente
+Pendência: colocar filtro para pesquisa
+
+Formulário: FrmCadTpManutencao.cs
+Tabela: Tb_TipoManutencao
+Pendência: colocar filtro para pesquisa
+
+Formulário: FrmCadTpVeiculo.cs
+Tabela: Tb_TipoVeiculo
+Pendência: indica se veiculo é de frota interna ou de terceiros, não precisa filtro
+
+Formulário: FrmCadUsuario.cs
+Tabela: Tb_Usuarios
+Pendência: colocar filtro para pesquisa
+
+Formulário: 
+Tabela: 
+Pendência: 
+
+Formulário: 
+Tabela: 
+Pendência: 
+
+ Incluir botão na tela principal para locação 
