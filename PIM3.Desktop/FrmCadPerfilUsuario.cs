@@ -41,5 +41,15 @@ namespace PIM3.Desktop
                 btncad.Show();
             } */
         }
+
+        private void btncad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCadPerfilUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

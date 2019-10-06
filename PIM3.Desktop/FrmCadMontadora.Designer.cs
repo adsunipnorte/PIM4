@@ -33,9 +33,6 @@
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chksituacao = new System.Windows.Forms.CheckBox();
-            this.btnsair = new System.Windows.Forms.Button();
-            this.btnlimpar = new System.Windows.Forms.Button();
-            this.btncad = new System.Windows.Forms.Button();
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
@@ -91,43 +88,6 @@
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
             // 
-            // btnsair
-            // 
-            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btnsair.Location = new System.Drawing.Point(503, 422);
-            this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsair.Name = "btnsair";
-            this.btnsair.Size = new System.Drawing.Size(106, 70);
-            this.btnsair.TabIndex = 63;
-            this.btnsair.Text = "&Sair";
-            this.btnsair.UseVisualStyleBackColor = true;
-            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
-            // 
-            // btnlimpar
-            // 
-            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimpar.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btnlimpar.Location = new System.Drawing.Point(371, 422);
-            this.btnlimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnlimpar.Name = "btnlimpar";
-            this.btnlimpar.Size = new System.Drawing.Size(106, 70);
-            this.btnlimpar.TabIndex = 62;
-            this.btnlimpar.Text = "&Limpar";
-            this.btnlimpar.UseVisualStyleBackColor = true;
-            // 
-            // btncad
-            // 
-            this.btncad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncad.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btncad.Location = new System.Drawing.Point(234, 422);
-            this.btncad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btncad.Name = "btncad";
-            this.btncad.Size = new System.Drawing.Size(106, 70);
-            this.btncad.TabIndex = 61;
-            this.btncad.Text = "&Gravar";
-            this.btncad.UseVisualStyleBackColor = true;
-            // 
             // txtdescricao
             // 
             this.txtdescricao.Location = new System.Drawing.Point(146, 70);
@@ -176,9 +136,6 @@
             this.ClientSize = new System.Drawing.Size(856, 555);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chksituacao);
-            this.Controls.Add(this.btnsair);
-            this.Controls.Add(this.btnlimpar);
-            this.Controls.Add(this.btncad);
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lbldescricao);
             this.Controls.Add(this.lblid);
@@ -198,9 +155,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox chksituacao;
-        private System.Windows.Forms.Button btnsair;
-        private System.Windows.Forms.Button btnlimpar;
-        private System.Windows.Forms.Button btncad;
         private System.Windows.Forms.TextBox txtdescricao;
         private System.Windows.Forms.Label lbldescricao;
         private System.Windows.Forms.Label lblid;

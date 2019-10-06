@@ -61,9 +61,6 @@
             this.lblsite = new System.Windows.Forms.Label();
             this.lblobs = new System.Windows.Forms.Label();
             this.rtbobs = new System.Windows.Forms.RichTextBox();
-            this.btncadcli = new System.Windows.Forms.Button();
-            this.btnlimparcli = new System.Windows.Forms.Button();
-            this.btnsaircli = new System.Windows.Forms.Button();
             this.lbltpcliente = new System.Windows.Forms.Label();
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.lblcidade = new System.Windows.Forms.Label();
@@ -73,6 +70,9 @@
             this.txtemailcontato = new System.Windows.Forms.TextBox();
             this.lblemailcontato = new System.Windows.Forms.Label();
             this.cmbtpcliente = new System.Windows.Forms.ComboBox();
+            this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnsucesso = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // lblrazaosocial
@@ -364,50 +364,12 @@
             // 
             // rtbobs
             // 
-            this.rtbobs.Location = new System.Drawing.Point(10, 388);
+            this.rtbobs.Location = new System.Drawing.Point(-2, 399);
             this.rtbobs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rtbobs.Name = "rtbobs";
             this.rtbobs.Size = new System.Drawing.Size(1044, 199);
             this.rtbobs.TabIndex = 32;
             this.rtbobs.Text = "";
-            // 
-            // btncadcli
-            // 
-            this.btncadcli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncadcli.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btncadcli.Location = new System.Drawing.Point(376, 605);
-            this.btncadcli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btncadcli.Name = "btncadcli";
-            this.btncadcli.Size = new System.Drawing.Size(94, 59);
-            this.btncadcli.TabIndex = 15;
-            this.btncadcli.Text = "&Gravar";
-            this.btncadcli.UseVisualStyleBackColor = true;
-            // 
-            // btnlimparcli
-            // 
-            this.btnlimparcli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimparcli.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btnlimparcli.Location = new System.Drawing.Point(500, 605);
-            this.btnlimparcli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnlimparcli.Name = "btnlimparcli";
-            this.btnlimparcli.Size = new System.Drawing.Size(94, 59);
-            this.btnlimparcli.TabIndex = 16;
-            this.btnlimparcli.Text = "&Limpar";
-            this.btnlimparcli.UseVisualStyleBackColor = true;
-            this.btnlimparcli.Click += new System.EventHandler(this.btnlimparcli_Click);
-            // 
-            // btnsaircli
-            // 
-            this.btnsaircli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsaircli.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btnsaircli.Location = new System.Drawing.Point(627, 605);
-            this.btnsaircli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsaircli.Name = "btnsaircli";
-            this.btnsaircli.Size = new System.Drawing.Size(94, 59);
-            this.btnsaircli.TabIndex = 17;
-            this.btnsaircli.Text = "&Sair";
-            this.btnsaircli.UseVisualStyleBackColor = true;
-            this.btnsaircli.Click += new System.EventHandler(this.btnsaircli_Click);
             // 
             // lbltpcliente
             // 
@@ -494,12 +456,123 @@
             this.cmbtpcliente.Size = new System.Drawing.Size(121, 27);
             this.cmbtpcliente.TabIndex = 42;
             // 
+            // btnlimpar
+            // 
+            this.btnlimpar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpar.BorderRadius = 7;
+            this.btnlimpar.ButtonText = "Limpar";
+            this.btnlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnlimpar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnlimpar.Iconimage")));
+            this.btnlimpar.Iconimage_right = null;
+            this.btnlimpar.Iconimage_right_Selected = null;
+            this.btnlimpar.Iconimage_Selected = null;
+            this.btnlimpar.IconMarginLeft = 0;
+            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconRightVisible = false;
+            this.btnlimpar.IconRightZoom = 0D;
+            this.btnlimpar.IconVisible = false;
+            this.btnlimpar.IconZoom = 90D;
+            this.btnlimpar.IsTab = false;
+            this.btnlimpar.Location = new System.Drawing.Point(396, 633);
+            this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnlimpar.Name = "btnlimpar";
+            this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.OnHovercolor = System.Drawing.Color.Black;
+            this.btnlimpar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpar.selected = false;
+            this.btnlimpar.Size = new System.Drawing.Size(154, 70);
+            this.btnlimpar.TabIndex = 54;
+            this.btnlimpar.Text = "Limpar";
+            this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
+            // 
+            // btnsair
+            // 
+            this.btnsair.Activecolor = System.Drawing.Color.Crimson;
+            this.btnsair.BackColor = System.Drawing.Color.Crimson;
+            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsair.BorderRadius = 7;
+            this.btnsair.ButtonText = "Sair";
+            this.btnsair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsair.DisabledColor = System.Drawing.Color.Gray;
+            this.btnsair.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnsair.Iconimage = null;
+            this.btnsair.Iconimage_right = null;
+            this.btnsair.Iconimage_right_Selected = null;
+            this.btnsair.Iconimage_Selected = null;
+            this.btnsair.IconMarginLeft = 0;
+            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconRightVisible = false;
+            this.btnsair.IconRightZoom = 0D;
+            this.btnsair.IconVisible = false;
+            this.btnsair.IconZoom = 90D;
+            this.btnsair.IsTab = false;
+            this.btnsair.Location = new System.Drawing.Point(575, 633);
+            this.btnsair.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnsair.Name = "btnsair";
+            this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
+            this.btnsair.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(13)))), ((int)(((byte)(40)))));
+            this.btnsair.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnsair.selected = false;
+            this.btnsair.Size = new System.Drawing.Size(154, 70);
+            this.btnsair.TabIndex = 53;
+            this.btnsair.Text = "Sair";
+            this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnsair.Textcolor = System.Drawing.Color.White;
+            this.btnsair.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
+            // 
+            // btnsucesso
+            // 
+            this.btnsucesso.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnsucesso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnsucesso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsucesso.BorderRadius = 7;
+            this.btnsucesso.ButtonText = "Gravar";
+            this.btnsucesso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsucesso.DisabledColor = System.Drawing.Color.Gray;
+            this.btnsucesso.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnsucesso.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnsucesso.Iconimage")));
+            this.btnsucesso.Iconimage_right = null;
+            this.btnsucesso.Iconimage_right_Selected = null;
+            this.btnsucesso.Iconimage_Selected = null;
+            this.btnsucesso.IconMarginLeft = 0;
+            this.btnsucesso.IconMarginRight = 0;
+            this.btnsucesso.IconRightVisible = true;
+            this.btnsucesso.IconRightZoom = 0D;
+            this.btnsucesso.IconVisible = true;
+            this.btnsucesso.IconZoom = 90D;
+            this.btnsucesso.IsTab = false;
+            this.btnsucesso.Location = new System.Drawing.Point(214, 633);
+            this.btnsucesso.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnsucesso.Name = "btnsucesso";
+            this.btnsucesso.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnsucesso.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnsucesso.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnsucesso.selected = false;
+            this.btnsucesso.Size = new System.Drawing.Size(154, 70);
+            this.btnsucesso.TabIndex = 52;
+            this.btnsucesso.Text = "Gravar";
+            this.btnsucesso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsucesso.Textcolor = System.Drawing.Color.White;
+            this.btnsucesso.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1182, 675);
+            this.ClientSize = new System.Drawing.Size(1182, 737);
+            this.Controls.Add(this.btnlimpar);
+            this.Controls.Add(this.btnsair);
+            this.Controls.Add(this.btnsucesso);
             this.Controls.Add(this.cmbtpcliente);
             this.Controls.Add(this.txtemailcontato);
             this.Controls.Add(this.lblemailcontato);
@@ -509,9 +582,6 @@
             this.Controls.Add(this.txtcidade);
             this.Controls.Add(this.lblcidade);
             this.Controls.Add(this.lbltpcliente);
-            this.Controls.Add(this.btnsaircli);
-            this.Controls.Add(this.btnlimparcli);
-            this.Controls.Add(this.btncadcli);
             this.Controls.Add(this.rtbobs);
             this.Controls.Add(this.lblobs);
             this.Controls.Add(this.txtsite);
@@ -589,9 +659,6 @@
         private System.Windows.Forms.Label lblsite;
         private System.Windows.Forms.Label lblobs;
         private System.Windows.Forms.RichTextBox rtbobs;
-        private System.Windows.Forms.Button btncadcli;
-        private System.Windows.Forms.Button btnlimparcli;
-        private System.Windows.Forms.Button btnsaircli;
         private System.Windows.Forms.Label lbltpcliente;
         private System.Windows.Forms.TextBox txtcidade;
         private System.Windows.Forms.Label lblcidade;
@@ -601,5 +668,8 @@
         private System.Windows.Forms.TextBox txtemailcontato;
         private System.Windows.Forms.Label lblemailcontato;
         private System.Windows.Forms.ComboBox cmbtpcliente;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnsair;
+        private Bunifu.Framework.UI.BunifuFlatButton btnsucesso;
     }
 }

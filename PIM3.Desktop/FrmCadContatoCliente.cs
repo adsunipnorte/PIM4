@@ -31,7 +31,31 @@ namespace PIM3.Desktop
             }
             else
             {
-                txtnome.Focus(); // Coloca o foco no nome caso digite "não" no messagebox
+                txtnome.Focus(); // Coloca o foco no nome caso digite "não" no messagebox //
+            }
+        }
+
+        private void btncadastrar_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
+                this.Close();
+            }
+            else
+            {
+                txtnome.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
             }
         }
     }

@@ -43,6 +43,27 @@ namespace PIM3.Desktop
 
         private void btnlimparcli_Click(object sender, EventArgs e)
         {
+            
+          
+
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
+                this.Close();
+            }
+            else
+            {
+                txtrazaosocial.Focus(); // Coloca foco na razão social caso digite "não" no messagebox
+            }
+        }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
             txtrazaosocial.Clear();
             txtfantasia.Clear();
             txtend.Clear();
@@ -58,7 +79,10 @@ namespace PIM3.Desktop
             txttel.Clear();
             txtcel.Clear();
             rtbobs.Clear();
-          
+        }
+
+        private void btncadcli_Click(object sender, EventArgs e)
+        {
 
         }
     }

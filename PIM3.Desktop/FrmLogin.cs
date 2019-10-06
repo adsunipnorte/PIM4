@@ -51,5 +51,31 @@ namespace PIM3.Desktop
                 txtusuario.Focus();
             }
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            btnsair.Enabled = false;
+            this.Close();
+        }
+
+        private void btnentrar_Click(object sender, EventArgs e)
+        {
+            if (txtusuario.Text == "sa" && txtsenha.Text == "sa")
+            {
+                FrmLogin login = new FrmLogin();
+                FrmPrincipal principal = new FrmPrincipal();
+
+                login.Close();
+                principal.Show();
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtusuario.Focus();
+            }
+        }
     }
 }

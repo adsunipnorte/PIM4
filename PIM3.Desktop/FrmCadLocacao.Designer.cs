@@ -53,13 +53,13 @@
             this.txtveiculo = new System.Windows.Forms.TextBox();
             this.lblnome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnsaircli = new System.Windows.Forms.Button();
-            this.btnlimparcli = new System.Windows.Forms.Button();
-            this.btncadcli = new System.Windows.Forms.Button();
             this.lblcliente = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblseguro = new System.Windows.Forms.Label();
+            this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // mskdtdevol
@@ -69,7 +69,7 @@
             this.mskdtdevol.Mask = "00/00/0000 90:00";
             this.mskdtdevol.Name = "mskdtdevol";
             this.mskdtdevol.Size = new System.Drawing.Size(124, 27);
-            this.mskdtdevol.TabIndex = 4;
+            this.mskdtdevol.TabIndex = 5;
             this.mskdtdevol.ValidatingType = typeof(System.DateTime);
             // 
             // mskdtloc
@@ -79,7 +79,7 @@
             this.mskdtloc.Mask = "00/00/0000 90:00";
             this.mskdtloc.Name = "mskdtloc";
             this.mskdtloc.Size = new System.Drawing.Size(124, 27);
-            this.mskdtloc.TabIndex = 3;
+            this.mskdtloc.TabIndex = 4;
             this.mskdtloc.ValidatingType = typeof(System.DateTime);
             // 
             // lblid
@@ -148,7 +148,7 @@
             this.txtdiaria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdiaria.Name = "txtdiaria";
             this.txtdiaria.Size = new System.Drawing.Size(124, 27);
-            this.txtdiaria.TabIndex = 5;
+            this.txtdiaria.TabIndex = 6;
             // 
             // lblplaca
             // 
@@ -166,7 +166,7 @@
             this.txtplaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtplaca.Name = "txtplaca";
             this.txtplaca.Size = new System.Drawing.Size(191, 27);
-            this.txtplaca.TabIndex = 2;
+            this.txtplaca.TabIndex = 3;
             // 
             // lblveiculo
             // 
@@ -184,7 +184,7 @@
             this.txtkmi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkmi.Name = "txtkmi";
             this.txtkmi.Size = new System.Drawing.Size(124, 27);
-            this.txtkmi.TabIndex = 7;
+            this.txtkmi.TabIndex = 8;
             // 
             // lblcel
             // 
@@ -202,7 +202,7 @@
             this.txtdias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdias.Name = "txtdias";
             this.txtdias.Size = new System.Drawing.Size(124, 27);
-            this.txtdias.TabIndex = 6;
+            this.txtdias.TabIndex = 7;
             // 
             // lbldtini
             // 
@@ -252,7 +252,7 @@
             this.txtkmf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkmf.Name = "txtkmf";
             this.txtkmf.Size = new System.Drawing.Size(124, 27);
-            this.txtkmf.TabIndex = 8;
+            this.txtkmf.TabIndex = 9;
             // 
             // lblcnh
             // 
@@ -270,7 +270,7 @@
             this.txtveiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtveiculo.Name = "txtveiculo";
             this.txtveiculo.Size = new System.Drawing.Size(535, 27);
-            this.txtveiculo.TabIndex = 1;
+            this.txtveiculo.TabIndex = 2;
             this.txtveiculo.Tag = "";
             // 
             // lblnome
@@ -293,43 +293,6 @@
             this.label1.TabIndex = 123;
             this.label1.Text = "ID";
             // 
-            // btnsaircli
-            // 
-            this.btnsaircli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsaircli.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btnsaircli.Location = new System.Drawing.Point(410, 532);
-            this.btnsaircli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsaircli.Name = "btnsaircli";
-            this.btnsaircli.Size = new System.Drawing.Size(94, 59);
-            this.btnsaircli.TabIndex = 126;
-            this.btnsaircli.Text = "&Sair";
-            this.btnsaircli.UseVisualStyleBackColor = true;
-            this.btnsaircli.Click += new System.EventHandler(this.btnsaircli_Click);
-            // 
-            // btnlimparcli
-            // 
-            this.btnlimparcli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnlimparcli.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btnlimparcli.Location = new System.Drawing.Point(267, 532);
-            this.btnlimparcli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnlimparcli.Name = "btnlimparcli";
-            this.btnlimparcli.Size = new System.Drawing.Size(94, 59);
-            this.btnlimparcli.TabIndex = 125;
-            this.btnlimparcli.Text = "&Limpar";
-            this.btnlimparcli.UseVisualStyleBackColor = true;
-            // 
-            // btncadcli
-            // 
-            this.btncadcli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncadcli.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.btncadcli.Location = new System.Drawing.Point(137, 532);
-            this.btncadcli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btncadcli.Name = "btncadcli";
-            this.btncadcli.Size = new System.Drawing.Size(94, 59);
-            this.btncadcli.TabIndex = 124;
-            this.btncadcli.Text = "&Gravar";
-            this.btncadcli.UseVisualStyleBackColor = true;
-            // 
             // lblcliente
             // 
             this.lblcliente.AutoSize = true;
@@ -346,7 +309,7 @@
             this.txtcliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcliente.Name = "txtcliente";
             this.txtcliente.Size = new System.Drawing.Size(537, 27);
-            this.txtcliente.TabIndex = 128;
+            this.txtcliente.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -354,7 +317,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 27);
-            this.textBox1.TabIndex = 130;
+            this.textBox1.TabIndex = 10;
             // 
             // lblseguro
             // 
@@ -366,18 +329,125 @@
             this.lblseguro.TabIndex = 129;
             this.lblseguro.Text = "Seguro";
             // 
+            // btnlimpar
+            // 
+            this.btnlimpar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimpar.BorderRadius = 7;
+            this.btnlimpar.ButtonText = "Limpar";
+            this.btnlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimpar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnlimpar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimpar.Iconimage = null;
+            this.btnlimpar.Iconimage_right = null;
+            this.btnlimpar.Iconimage_right_Selected = null;
+            this.btnlimpar.Iconimage_Selected = null;
+            this.btnlimpar.IconMarginLeft = 0;
+            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconRightVisible = false;
+            this.btnlimpar.IconRightZoom = 0D;
+            this.btnlimpar.IconVisible = false;
+            this.btnlimpar.IconZoom = 90D;
+            this.btnlimpar.IsTab = false;
+            this.btnlimpar.Location = new System.Drawing.Point(264, 498);
+            this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnlimpar.Name = "btnlimpar";
+            this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.OnHovercolor = System.Drawing.Color.Black;
+            this.btnlimpar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimpar.selected = false;
+            this.btnlimpar.Size = new System.Drawing.Size(154, 70);
+            this.btnlimpar.TabIndex = 12;
+            this.btnlimpar.Text = "Limpar";
+            this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnlimpar.Textcolor = System.Drawing.Color.White;
+            this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            // 
+            // btnsair
+            // 
+            this.btnsair.Activecolor = System.Drawing.Color.Crimson;
+            this.btnsair.BackColor = System.Drawing.Color.Crimson;
+            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsair.BorderRadius = 7;
+            this.btnsair.ButtonText = "Sair";
+            this.btnsair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsair.DisabledColor = System.Drawing.Color.Gray;
+            this.btnsair.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnsair.Iconimage = null;
+            this.btnsair.Iconimage_right = null;
+            this.btnsair.Iconimage_right_Selected = null;
+            this.btnsair.Iconimage_Selected = null;
+            this.btnsair.IconMarginLeft = 0;
+            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconRightVisible = false;
+            this.btnsair.IconRightZoom = 0D;
+            this.btnsair.IconVisible = false;
+            this.btnsair.IconZoom = 90D;
+            this.btnsair.IsTab = false;
+            this.btnsair.Location = new System.Drawing.Point(438, 498);
+            this.btnsair.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnsair.Name = "btnsair";
+            this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
+            this.btnsair.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(13)))), ((int)(((byte)(40)))));
+            this.btnsair.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnsair.selected = false;
+            this.btnsair.Size = new System.Drawing.Size(154, 70);
+            this.btnsair.TabIndex = 13;
+            this.btnsair.Text = "Sair";
+            this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnsair.Textcolor = System.Drawing.Color.White;
+            this.btnsair.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
+            // 
+            // btngravar
+            // 
+            this.btngravar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btngravar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btngravar.BorderRadius = 7;
+            this.btngravar.ButtonText = "Gravar";
+            this.btngravar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btngravar.DisabledColor = System.Drawing.Color.Gray;
+            this.btngravar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btngravar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btngravar.Iconimage")));
+            this.btngravar.Iconimage_right = null;
+            this.btngravar.Iconimage_right_Selected = null;
+            this.btngravar.Iconimage_Selected = null;
+            this.btngravar.IconMarginLeft = 0;
+            this.btngravar.IconMarginRight = 0;
+            this.btngravar.IconRightVisible = true;
+            this.btngravar.IconRightZoom = 0D;
+            this.btngravar.IconVisible = true;
+            this.btngravar.IconZoom = 90D;
+            this.btngravar.IsTab = false;
+            this.btngravar.Location = new System.Drawing.Point(89, 498);
+            this.btngravar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btngravar.Name = "btngravar";
+            this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btngravar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btngravar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btngravar.selected = false;
+            this.btngravar.Size = new System.Drawing.Size(154, 70);
+            this.btngravar.TabIndex = 11;
+            this.btngravar.Text = "Gravar";
+            this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btngravar.Textcolor = System.Drawing.Color.White;
+            this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // FrmCadLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 616);
+            this.Controls.Add(this.btnlimpar);
+            this.Controls.Add(this.btnsair);
+            this.Controls.Add(this.btngravar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblseguro);
             this.Controls.Add(this.txtcliente);
             this.Controls.Add(this.lblcliente);
-            this.Controls.Add(this.btnsaircli);
-            this.Controls.Add(this.btnlimparcli);
-            this.Controls.Add(this.btncadcli);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mskdtdevol);
             this.Controls.Add(this.mskdtloc);
@@ -408,6 +478,7 @@
             this.Name = "FrmCadLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de locação";
+            this.Load += new System.EventHandler(this.FrmCadLocacao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,12 +510,12 @@
         private System.Windows.Forms.TextBox txtveiculo;
         private System.Windows.Forms.Label lblnome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnsaircli;
-        private System.Windows.Forms.Button btnlimparcli;
-        private System.Windows.Forms.Button btncadcli;
         private System.Windows.Forms.Label lblcliente;
         private System.Windows.Forms.TextBox txtcliente;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblseguro;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnsair;
+        private Bunifu.Framework.UI.BunifuFlatButton btngravar;
     }
 }

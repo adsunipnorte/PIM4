@@ -30,5 +30,29 @@ namespace PIM3.Desktop
             }
 
         }
+
+        private void btncadcli_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlimparcli_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
+                this.Close();
+            }
+            else
+            {
+                txtnome.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
+            }
+        }
     }
 }

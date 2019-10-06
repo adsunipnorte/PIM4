@@ -29,5 +29,24 @@ namespace PIM3.Desktop
                 txtcliente.Focus(); // Coloca o foco no nome do cliente caso digite "não" no messagebox
             }
         }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
+                this.Close();
+            }
+            else
+            {
+                txtcliente.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
+            }
+        }
+
+        private void FrmCadLocacao_Load(object sender, EventArgs e)
+        {
+            txtcliente.Focus();
+        }
     }
 }

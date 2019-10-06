@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.btnlogin = new System.Windows.Forms.Button();
-            this.btnsair = new System.Windows.Forms.Button();
             this.txtusuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblusuario = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblsenha = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtsenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnentrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // btnlogin
             // 
             this.btnlogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(118, 208);
+            this.btnlogin.Location = new System.Drawing.Point(232, -5);
             this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(141, 56);
@@ -48,20 +49,8 @@
             this.btnlogin.Text = "Login";
             this.btnlogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Visible = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
-            // 
-            // btnsair
-            // 
-            this.btnsair.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsair.Location = new System.Drawing.Point(279, 208);
-            this.btnsair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnsair.Name = "btnsair";
-            this.btnsair.Size = new System.Drawing.Size(141, 56);
-            this.btnsair.TabIndex = 4;
-            this.btnsair.Text = "Sair";
-            this.btnsair.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnsair.UseVisualStyleBackColor = true;
-            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
             // txtusuario
             // 
@@ -123,16 +112,89 @@
             this.txtsenha.TabIndex = 8;
             this.txtsenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // btnsair
+            // 
+            this.btnsair.Activecolor = System.Drawing.Color.Crimson;
+            this.btnsair.BackColor = System.Drawing.Color.Crimson;
+            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsair.BorderRadius = 7;
+            this.btnsair.ButtonText = "Sair";
+            this.btnsair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsair.DisabledColor = System.Drawing.Color.Gray;
+            this.btnsair.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnsair.Iconimage = null;
+            this.btnsair.Iconimage_right = null;
+            this.btnsair.Iconimage_right_Selected = null;
+            this.btnsair.Iconimage_Selected = null;
+            this.btnsair.IconMarginLeft = 0;
+            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconRightVisible = false;
+            this.btnsair.IconRightZoom = 0D;
+            this.btnsair.IconVisible = false;
+            this.btnsair.IconZoom = 90D;
+            this.btnsair.IsTab = false;
+            this.btnsair.Location = new System.Drawing.Point(306, 208);
+            this.btnsair.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
+            this.btnsair.Name = "btnsair";
+            this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
+            this.btnsair.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(13)))), ((int)(((byte)(40)))));
+            this.btnsair.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnsair.selected = false;
+            this.btnsair.Size = new System.Drawing.Size(154, 70);
+            this.btnsair.TabIndex = 141;
+            this.btnsair.Text = "Sair";
+            this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnsair.Textcolor = System.Drawing.Color.White;
+            this.btnsair.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnsair.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // btnentrar
+            // 
+            this.btnentrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnentrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnentrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnentrar.BorderRadius = 7;
+            this.btnentrar.ButtonText = "Acessar";
+            this.btnentrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnentrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnentrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnentrar.Iconimage = null;
+            this.btnentrar.Iconimage_right = null;
+            this.btnentrar.Iconimage_right_Selected = null;
+            this.btnentrar.Iconimage_Selected = null;
+            this.btnentrar.IconMarginLeft = 0;
+            this.btnentrar.IconMarginRight = 0;
+            this.btnentrar.IconRightVisible = false;
+            this.btnentrar.IconRightZoom = 0D;
+            this.btnentrar.IconVisible = false;
+            this.btnentrar.IconZoom = 90D;
+            this.btnentrar.IsTab = false;
+            this.btnentrar.Location = new System.Drawing.Point(129, 208);
+            this.btnentrar.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
+            this.btnentrar.Name = "btnentrar";
+            this.btnentrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnentrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnentrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnentrar.selected = false;
+            this.btnentrar.Size = new System.Drawing.Size(154, 70);
+            this.btnentrar.TabIndex = 140;
+            this.btnentrar.Text = "Acessar";
+            this.btnentrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnentrar.Textcolor = System.Drawing.Color.White;
+            this.btnentrar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 347);
+            this.Controls.Add(this.btnsair);
+            this.Controls.Add(this.btnentrar);
             this.Controls.Add(this.txtsenha);
             this.Controls.Add(this.lblsenha);
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.txtusuario);
-            this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnlogin);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -149,11 +211,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.Button btnsair;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtusuario;
         private Bunifu.Framework.UI.BunifuCustomLabel lblusuario;
         private Bunifu.Framework.UI.BunifuCustomLabel lblsenha;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtsenha;
+        private Bunifu.Framework.UI.BunifuFlatButton btnsair;
+        private Bunifu.Framework.UI.BunifuFlatButton btnentrar;
     }
 }
 
