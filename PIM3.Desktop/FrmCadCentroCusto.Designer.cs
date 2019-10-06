@@ -129,7 +129,7 @@
             this.chksituacao.Checked = true;
             this.chksituacao.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.chksituacao.ForeColor = System.Drawing.Color.White;
-            this.chksituacao.Location = new System.Drawing.Point(177, 21);
+            this.chksituacao.Location = new System.Drawing.Point(172, 25);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chksituacao.Name = "chksituacao";
             this.chksituacao.Size = new System.Drawing.Size(20, 20);
