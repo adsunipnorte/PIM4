@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCentroCusto));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
             this.lblidcc = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.dgvccusto = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chksituacao = new Bunifu.Framework.UI.BunifuCheckbox();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvccusto)).BeginInit();
+            this.dgvteste = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvteste)).BeginInit();
             this.SuspendLayout();
             // 
             // txtdescricao
@@ -84,42 +87,6 @@
             this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 39;
             this.txtid.TabStop = false;
-            // 
-            // dgvccusto
-            // 
-            this.dgvccusto.AllowUserToAddRows = false;
-            this.dgvccusto.AllowUserToDeleteRows = false;
-            this.dgvccusto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvccusto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Descricao,
-            this.Situacao});
-            this.dgvccusto.Location = new System.Drawing.Point(3, 147);
-            this.dgvccusto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvccusto.Name = "dgvccusto";
-            this.dgvccusto.RowTemplate.Height = 24;
-            this.dgvccusto.Size = new System.Drawing.Size(770, 178);
-            this.dgvccusto.TabIndex = 47;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 350;
-            // 
-            // Situacao
-            // 
-            this.Situacao.HeaderText = "Situação";
-            this.Situacao.Name = "Situacao";
-            this.Situacao.ReadOnly = true;
-            this.Situacao.Width = 308;
             // 
             // chksituacao
             // 
@@ -244,16 +211,94 @@
             this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
             this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click_1);
             // 
+            // dgvteste
+            // 
+            this.dgvteste.AllowUserToAddRows = false;
+            this.dgvteste.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvteste.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvteste.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvteste.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvteste.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvteste.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvteste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvteste.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.descricao,
+            this.situacao});
+            this.dgvteste.DoubleBuffered = true;
+            this.dgvteste.EnableHeadersVisualStyles = false;
+            this.dgvteste.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgvteste.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgvteste.Location = new System.Drawing.Point(12, 145);
+            this.dgvteste.Name = "dgvteste";
+            this.dgvteste.ReadOnly = true;
+            this.dgvteste.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvteste.RowTemplate.Height = 24;
+            this.dgvteste.Size = new System.Drawing.Size(741, 217);
+            this.dgvteste.TabIndex = 49;
+            // 
+            // bunifuTileButton1
+            // 
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
+            this.bunifuTileButton1.ImagePosition = 20;
+            this.bunifuTileButton1.ImageZoom = 50;
+            this.bunifuTileButton1.LabelPosition = 41;
+            this.bunifuTileButton1.LabelText = "Tile 1";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(518, 21);
+            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuTileButton1.Name = "bunifuTileButton1";
+            this.bunifuTileButton1.Size = new System.Drawing.Size(173, 78);
+            this.bunifuTileButton1.TabIndex = 50;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 300;
+            // 
+            // situacao
+            // 
+            this.situacao.DataPropertyName = "situacao";
+            this.situacao.HeaderText = "Situação";
+            this.situacao.Name = "situacao";
+            this.situacao.ReadOnly = true;
+            this.situacao.Width = 300;
+            // 
             // FrmCadCentroCusto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 555);
+            this.Controls.Add(this.bunifuTileButton1);
+            this.Controls.Add(this.dgvteste);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
             this.Controls.Add(this.chksituacao);
-            this.Controls.Add(this.dgvccusto);
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lbldescricao);
             this.Controls.Add(this.lblidcc);
@@ -264,7 +309,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centro de custo";
             this.Load += new System.EventHandler(this.FrmCadCentroCusto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvccusto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvteste)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,13 +320,14 @@
         private System.Windows.Forms.Label lbldescricao;
         private System.Windows.Forms.Label lblidcc;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.DataGridView dgvccusto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Situacao;
         private Bunifu.Framework.UI.BunifuCheckbox chksituacao;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvteste;
+        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
     }
 }

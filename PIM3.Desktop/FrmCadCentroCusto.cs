@@ -73,7 +73,7 @@ namespace PIM3.Desktop
 
             con.Close();
 
-            testeMessageBox
+            
             //lblcodcategoria.Text = "Registro Inserido Com Sucesso";
         }
 
@@ -100,6 +100,17 @@ namespace PIM3.Desktop
         private void btncad_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+            string Query = "Select * from tb_centrocustos";
+            SqlConnection con = new SqlConnection(strConxao);
+            SqlDataAdapter da = new SqlDataAdapter(Query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvteste.DataSource = dt;
         }
     }
 }
