@@ -59,7 +59,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(29, 27);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
+            this.lblid.Size = new System.Drawing.Size(21, 16);
             this.lblid.TabIndex = 9;
             this.lblid.Text = "ID";
             // 
@@ -71,7 +71,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
+            this.txtid.Size = new System.Drawing.Size(62, 23);
             this.txtid.TabIndex = 8;
             this.txtid.TabStop = false;
             // 
@@ -82,7 +82,7 @@
             this.chksituacao.Location = new System.Drawing.Point(176, 27);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(66, 23);
+            this.chksituacao.Size = new System.Drawing.Size(58, 20);
             this.chksituacao.TabIndex = 39;
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.txtnome.Location = new System.Drawing.Point(133, 73);
             this.txtnome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(273, 27);
+            this.txtnome.Size = new System.Drawing.Size(273, 23);
             this.txtnome.TabIndex = 1;
             this.txtnome.Tag = "";
             // 
@@ -102,7 +102,7 @@
             this.lblnome.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnome.Location = new System.Drawing.Point(29, 73);
             this.lblnome.Name = "lblnome";
-            this.lblnome.Size = new System.Drawing.Size(51, 19);
+            this.lblnome.Size = new System.Drawing.Size(44, 16);
             this.lblnome.TabIndex = 41;
             this.lblnome.Text = "Nome";
             // 
@@ -111,7 +111,7 @@
             this.txtlogin.Location = new System.Drawing.Point(133, 105);
             this.txtlogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(273, 27);
+            this.txtlogin.Size = new System.Drawing.Size(273, 23);
             this.txtlogin.TabIndex = 2;
             this.txtlogin.Tag = "";
             // 
@@ -121,7 +121,7 @@
             this.lbllogin.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbllogin.Location = new System.Drawing.Point(29, 105);
             this.lbllogin.Name = "lbllogin";
-            this.lbllogin.Size = new System.Drawing.Size(49, 19);
+            this.lbllogin.Size = new System.Drawing.Size(43, 16);
             this.lbllogin.TabIndex = 43;
             this.lbllogin.Text = "Login";
             // 
@@ -131,7 +131,7 @@
             this.txtsenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.PasswordChar = '*';
-            this.txtsenha.Size = new System.Drawing.Size(142, 27);
+            this.txtsenha.Size = new System.Drawing.Size(142, 23);
             this.txtsenha.TabIndex = 3;
             this.txtsenha.Tag = "";
             // 
@@ -141,7 +141,7 @@
             this.lblsenha.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.Location = new System.Drawing.Point(430, 108);
             this.lblsenha.Name = "lblsenha";
-            this.lblsenha.Size = new System.Drawing.Size(56, 19);
+            this.lblsenha.Size = new System.Drawing.Size(49, 16);
             this.lblsenha.TabIndex = 45;
             this.lblsenha.Text = "Senha";
             // 
@@ -150,7 +150,7 @@
             this.txtemail.Location = new System.Drawing.Point(133, 145);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(273, 27);
+            this.txtemail.Size = new System.Drawing.Size(273, 23);
             this.txtemail.TabIndex = 4;
             this.txtemail.Tag = "";
             // 
@@ -160,7 +160,7 @@
             this.lblemail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblemail.Location = new System.Drawing.Point(31, 148);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(49, 19);
+            this.lblemail.Size = new System.Drawing.Size(42, 16);
             this.lblemail.TabIndex = 47;
             this.lblemail.Text = "Email";
             // 
@@ -170,7 +170,7 @@
             this.lblpuser.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpuser.Location = new System.Drawing.Point(378, 31);
             this.lblpuser.Name = "lblpuser";
-            this.lblpuser.Size = new System.Drawing.Size(108, 19);
+            this.lblpuser.Size = new System.Drawing.Size(92, 16);
             this.lblpuser.TabIndex = 52;
             this.lblpuser.Text = "Perfil Usuário";
             // 
@@ -222,7 +222,7 @@
             this.cmbpuser.FormattingEnabled = true;
             this.cmbpuser.Location = new System.Drawing.Point(492, 25);
             this.cmbpuser.Name = "cmbpuser";
-            this.cmbpuser.Size = new System.Drawing.Size(142, 27);
+            this.cmbpuser.Size = new System.Drawing.Size(142, 24);
             this.cmbpuser.TabIndex = 58;
             // 
             // btnlimpar
@@ -241,7 +241,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -276,7 +276,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -334,7 +334,7 @@
             // 
             // FrmCadUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 555);
             this.Controls.Add(this.btnlimpar);

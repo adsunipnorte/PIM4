@@ -78,7 +78,7 @@
             this.lblusuario.Font = new System.Drawing.Font("Arial", 12F);
             this.lblusuario.Location = new System.Drawing.Point(139, 69);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(76, 23);
+            this.lblusuario.Size = new System.Drawing.Size(62, 18);
             this.lblusuario.TabIndex = 6;
             this.lblusuario.Text = "Usuário";
             // 
@@ -88,7 +88,7 @@
             this.lblsenha.Font = new System.Drawing.Font("Arial", 12F);
             this.lblsenha.Location = new System.Drawing.Point(139, 129);
             this.lblsenha.Name = "lblsenha";
-            this.lblsenha.Size = new System.Drawing.Size(65, 23);
+            this.lblsenha.Size = new System.Drawing.Size(53, 18);
             this.lblsenha.TabIndex = 7;
             this.lblsenha.Text = "Senha";
             // 
@@ -127,7 +127,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -163,7 +163,7 @@
             this.btnentrar.Iconimage_right_Selected = null;
             this.btnentrar.Iconimage_Selected = null;
             this.btnentrar.IconMarginLeft = 0;
-            this.btnentrar.IconMarginRight = 0;
+            this.btnentrar.IconMarginRight = 10;
             this.btnentrar.IconRightVisible = false;
             this.btnentrar.IconRightZoom = 0D;
             this.btnentrar.IconVisible = false;
@@ -186,7 +186,7 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 347);
             this.Controls.Add(this.btnsair);

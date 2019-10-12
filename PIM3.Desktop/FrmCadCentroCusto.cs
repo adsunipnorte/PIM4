@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLLComando;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PIM3.Desktop;
+
 
 namespace PIM3.Desktop
 {
@@ -62,19 +65,35 @@ namespace PIM3.Desktop
 
         private void btnsucesso_Click(object sender, EventArgs e)
         {
-            string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
-            string Query = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")";
-            SqlConnection con = new SqlConnection(strConxao);
-            SqlCommand sqlCommand = new SqlCommand(Query, con);
+            //string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+            //string Query = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")";
+            //SqlConnection con = new SqlConnection(strConxao);
+            //SqlCommand sqlCommand = new SqlCommand(Query, con);
 
-            con.Open();
+            //con.Open();
 
-            sqlCommand.ExecuteNonQuery();
+            //sqlCommand.ExecuteNonQuery();
 
-            con.Close();
+            //con.Close();
 
-            
-            //lblcodcategoria.Text = "Registro Inserido Com Sucesso";
+            // --------------------------------------------------------------------------------------------------------------------
+            //ClasseConexaoBD classe = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
+            //string query = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+            //classe.AbreConexao(query); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
+
+            // --------------------------------------------------------------------------------------------------------------------
+            //ClasseConexaoBD con = new ClasseConexaoBD();
+            //string var = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+            //con.AbreConexao(var);
+            // --------------------------------------------------------------------------------------------------------------------
+
+
+            // --------------------------------------------------------------------------------------------------------------------
+            //SqlComandosDLL sql = new SqlComandosDLL();
+            //sql.InsertCentroCusto(txtdescricao.Text);
+            // --------------------------------------------------------------------------------------------------------------------
+
+
         }
 
         private void btnlimpar_Click_1(object sender, EventArgs e)
@@ -111,6 +130,8 @@ namespace PIM3.Desktop
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvteste.DataSource = dt;
+
+
         }
     }
 }

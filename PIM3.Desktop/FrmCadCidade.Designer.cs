@@ -85,7 +85,7 @@
             this.txtnomecid.Location = new System.Drawing.Point(160, 61);
             this.txtnomecid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnomecid.Name = "txtnomecid";
-            this.txtnomecid.Size = new System.Drawing.Size(273, 27);
+            this.txtnomecid.Size = new System.Drawing.Size(273, 23);
             this.txtnomecid.TabIndex = 69;
             this.txtnomecid.Tag = "";
             // 
@@ -95,7 +95,7 @@
             this.lblnomecid.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnomecid.Location = new System.Drawing.Point(21, 69);
             this.lblnomecid.Name = "lblnomecid";
-            this.lblnomecid.Size = new System.Drawing.Size(84, 19);
+            this.lblnomecid.Size = new System.Drawing.Size(71, 16);
             this.lblnomecid.TabIndex = 75;
             this.lblnomecid.Text = "Descrição";
             // 
@@ -105,7 +105,7 @@
             this.lblcodcidade.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblcodcidade.Location = new System.Drawing.Point(21, 19);
             this.lblcodcidade.Name = "lblcodcidade";
-            this.lblcodcidade.Size = new System.Drawing.Size(118, 19);
+            this.lblcodcidade.Size = new System.Drawing.Size(102, 16);
             this.lblcodcidade.TabIndex = 74;
             this.lblcodcidade.Text = "Código Cidade";
             // 
@@ -114,7 +114,7 @@
             this.txtcodcidade.Location = new System.Drawing.Point(160, 16);
             this.txtcodcidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcodcidade.Name = "txtcodcidade";
-            this.txtcodcidade.Size = new System.Drawing.Size(164, 27);
+            this.txtcodcidade.Size = new System.Drawing.Size(164, 23);
             this.txtcodcidade.TabIndex = 77;
             this.txtcodcidade.Tag = "";
             // 
@@ -134,7 +134,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -170,7 +170,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -228,7 +228,7 @@
             // 
             // FrmCadCidade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 534);
             this.Controls.Add(this.btnlimpar);

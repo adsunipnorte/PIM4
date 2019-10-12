@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCentroCusto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
             this.lblidcc = new System.Windows.Forms.Label();
@@ -40,10 +44,11 @@
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvteste = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvteste)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +110,7 @@
             // btngravar
             // 
             this.btngravar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btngravar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btngravar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btngravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btngravar.BorderRadius = 7;
@@ -141,6 +147,7 @@
             // btnsair
             // 
             this.btnsair.Activecolor = System.Drawing.Color.Crimson;
+            this.btnsair.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnsair.BackColor = System.Drawing.Color.Crimson;
             this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsair.BorderRadius = 7;
@@ -153,7 +160,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -177,6 +184,7 @@
             // btnlimpar
             // 
             this.btnlimpar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnlimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnlimpar.BorderRadius = 7;
@@ -190,7 +198,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -215,35 +223,83 @@
             // 
             this.dgvteste.AllowUserToAddRows = false;
             this.dgvteste.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvteste.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvteste.BackgroundColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvteste.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvteste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvteste.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvteste.BackgroundColor = System.Drawing.Color.White;
             this.dgvteste.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvteste.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvteste.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvteste.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvteste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvteste.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvteste.ColumnHeadersHeight = 50;
             this.dgvteste.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.descricao,
             this.situacao});
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvteste.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvteste.DoubleBuffered = true;
             this.dgvteste.EnableHeadersVisualStyles = false;
-            this.dgvteste.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgvteste.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgvteste.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.dgvteste.HeaderForeColor = System.Drawing.Color.White;
             this.dgvteste.Location = new System.Drawing.Point(12, 145);
+            this.dgvteste.Margin = new System.Windows.Forms.Padding(4);
             this.dgvteste.Name = "dgvteste";
             this.dgvteste.ReadOnly = true;
             this.dgvteste.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvteste.RowTemplate.Height = 24;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvteste.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvteste.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvteste.RowTemplate.DividerHeight = 1;
+            this.dgvteste.RowTemplate.Height = 40;
+            this.dgvteste.RowTemplate.ReadOnly = true;
+            this.dgvteste.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvteste.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvteste.Size = new System.Drawing.Size(741, 217);
-            this.dgvteste.TabIndex = 49;
+            this.dgvteste.TabIndex = 999;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // situacao
+            // 
+            this.situacao.DataPropertyName = "situacao";
+            this.situacao.HeaderText = "Situação";
+            this.situacao.Name = "situacao";
+            this.situacao.ReadOnly = true;
             // 
             // bunifuTileButton1
             // 
@@ -265,28 +321,10 @@
             this.bunifuTileButton1.TabIndex = 50;
             this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
-            // Id
+            // bunifuElipse1
             // 
-            this.Id.DataPropertyName = "id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            this.descricao.Width = 300;
-            // 
-            // situacao
-            // 
-            this.situacao.DataPropertyName = "situacao";
-            this.situacao.HeaderText = "Situação";
-            this.situacao.Name = "situacao";
-            this.situacao.ReadOnly = true;
-            this.situacao.Width = 300;
+            this.bunifuElipse1.ElipseRadius = 7;
+            this.bunifuElipse1.TargetControl = this.dgvteste;
             // 
             // FrmCadCentroCusto
             // 
@@ -329,5 +367,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

@@ -50,7 +50,7 @@
             this.lblidcliente.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblidcliente.Location = new System.Drawing.Point(25, 30);
             this.lblidcliente.Name = "lblidcliente";
-            this.lblidcliente.Size = new System.Drawing.Size(26, 19);
+            this.lblidcliente.Size = new System.Drawing.Size(21, 16);
             this.lblidcliente.TabIndex = 7;
             this.lblidcliente.Text = "ID";
             // 
@@ -62,7 +62,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
+            this.txtid.Size = new System.Drawing.Size(62, 23);
             this.txtid.TabIndex = 0;
             this.txtid.TabStop = false;
             // 
@@ -71,7 +71,7 @@
             this.txtdescricao.Location = new System.Drawing.Point(126, 75);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(273, 27);
+            this.txtdescricao.Size = new System.Drawing.Size(273, 23);
             this.txtdescricao.TabIndex = 1;
             this.txtdescricao.Tag = "";
             // 
@@ -81,7 +81,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldescricao.Location = new System.Drawing.Point(25, 78);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
+            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
             this.lbldescricao.TabIndex = 9;
             this.lbldescricao.Text = "Descrição";
             // 
@@ -92,7 +92,7 @@
             this.chksituacao.Location = new System.Drawing.Point(173, 26);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(66, 23);
+            this.chksituacao.Size = new System.Drawing.Size(58, 20);
             this.chksituacao.TabIndex = 38;
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -186,7 +186,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -244,7 +244,7 @@
             // 
             // FrmCadTpCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 555);
             this.Controls.Add(this.btnlimpar);

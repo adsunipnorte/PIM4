@@ -87,7 +87,7 @@
             this.chksituacao.Location = new System.Drawing.Point(216, 12);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(66, 23);
+            this.chksituacao.Size = new System.Drawing.Size(58, 20);
             this.chksituacao.TabIndex = 55;
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             this.txtdescricao.Location = new System.Drawing.Point(163, 69);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(307, 27);
+            this.txtdescricao.Size = new System.Drawing.Size(307, 23);
             this.txtdescricao.TabIndex = 49;
             this.txtdescricao.Tag = "";
             // 
@@ -107,7 +107,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbldescricao.Location = new System.Drawing.Point(50, 74);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
+            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
             this.lbldescricao.TabIndex = 51;
             this.lbldescricao.Text = "Descrição";
             // 
@@ -117,7 +117,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(50, 15);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
+            this.lblid.Size = new System.Drawing.Size(21, 16);
             this.lblid.TabIndex = 50;
             this.lblid.Text = "ID";
             // 
@@ -129,7 +129,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(69, 27);
+            this.txtid.Size = new System.Drawing.Size(69, 23);
             this.txtid.TabIndex = 48;
             this.txtid.TabStop = false;
             // 
@@ -149,7 +149,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -184,7 +184,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -242,7 +242,7 @@
             // 
             // FrmCadPlanoContas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 555);
             this.Controls.Add(this.btnlimpar);

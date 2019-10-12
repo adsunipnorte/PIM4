@@ -51,7 +51,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(34, 28);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
+            this.lblid.Size = new System.Drawing.Size(21, 16);
             this.lblid.TabIndex = 11;
             this.lblid.Text = "ID";
             // 
@@ -63,7 +63,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
+            this.txtid.Size = new System.Drawing.Size(62, 23);
             this.txtid.TabIndex = 0;
             this.txtid.TabStop = false;
             // 
@@ -72,7 +72,7 @@
             this.txtdescricao.Location = new System.Drawing.Point(142, 72);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(273, 27);
+            this.txtdescricao.Size = new System.Drawing.Size(273, 23);
             this.txtdescricao.TabIndex = 1;
             this.txtdescricao.Tag = "";
             // 
@@ -82,7 +82,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldescricao.Location = new System.Drawing.Point(37, 80);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
+            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
             this.lbldescricao.TabIndex = 43;
             this.lbldescricao.Text = "Descrição";
             // 
@@ -129,7 +129,7 @@
             this.chksituacao.Location = new System.Drawing.Point(175, 28);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(66, 23);
+            this.chksituacao.Size = new System.Drawing.Size(58, 20);
             this.chksituacao.TabIndex = 5;
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             this.chkfiltro.AutoSize = true;
             this.chkfiltro.Location = new System.Drawing.Point(287, 28);
             this.chkfiltro.Name = "chkfiltro";
-            this.chkfiltro.Size = new System.Drawing.Size(98, 23);
+            this.chkfiltro.Size = new System.Drawing.Size(85, 20);
             this.chkfiltro.TabIndex = 59;
             this.chkfiltro.Text = "Pesquisa";
             this.chkfiltro.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -197,7 +197,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -254,7 +254,7 @@
             // 
             // FrmCadPerfilUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 511);
             this.Controls.Add(this.btnlimpar);

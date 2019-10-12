@@ -50,7 +50,7 @@
             this.txtestado.Location = new System.Drawing.Point(130, 67);
             this.txtestado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(273, 27);
+            this.txtestado.Size = new System.Drawing.Size(273, 23);
             this.txtestado.TabIndex = 1;
             this.txtestado.Tag = "";
             // 
@@ -60,7 +60,7 @@
             this.lblestado.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblestado.Location = new System.Drawing.Point(29, 75);
             this.lblestado.Name = "lblestado";
-            this.lblestado.Size = new System.Drawing.Size(59, 19);
+            this.lblestado.Size = new System.Drawing.Size(52, 16);
             this.lblestado.TabIndex = 42;
             this.lblestado.Text = "Estado";
             // 
@@ -70,7 +70,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(29, 26);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
+            this.lblid.Size = new System.Drawing.Size(21, 16);
             this.lblid.TabIndex = 41;
             this.lblid.Text = "ID";
             // 
@@ -82,7 +82,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
+            this.txtid.Size = new System.Drawing.Size(62, 23);
             this.txtid.TabIndex = 39;
             this.txtid.TabStop = false;
             // 
@@ -92,7 +92,7 @@
             this.lblsigla.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblsigla.Location = new System.Drawing.Point(29, 119);
             this.lblsigla.Name = "lblsigla";
-            this.lblsigla.Size = new System.Drawing.Size(45, 19);
+            this.lblsigla.Size = new System.Drawing.Size(39, 16);
             this.lblsigla.TabIndex = 48;
             this.lblsigla.Text = "Sigla";
             // 
@@ -107,7 +107,7 @@
             this.cmbsigla.Location = new System.Drawing.Point(130, 111);
             this.cmbsigla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbsigla.Name = "cmbsigla";
-            this.cmbsigla.Size = new System.Drawing.Size(136, 27);
+            this.cmbsigla.Size = new System.Drawing.Size(136, 24);
             this.cmbsigla.TabIndex = 2;
             // 
             // dgvestado
@@ -161,7 +161,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -196,7 +196,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -254,7 +254,7 @@
             // 
             // FrmCadEstados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 555);
             this.Controls.Add(this.btnlimpar);

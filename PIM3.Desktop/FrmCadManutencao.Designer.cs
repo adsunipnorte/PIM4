@@ -50,7 +50,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(43, 34);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
+            this.lblid.Size = new System.Drawing.Size(21, 16);
             this.lblid.TabIndex = 69;
             this.lblid.Text = "ID";
             // 
@@ -62,7 +62,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
+            this.txtid.Size = new System.Drawing.Size(62, 23);
             this.txtid.TabIndex = 68;
             this.txtid.TabStop = false;
             // 
@@ -72,7 +72,7 @@
             this.cmbtpmanut.FormattingEnabled = true;
             this.cmbtpmanut.Location = new System.Drawing.Point(395, 34);
             this.cmbtpmanut.Name = "cmbtpmanut";
-            this.cmbtpmanut.Size = new System.Drawing.Size(121, 27);
+            this.cmbtpmanut.Size = new System.Drawing.Size(121, 24);
             this.cmbtpmanut.TabIndex = 70;
             // 
             // lbltpmanut
@@ -81,7 +81,7 @@
             this.lbltpmanut.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbltpmanut.Location = new System.Drawing.Point(210, 38);
             this.lbltpmanut.Name = "lbltpmanut";
-            this.lbltpmanut.Size = new System.Drawing.Size(156, 19);
+            this.lbltpmanut.Size = new System.Drawing.Size(137, 16);
             this.lbltpmanut.TabIndex = 71;
             this.lbltpmanut.Text = "Tipo de Manutenção";
             // 
@@ -89,7 +89,7 @@
             // 
             this.txtdescricao.Location = new System.Drawing.Point(161, 85);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(355, 27);
+            this.txtdescricao.Size = new System.Drawing.Size(355, 23);
             this.txtdescricao.TabIndex = 72;
             // 
             // lbldescricao
@@ -98,7 +98,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbldescricao.Location = new System.Drawing.Point(43, 88);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
+            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
             this.lbldescricao.TabIndex = 73;
             this.lbldescricao.Text = "Descrição";
             // 
@@ -108,7 +108,7 @@
             this.lblveiculo.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblveiculo.Location = new System.Drawing.Point(43, 134);
             this.lblveiculo.Name = "lblveiculo";
-            this.lblveiculo.Size = new System.Drawing.Size(63, 19);
+            this.lblveiculo.Size = new System.Drawing.Size(54, 16);
             this.lblveiculo.TabIndex = 78;
             this.lblveiculo.Text = "Veículo";
             // 
@@ -116,7 +116,7 @@
             // 
             this.txtveiculo.Location = new System.Drawing.Point(161, 131);
             this.txtveiculo.Name = "txtveiculo";
-            this.txtveiculo.Size = new System.Drawing.Size(355, 27);
+            this.txtveiculo.Size = new System.Drawing.Size(355, 23);
             this.txtveiculo.TabIndex = 77;
             // 
             // lblplacaveiculo
@@ -125,7 +125,7 @@
             this.lblplacaveiculo.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblplacaveiculo.Location = new System.Drawing.Point(43, 167);
             this.lblplacaveiculo.Name = "lblplacaveiculo";
-            this.lblplacaveiculo.Size = new System.Drawing.Size(106, 19);
+            this.lblplacaveiculo.Size = new System.Drawing.Size(92, 16);
             this.lblplacaveiculo.TabIndex = 80;
             this.lblplacaveiculo.Text = "Placa veículo";
             // 
@@ -133,7 +133,7 @@
             // 
             this.txtplacaveiculo.Location = new System.Drawing.Point(161, 164);
             this.txtplacaveiculo.Name = "txtplacaveiculo";
-            this.txtplacaveiculo.Size = new System.Drawing.Size(355, 27);
+            this.txtplacaveiculo.Size = new System.Drawing.Size(355, 23);
             this.txtplacaveiculo.TabIndex = 79;
             // 
             // btnlimpar
@@ -152,7 +152,7 @@
             this.btnlimpar.Iconimage_right_Selected = null;
             this.btnlimpar.Iconimage_Selected = null;
             this.btnlimpar.IconMarginLeft = 0;
-            this.btnlimpar.IconMarginRight = 0;
+            this.btnlimpar.IconMarginRight = 10;
             this.btnlimpar.IconRightVisible = false;
             this.btnlimpar.IconRightZoom = 0D;
             this.btnlimpar.IconVisible = false;
@@ -188,7 +188,7 @@
             this.btnsair.Iconimage_right_Selected = null;
             this.btnsair.Iconimage_Selected = null;
             this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 0;
+            this.btnsair.IconMarginRight = 10;
             this.btnsair.IconRightVisible = false;
             this.btnsair.IconRightZoom = 0D;
             this.btnsair.IconVisible = false;
@@ -247,7 +247,7 @@
             // 
             // FrmCadManutencao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 380);
             this.Controls.Add(this.btnlimpar);
