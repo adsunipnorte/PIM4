@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadPlanoContas));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chksituacao = new System.Windows.Forms.CheckBox();
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
@@ -41,44 +37,7 @@
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Descricao,
-            this.Situacao});
-            this.dataGridView1.Location = new System.Drawing.Point(54, 166);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(643, 211);
-            this.dataGridView1.TabIndex = 56;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 300;
-            // 
-            // Situacao
-            // 
-            this.Situacao.HeaderText = "Situação";
-            this.Situacao.Name = "Situacao";
-            this.Situacao.ReadOnly = true;
-            this.Situacao.Width = 200;
             // 
             // chksituacao
             // 
@@ -87,7 +46,7 @@
             this.chksituacao.Location = new System.Drawing.Point(216, 12);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(58, 20);
+            this.chksituacao.Size = new System.Drawing.Size(66, 23);
             this.chksituacao.TabIndex = 55;
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
@@ -97,7 +56,7 @@
             this.txtdescricao.Location = new System.Drawing.Point(163, 69);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(307, 23);
+            this.txtdescricao.Size = new System.Drawing.Size(307, 27);
             this.txtdescricao.TabIndex = 49;
             this.txtdescricao.Tag = "";
             // 
@@ -107,7 +66,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbldescricao.Location = new System.Drawing.Point(50, 74);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
+            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
             this.lbldescricao.TabIndex = 51;
             this.lbldescricao.Text = "Descrição";
             // 
@@ -117,7 +76,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(50, 15);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(21, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 50;
             this.lblid.Text = "ID";
             // 
@@ -129,7 +88,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(69, 23);
+            this.txtid.Size = new System.Drawing.Size(69, 27);
             this.txtid.TabIndex = 48;
             this.txtid.TabStop = false;
             // 
@@ -155,7 +114,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(298, 419);
+            this.btnlimpar.Location = new System.Drawing.Point(237, 161);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -168,6 +127,7 @@
             this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnlimpar.Textcolor = System.Drawing.Color.White;
             this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
             // btnsair
             // 
@@ -190,7 +150,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(480, 419);
+            this.btnsair.Location = new System.Drawing.Point(419, 161);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -226,7 +186,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(115, 419);
+            this.btngravar.Location = new System.Drawing.Point(54, 161);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -239,16 +199,16 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // FrmCadPlanoContas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 555);
+            this.ClientSize = new System.Drawing.Size(622, 315);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chksituacao);
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lbldescricao);
@@ -256,27 +216,22 @@
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadPlanoContas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plano de contas";
             this.Load += new System.EventHandler(this.FrmPlanoContas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox chksituacao;
         private System.Windows.Forms.TextBox txtdescricao;
         private System.Windows.Forms.Label lbldescricao;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Situacao;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;

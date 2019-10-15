@@ -67,7 +67,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(33, 30);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(21, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 88;
             this.lblid.Text = "ID";
             // 
@@ -79,7 +79,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 23);
+            this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 87;
             this.txtid.TabStop = false;
             // 
@@ -90,7 +90,7 @@
             this.txtnome.Location = new System.Drawing.Point(119, 69);
             this.txtnome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(487, 23);
+            this.txtnome.Size = new System.Drawing.Size(637, 27);
             this.txtnome.TabIndex = 89;
             this.txtnome.Tag = "";
             // 
@@ -100,7 +100,7 @@
             this.lblnome.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblnome.Location = new System.Drawing.Point(33, 77);
             this.lblnome.Name = "lblnome";
-            this.lblnome.Size = new System.Drawing.Size(44, 16);
+            this.lblnome.Size = new System.Drawing.Size(51, 19);
             this.lblnome.TabIndex = 90;
             this.lblnome.Text = "Nome";
             // 
@@ -109,7 +109,7 @@
             this.txtend.Location = new System.Drawing.Point(119, 108);
             this.txtend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtend.Name = "txtend";
-            this.txtend.Size = new System.Drawing.Size(531, 23);
+            this.txtend.Size = new System.Drawing.Size(531, 27);
             this.txtend.TabIndex = 91;
             // 
             // lblend
@@ -118,7 +118,7 @@
             this.lblend.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblend.Location = new System.Drawing.Point(33, 116);
             this.lblend.Name = "lblend";
-            this.lblend.Size = new System.Drawing.Size(69, 16);
+            this.lblend.Size = new System.Drawing.Size(80, 19);
             this.lblend.TabIndex = 92;
             this.lblend.Text = "Endereço";
             // 
@@ -127,7 +127,7 @@
             this.txtnumero.Location = new System.Drawing.Point(119, 144);
             this.txtnumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnumero.Name = "txtnumero";
-            this.txtnumero.Size = new System.Drawing.Size(90, 23);
+            this.txtnumero.Size = new System.Drawing.Size(90, 27);
             this.txtnumero.TabIndex = 93;
             // 
             // lblnumero
@@ -136,7 +136,7 @@
             this.lblnumero.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblnumero.Location = new System.Drawing.Point(33, 152);
             this.lblnumero.Name = "lblnumero";
-            this.lblnumero.Size = new System.Drawing.Size(57, 16);
+            this.lblnumero.Size = new System.Drawing.Size(66, 19);
             this.lblnumero.TabIndex = 94;
             this.lblnumero.Text = "Número";
             // 
@@ -145,7 +145,7 @@
             this.txtcompl.Location = new System.Drawing.Point(353, 144);
             this.txtcompl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcompl.Name = "txtcompl";
-            this.txtcompl.Size = new System.Drawing.Size(181, 23);
+            this.txtcompl.Size = new System.Drawing.Size(181, 27);
             this.txtcompl.TabIndex = 95;
             // 
             // lblcompl
@@ -154,7 +154,7 @@
             this.lblcompl.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblcompl.Location = new System.Drawing.Point(228, 152);
             this.lblcompl.Name = "lblcompl";
-            this.lblcompl.Size = new System.Drawing.Size(95, 16);
+            this.lblcompl.Size = new System.Drawing.Size(108, 19);
             this.lblcompl.TabIndex = 96;
             this.lblcompl.Text = "Complemento";
             // 
@@ -163,7 +163,7 @@
             this.txtbairro.Location = new System.Drawing.Point(119, 178);
             this.txtbairro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbairro.Name = "txtbairro";
-            this.txtbairro.Size = new System.Drawing.Size(238, 23);
+            this.txtbairro.Size = new System.Drawing.Size(238, 27);
             this.txtbairro.TabIndex = 97;
             // 
             // lblbairro
@@ -172,7 +172,7 @@
             this.lblbairro.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblbairro.Location = new System.Drawing.Point(33, 184);
             this.lblbairro.Name = "lblbairro";
-            this.lblbairro.Size = new System.Drawing.Size(46, 16);
+            this.lblbairro.Size = new System.Drawing.Size(54, 19);
             this.lblbairro.TabIndex = 98;
             this.lblbairro.Text = "Bairro";
             // 
@@ -181,7 +181,7 @@
             this.txtcep.Location = new System.Drawing.Point(427, 178);
             this.txtcep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcep.Name = "txtcep";
-            this.txtcep.Size = new System.Drawing.Size(151, 23);
+            this.txtcep.Size = new System.Drawing.Size(151, 27);
             this.txtcep.TabIndex = 99;
             // 
             // lblcep
@@ -190,7 +190,7 @@
             this.lblcep.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblcep.Location = new System.Drawing.Point(378, 184);
             this.lblcep.Name = "lblcep";
-            this.lblcep.Size = new System.Drawing.Size(36, 16);
+            this.lblcep.Size = new System.Drawing.Size(43, 19);
             this.lblcep.TabIndex = 100;
             this.lblcep.Text = "CEP";
             // 
@@ -199,7 +199,7 @@
             this.txttel.Location = new System.Drawing.Point(119, 213);
             this.txttel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(151, 23);
+            this.txttel.Size = new System.Drawing.Size(151, 27);
             this.txttel.TabIndex = 101;
             // 
             // lbltel
@@ -208,7 +208,7 @@
             this.lbltel.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbltel.Location = new System.Drawing.Point(33, 221);
             this.lbltel.Name = "lbltel";
-            this.lbltel.Size = new System.Drawing.Size(62, 16);
+            this.lbltel.Size = new System.Drawing.Size(69, 19);
             this.lbltel.TabIndex = 102;
             this.lbltel.Text = "Telefone";
             // 
@@ -217,7 +217,7 @@
             this.txtcel.Location = new System.Drawing.Point(353, 218);
             this.txtcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcel.Name = "txtcel";
-            this.txtcel.Size = new System.Drawing.Size(151, 23);
+            this.txtcel.Size = new System.Drawing.Size(151, 27);
             this.txtcel.TabIndex = 103;
             // 
             // lblcel
@@ -226,7 +226,7 @@
             this.lblcel.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblcel.Location = new System.Drawing.Point(286, 221);
             this.lblcel.Name = "lblcel";
-            this.lblcel.Size = new System.Drawing.Size(53, 16);
+            this.lblcel.Size = new System.Drawing.Size(60, 19);
             this.lblcel.TabIndex = 104;
             this.lblcel.Text = "Celular";
             // 
@@ -235,7 +235,7 @@
             this.txtemail.Location = new System.Drawing.Point(119, 249);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(385, 23);
+            this.txtemail.Size = new System.Drawing.Size(385, 27);
             this.txtemail.TabIndex = 105;
             // 
             // lblemail
@@ -244,7 +244,7 @@
             this.lblemail.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblemail.Location = new System.Drawing.Point(33, 254);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(47, 16);
+            this.lblemail.Size = new System.Drawing.Size(55, 19);
             this.lblemail.TabIndex = 106;
             this.lblemail.Text = "E-mail";
             // 
@@ -290,7 +290,7 @@
             this.cmbidcliente.FormattingEnabled = true;
             this.cmbidcliente.Location = new System.Drawing.Point(313, 27);
             this.cmbidcliente.Name = "cmbidcliente";
-            this.cmbidcliente.Size = new System.Drawing.Size(121, 24);
+            this.cmbidcliente.Size = new System.Drawing.Size(121, 27);
             this.cmbidcliente.TabIndex = 111;
             // 
             // lblcliente
@@ -299,7 +299,7 @@
             this.lblcliente.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblcliente.Location = new System.Drawing.Point(248, 30);
             this.lblcliente.Name = "lblcliente";
-            this.lblcliente.Size = new System.Drawing.Size(52, 16);
+            this.lblcliente.Size = new System.Drawing.Size(59, 19);
             this.lblcliente.TabIndex = 112;
             this.lblcliente.Text = "Cliente";
             // 
@@ -412,9 +412,9 @@
             // 
             // FrmCadContatoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 590);
+            this.ClientSize = new System.Drawing.Size(1006, 723);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
@@ -443,6 +443,7 @@
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadContatoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contato cliente";

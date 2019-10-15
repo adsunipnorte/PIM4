@@ -33,7 +33,7 @@
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtseguro = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
-            this.rtxtobs = new System.Windows.Forms.RichTextBox();
+            this.txtobs = new System.Windows.Forms.RichTextBox();
             this.lblobs = new System.Windows.Forms.Label();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,7 +46,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(24, 30);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(21, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 125;
             this.lblid.Text = "ID";
             // 
@@ -58,7 +58,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 23);
+            this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 124;
             this.txtid.TabStop = false;
             // 
@@ -67,7 +67,7 @@
             this.txtseguro.Location = new System.Drawing.Point(142, 67);
             this.txtseguro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtseguro.Name = "txtseguro";
-            this.txtseguro.Size = new System.Drawing.Size(537, 23);
+            this.txtseguro.Size = new System.Drawing.Size(537, 27);
             this.txtseguro.TabIndex = 1;
             // 
             // lbldescricao
@@ -76,18 +76,18 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbldescricao.Location = new System.Drawing.Point(24, 70);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
+            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
             this.lbldescricao.TabIndex = 129;
             this.lbldescricao.Text = "Descrição";
             // 
-            // rtxtobs
+            // txtobs
             // 
-            this.rtxtobs.Location = new System.Drawing.Point(28, 142);
-            this.rtxtobs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.rtxtobs.Name = "rtxtobs";
-            this.rtxtobs.Size = new System.Drawing.Size(651, 224);
-            this.rtxtobs.TabIndex = 130;
-            this.rtxtobs.Text = "";
+            this.txtobs.Location = new System.Drawing.Point(28, 142);
+            this.txtobs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtobs.Name = "txtobs";
+            this.txtobs.Size = new System.Drawing.Size(651, 224);
+            this.txtobs.TabIndex = 130;
+            this.txtobs.Text = "";
             // 
             // lblobs
             // 
@@ -95,7 +95,7 @@
             this.lblobs.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblobs.Location = new System.Drawing.Point(24, 119);
             this.lblobs.Name = "lblobs";
-            this.lblobs.Size = new System.Drawing.Size(85, 16);
+            this.lblobs.Size = new System.Drawing.Size(96, 19);
             this.lblobs.TabIndex = 134;
             this.lblobs.Text = "Observação";
             // 
@@ -134,6 +134,7 @@
             this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnlimpar.Textcolor = System.Drawing.Color.White;
             this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
             // btnsair
             // 
@@ -205,23 +206,25 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // FrmCadSeguro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 495);
+            this.ClientSize = new System.Drawing.Size(782, 555);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
             this.Controls.Add(this.lblobs);
-            this.Controls.Add(this.rtxtobs);
+            this.Controls.Add(this.txtobs);
             this.Controls.Add(this.txtseguro);
             this.Controls.Add(this.lbldescricao);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadSeguro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de seguro";
@@ -236,7 +239,7 @@
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtseguro;
         private System.Windows.Forms.Label lbldescricao;
-        private System.Windows.Forms.RichTextBox rtxtobs;
+        private System.Windows.Forms.RichTextBox txtobs;
         private System.Windows.Forms.Label lblobs;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;

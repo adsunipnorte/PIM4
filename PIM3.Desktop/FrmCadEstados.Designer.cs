@@ -35,14 +35,9 @@
             this.txtid = new System.Windows.Forms.TextBox();
             this.lblsigla = new System.Windows.Forms.Label();
             this.cmbsigla = new System.Windows.Forms.ComboBox();
-            this.dgvestado = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sigla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvestado)).BeginInit();
             this.SuspendLayout();
             // 
             // txtestado
@@ -50,7 +45,7 @@
             this.txtestado.Location = new System.Drawing.Point(130, 67);
             this.txtestado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtestado.Name = "txtestado";
-            this.txtestado.Size = new System.Drawing.Size(273, 23);
+            this.txtestado.Size = new System.Drawing.Size(273, 27);
             this.txtestado.TabIndex = 1;
             this.txtestado.Tag = "";
             // 
@@ -60,7 +55,7 @@
             this.lblestado.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblestado.Location = new System.Drawing.Point(29, 75);
             this.lblestado.Name = "lblestado";
-            this.lblestado.Size = new System.Drawing.Size(52, 16);
+            this.lblestado.Size = new System.Drawing.Size(59, 19);
             this.lblestado.TabIndex = 42;
             this.lblestado.Text = "Estado";
             // 
@@ -70,7 +65,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(29, 26);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(21, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 41;
             this.lblid.Text = "ID";
             // 
@@ -82,7 +77,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 23);
+            this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 39;
             this.txtid.TabStop = false;
             // 
@@ -92,7 +87,7 @@
             this.lblsigla.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblsigla.Location = new System.Drawing.Point(29, 119);
             this.lblsigla.Name = "lblsigla";
-            this.lblsigla.Size = new System.Drawing.Size(39, 16);
+            this.lblsigla.Size = new System.Drawing.Size(45, 19);
             this.lblsigla.TabIndex = 48;
             this.lblsigla.Text = "Sigla";
             // 
@@ -107,43 +102,8 @@
             this.cmbsigla.Location = new System.Drawing.Point(130, 111);
             this.cmbsigla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbsigla.Name = "cmbsigla";
-            this.cmbsigla.Size = new System.Drawing.Size(136, 24);
+            this.cmbsigla.Size = new System.Drawing.Size(136, 27);
             this.cmbsigla.TabIndex = 2;
-            // 
-            // dgvestado
-            // 
-            this.dgvestado.AllowUserToAddRows = false;
-            this.dgvestado.AllowUserToDeleteRows = false;
-            this.dgvestado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvestado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Estado,
-            this.Sigla});
-            this.dgvestado.Location = new System.Drawing.Point(33, 181);
-            this.dgvestado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvestado.Name = "dgvestado";
-            this.dgvestado.RowTemplate.Height = 24;
-            this.dgvestado.Size = new System.Drawing.Size(644, 178);
-            this.dgvestado.TabIndex = 50;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 400;
-            // 
-            // Sigla
-            // 
-            this.Sigla.HeaderText = "Sigla";
-            this.Sigla.Name = "Sigla";
-            this.Sigla.ReadOnly = true;
             // 
             // btnlimpar
             // 
@@ -167,7 +127,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(277, 410);
+            this.btnlimpar.Location = new System.Drawing.Point(234, 196);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -202,7 +162,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(473, 410);
+            this.btnsair.Location = new System.Drawing.Point(430, 196);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -238,7 +198,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(81, 410);
+            this.btngravar.Location = new System.Drawing.Point(38, 196);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -251,16 +211,16 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // FrmCadEstados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 555);
+            this.ClientSize = new System.Drawing.Size(622, 315);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
-            this.Controls.Add(this.dgvestado);
             this.Controls.Add(this.cmbsigla);
             this.Controls.Add(this.lblsigla);
             this.Controls.Add(this.txtestado);
@@ -269,10 +229,10 @@
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadEstados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de estados";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvestado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,10 +245,6 @@
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label lblsigla;
         private System.Windows.Forms.ComboBox cmbsigla;
-        private System.Windows.Forms.DataGridView dgvestado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sigla;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;

@@ -59,7 +59,7 @@
             this.sairToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(623, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(782, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -185,7 +185,7 @@
             this.dgvpesqtpveiculo.Name = "dgvpesqtpveiculo";
             this.dgvpesqtpveiculo.ReadOnly = true;
             this.dgvpesqtpveiculo.RowTemplate.Height = 24;
-            this.dgvpesqtpveiculo.Size = new System.Drawing.Size(593, 255);
+            this.dgvpesqtpveiculo.Size = new System.Drawing.Size(758, 255);
             this.dgvpesqtpveiculo.TabIndex = 10;
             // 
             // id
@@ -211,13 +211,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 462);
+            this.ClientSize = new System.Drawing.Size(782, 555);
             this.Controls.Add(this.dgvpesqtpveiculo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmTpVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo de veículo";

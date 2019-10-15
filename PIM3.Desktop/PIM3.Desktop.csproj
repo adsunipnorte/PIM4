@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Documents\ADS\4º semestre\PIM\DLL Bunifu\Bunifu_UI_v1.52.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -207,6 +207,12 @@
     <Compile Include="FrmManutencao.Designer.cs">
       <DependentUpon>FrmManutencao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMensagem.Designer.cs">
+      <DependentUpon>FrmMensagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMontadora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -367,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmManutencao.resx">
       <DependentUpon>FrmManutencao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMensagem.resx">
+      <DependentUpon>FrmMensagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMontadora.resx">
       <DependentUpon>FrmMontadora.cs</DependentUpon>

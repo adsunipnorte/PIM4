@@ -41,16 +41,11 @@
             this.txtemail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
             this.lblpuser = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbpuser = new System.Windows.Forms.ComboBox();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lblid
@@ -59,7 +54,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(29, 27);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(21, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 9;
             this.lblid.Text = "ID";
             // 
@@ -71,7 +66,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 23);
+            this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 8;
             this.txtid.TabStop = false;
             // 
@@ -82,7 +77,7 @@
             this.chksituacao.Location = new System.Drawing.Point(176, 27);
             this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(58, 20);
+            this.chksituacao.Size = new System.Drawing.Size(66, 23);
             this.chksituacao.TabIndex = 39;
             this.chksituacao.Text = "Ativo";
             this.chksituacao.UseVisualStyleBackColor = true;
@@ -92,7 +87,7 @@
             this.txtnome.Location = new System.Drawing.Point(133, 73);
             this.txtnome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(273, 23);
+            this.txtnome.Size = new System.Drawing.Size(273, 27);
             this.txtnome.TabIndex = 1;
             this.txtnome.Tag = "";
             // 
@@ -102,7 +97,7 @@
             this.lblnome.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnome.Location = new System.Drawing.Point(29, 73);
             this.lblnome.Name = "lblnome";
-            this.lblnome.Size = new System.Drawing.Size(44, 16);
+            this.lblnome.Size = new System.Drawing.Size(51, 19);
             this.lblnome.TabIndex = 41;
             this.lblnome.Text = "Nome";
             // 
@@ -111,7 +106,7 @@
             this.txtlogin.Location = new System.Drawing.Point(133, 105);
             this.txtlogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(273, 23);
+            this.txtlogin.Size = new System.Drawing.Size(273, 27);
             this.txtlogin.TabIndex = 2;
             this.txtlogin.Tag = "";
             // 
@@ -121,7 +116,7 @@
             this.lbllogin.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbllogin.Location = new System.Drawing.Point(29, 105);
             this.lbllogin.Name = "lbllogin";
-            this.lbllogin.Size = new System.Drawing.Size(43, 16);
+            this.lbllogin.Size = new System.Drawing.Size(49, 19);
             this.lbllogin.TabIndex = 43;
             this.lbllogin.Text = "Login";
             // 
@@ -131,7 +126,7 @@
             this.txtsenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.PasswordChar = '*';
-            this.txtsenha.Size = new System.Drawing.Size(142, 23);
+            this.txtsenha.Size = new System.Drawing.Size(142, 27);
             this.txtsenha.TabIndex = 3;
             this.txtsenha.Tag = "";
             // 
@@ -141,7 +136,7 @@
             this.lblsenha.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsenha.Location = new System.Drawing.Point(430, 108);
             this.lblsenha.Name = "lblsenha";
-            this.lblsenha.Size = new System.Drawing.Size(49, 16);
+            this.lblsenha.Size = new System.Drawing.Size(56, 19);
             this.lblsenha.TabIndex = 45;
             this.lblsenha.Text = "Senha";
             // 
@@ -150,7 +145,7 @@
             this.txtemail.Location = new System.Drawing.Point(133, 145);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(273, 23);
+            this.txtemail.Size = new System.Drawing.Size(273, 27);
             this.txtemail.TabIndex = 4;
             this.txtemail.Tag = "";
             // 
@@ -160,7 +155,7 @@
             this.lblemail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblemail.Location = new System.Drawing.Point(31, 148);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(42, 16);
+            this.lblemail.Size = new System.Drawing.Size(49, 19);
             this.lblemail.TabIndex = 47;
             this.lblemail.Text = "Email";
             // 
@@ -170,51 +165,9 @@
             this.lblpuser.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpuser.Location = new System.Drawing.Point(378, 31);
             this.lblpuser.Name = "lblpuser";
-            this.lblpuser.Size = new System.Drawing.Size(92, 16);
+            this.lblpuser.Size = new System.Drawing.Size(108, 19);
             this.lblpuser.TabIndex = 52;
             this.lblpuser.Text = "Perfil Usuário";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Nome,
-            this.Login,
-            this.Situacao});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 196);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 211);
-            this.dataGridView1.TabIndex = 57;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 260;
-            // 
-            // Login
-            // 
-            this.Login.HeaderText = "Login";
-            this.Login.Name = "Login";
-            this.Login.ReadOnly = true;
-            this.Login.Width = 260;
-            // 
-            // Situacao
-            // 
-            this.Situacao.HeaderText = "Situação";
-            this.Situacao.Name = "Situacao";
-            this.Situacao.ReadOnly = true;
-            this.Situacao.Width = 115;
             // 
             // cmbpuser
             // 
@@ -222,7 +175,7 @@
             this.cmbpuser.FormattingEnabled = true;
             this.cmbpuser.Location = new System.Drawing.Point(492, 25);
             this.cmbpuser.Name = "cmbpuser";
-            this.cmbpuser.Size = new System.Drawing.Size(142, 24);
+            this.cmbpuser.Size = new System.Drawing.Size(142, 27);
             this.cmbpuser.TabIndex = 58;
             // 
             // btnlimpar
@@ -247,7 +200,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(344, 436);
+            this.btnlimpar.Location = new System.Drawing.Point(310, 436);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -282,7 +235,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(522, 436);
+            this.btnsair.Location = new System.Drawing.Point(488, 436);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -318,7 +271,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(167, 436);
+            this.btngravar.Location = new System.Drawing.Point(133, 436);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -332,16 +285,24 @@
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(33, 208);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(716, 213);
+            this.richTextBox1.TabIndex = 143;
+            this.richTextBox1.Text = "";
+            // 
             // FrmCadUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 555);
+            this.ClientSize = new System.Drawing.Size(782, 555);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
             this.Controls.Add(this.cmbpuser);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblpuser);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.lblemail);
@@ -356,12 +317,12 @@
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadUsuario";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuários";
             this.Load += new System.EventHandler(this.FrmCadUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,14 +342,10 @@
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label lblpuser;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Situacao;
         private System.Windows.Forms.ComboBox cmbpuser;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

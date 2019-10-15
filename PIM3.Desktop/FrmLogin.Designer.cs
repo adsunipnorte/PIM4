@@ -78,7 +78,7 @@
             this.lblusuario.Font = new System.Drawing.Font("Arial", 12F);
             this.lblusuario.Location = new System.Drawing.Point(139, 69);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(62, 18);
+            this.lblusuario.Size = new System.Drawing.Size(76, 23);
             this.lblusuario.TabIndex = 6;
             this.lblusuario.Text = "Usuário";
             // 
@@ -88,7 +88,7 @@
             this.lblsenha.Font = new System.Drawing.Font("Arial", 12F);
             this.lblsenha.Location = new System.Drawing.Point(139, 129);
             this.lblsenha.Name = "lblsenha";
-            this.lblsenha.Size = new System.Drawing.Size(53, 18);
+            this.lblsenha.Size = new System.Drawing.Size(65, 23);
             this.lblsenha.TabIndex = 7;
             this.lblsenha.Text = "Senha";
             // 
@@ -186,9 +186,9 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 347);
+            this.ClientSize = new System.Drawing.Size(622, 435);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnentrar);
             this.Controls.Add(this.txtsenha);
@@ -199,6 +199,7 @@
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

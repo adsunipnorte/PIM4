@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,17 +18,7 @@ namespace PIM3.Desktop
             InitializeComponent();
         }
 
-        private void chkfitro_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkfitro.Checked == true)
-            {
-                cmbfiltro.Show();
-            }
-            else
-            {
-                cmbfiltro.Visible = false;
-            }
-        }
+        
 
         private void btnnovo_Click(object sender, EventArgs e)
         {
@@ -75,6 +66,17 @@ namespace PIM3.Desktop
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+            string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+            string Query = "Select * from tb_estados";
+            SqlConnection con = new SqlConnection(strConxao);
+            SqlDataAdapter da = new SqlDataAdapter(Query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvestados.DataSource = dt;
         }
     }
 }

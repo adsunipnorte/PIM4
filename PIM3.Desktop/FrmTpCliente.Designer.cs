@@ -59,7 +59,7 @@
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(582, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(782, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -111,7 +111,7 @@
             this.groupBox1.Controls.Add(this.btnnovo);
             this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 108);
+            this.groupBox1.Size = new System.Drawing.Size(758, 108);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -186,7 +186,7 @@
             this.dgvpesqtpcliente.Name = "dgvpesqtpcliente";
             this.dgvpesqtpcliente.ReadOnly = true;
             this.dgvpesqtpcliente.RowTemplate.Height = 24;
-            this.dgvpesqtpcliente.Size = new System.Drawing.Size(544, 255);
+            this.dgvpesqtpcliente.Size = new System.Drawing.Size(758, 255);
             this.dgvpesqtpcliente.TabIndex = 12;
             // 
             // id
@@ -212,13 +212,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 438);
+            this.ClientSize = new System.Drawing.Size(782, 555);
             this.Controls.Add(this.dgvpesqtpcliente);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmTpCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo de cliente";

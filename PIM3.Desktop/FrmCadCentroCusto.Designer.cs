@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCentroCusto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
             this.lblidcc = new System.Windows.Forms.Label();
@@ -43,13 +37,6 @@
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dgvteste = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvteste)).BeginInit();
             this.SuspendLayout();
             // 
             // txtdescricao
@@ -101,8 +88,8 @@
             this.chksituacao.Checked = true;
             this.chksituacao.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.chksituacao.ForeColor = System.Drawing.Color.White;
-            this.chksituacao.Location = new System.Drawing.Point(172, 25);
-            this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chksituacao.Location = new System.Drawing.Point(153, 21);
+            this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chksituacao.Name = "chksituacao";
             this.chksituacao.Size = new System.Drawing.Size(20, 20);
             this.chksituacao.TabIndex = 48;
@@ -129,14 +116,14 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = true;
-            this.btngravar.Location = new System.Drawing.Point(133, 400);
-            this.btngravar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btngravar.Location = new System.Drawing.Point(68, 179);
+            this.btngravar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btngravar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btngravar.OnHoverTextColor = System.Drawing.Color.White;
             this.btngravar.selected = false;
-            this.btngravar.Size = new System.Drawing.Size(154, 70);
+            this.btngravar.Size = new System.Drawing.Size(137, 59);
             this.btngravar.TabIndex = 2;
             this.btngravar.Text = "Gravar";
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,14 +153,14 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = true;
-            this.btnsair.Location = new System.Drawing.Point(482, 399);
-            this.btnsair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnsair.Location = new System.Drawing.Point(417, 178);
+            this.btnsair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
             this.btnsair.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(13)))), ((int)(((byte)(40)))));
             this.btnsair.OnHoverTextColor = System.Drawing.Color.White;
             this.btnsair.selected = false;
-            this.btnsair.Size = new System.Drawing.Size(154, 70);
+            this.btnsair.Size = new System.Drawing.Size(137, 59);
             this.btnsair.TabIndex = 4;
             this.btnsair.Text = "Sair";
             this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,14 +191,14 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = true;
-            this.btnlimpar.Location = new System.Drawing.Point(308, 399);
-            this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnlimpar.Location = new System.Drawing.Point(243, 178);
+            this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnlimpar.OnHovercolor = System.Drawing.Color.Black;
             this.btnlimpar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnlimpar.selected = false;
-            this.btnlimpar.Size = new System.Drawing.Size(154, 70);
+            this.btnlimpar.Size = new System.Drawing.Size(137, 59);
             this.btnlimpar.TabIndex = 3;
             this.btnlimpar.Text = "Limpar";
             this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,120 +206,12 @@
             this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
             this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click_1);
             // 
-            // dgvteste
-            // 
-            this.dgvteste.AllowUserToAddRows = false;
-            this.dgvteste.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            this.dgvteste.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvteste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvteste.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvteste.BackgroundColor = System.Drawing.Color.White;
-            this.dgvteste.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvteste.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvteste.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvteste.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvteste.ColumnHeadersHeight = 50;
-            this.dgvteste.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.descricao,
-            this.situacao});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvteste.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvteste.DoubleBuffered = true;
-            this.dgvteste.EnableHeadersVisualStyles = false;
-            this.dgvteste.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            this.dgvteste.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvteste.Location = new System.Drawing.Point(12, 145);
-            this.dgvteste.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvteste.Name = "dgvteste";
-            this.dgvteste.ReadOnly = true;
-            this.dgvteste.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvteste.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvteste.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvteste.RowTemplate.DividerHeight = 1;
-            this.dgvteste.RowTemplate.Height = 40;
-            this.dgvteste.RowTemplate.ReadOnly = true;
-            this.dgvteste.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvteste.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvteste.Size = new System.Drawing.Size(741, 217);
-            this.dgvteste.TabIndex = 999;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "id";
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // situacao
-            // 
-            this.situacao.DataPropertyName = "situacao";
-            this.situacao.HeaderText = "Situação";
-            this.situacao.Name = "situacao";
-            this.situacao.ReadOnly = true;
-            // 
-            // bunifuTileButton1
-            // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 20;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "Tile 1";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(518, 21);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(173, 78);
-            this.bunifuTileButton1.TabIndex = 50;
-            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 7;
-            this.bunifuElipse1.TargetControl = this.dgvteste;
-            // 
             // FrmCadCentroCusto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 555);
-            this.Controls.Add(this.bunifuTileButton1);
-            this.Controls.Add(this.dgvteste);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(622, 315);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
@@ -342,12 +221,13 @@
             this.Controls.Add(this.lblidcc);
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadCentroCusto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centro de custo";
             this.Load += new System.EventHandler(this.FrmCadCentroCusto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvteste)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,11 +242,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvteste;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        
     }
 }

@@ -37,7 +37,8 @@ namespace PIM3.Desktop
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
-
+            txtid.Clear();
+            txtdescricao.Clear();
         }
 
         private void btnsair_Click_1(object sender, EventArgs e)
@@ -51,6 +52,14 @@ namespace PIM3.Desktop
             else
             {
                 txtdescricao.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
+            }
+        }
+
+        private void btngravar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtdescricao.Text)){
+                MessageBox.Show("Campo descrição não está preenchido.", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
             }
         }
     }

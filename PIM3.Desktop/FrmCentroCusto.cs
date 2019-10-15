@@ -30,21 +30,7 @@ namespace PIM3.Desktop
                 this.Close();
         }
 
-        private void chkfiltro_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkfiltro.Checked == true) //verifica se checkbox está selecionado, caso sim mostra combobox filtro
-            {
-                cmbfiltro.Show();
-            }
-            else
-            {
-                cmbfiltro.Visible = false; // caso não esteja selecionado, marca false no combobox
-            }
-                
-            
-                
-        }
-
+        
         private void cmbfiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -79,5 +65,20 @@ namespace PIM3.Desktop
             FrmCadCentroCusto altcentrocusto = new FrmCadCentroCusto();
             altcentrocusto.Show();
         }
+
+        private void chkpesquisar_OnChange(object sender, EventArgs e)
+        {
+            if (chkpesquisar.Checked == true)
+            {
+                cmbpesqcentrocusto.Visible = true;
+            }
+
+            else
+            {
+                cmbpesqcentrocusto.Visible = false;
+            }
+        }
+
+        
     }
 }

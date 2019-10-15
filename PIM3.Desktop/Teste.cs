@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace PIM3.Desktop
 {
     public partial class Teste : Form
@@ -33,6 +34,28 @@ namespace PIM3.Desktop
             {
                 MessageBox.Show("Nao Conectado");
             }
+        }
+
+       
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            alert.Show("Registro inserido com sucesso.", alert.AlertType.success);
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            alert.Show("Registro inserido com sucesso.", alert.AlertType.error);
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            alert.Show("Registro inserido com sucesso.", alert.AlertType.info);
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            alert.Show("Registro inserido com sucesso.", alert.AlertType.warnig);
         }
     }
 }

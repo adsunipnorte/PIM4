@@ -40,5 +40,22 @@ namespace PIM3.Desktop
                 txtdescricao.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
             }
         }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
+            txtid.Clear();
+            txtdescricao.Clear();
+        }
+
+        private void btngravar_Click(object sender, EventArgs e)
+        {
+
+            if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text)))
+            {
+                MessageBox.Show("É necessario preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtdescricao.Focus();
+            }
+
+        }
     }
 }

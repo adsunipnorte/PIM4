@@ -43,6 +43,9 @@
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peçasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradaSaídaDeMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.locaçãoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.novaLocaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesInadimplentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesBloqueadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,19 +56,16 @@
             this.centroDeCustoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planoDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnclienteprinc = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.entradaSaídaDeMateriaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnfinanceiroprinc = new System.Windows.Forms.Button();
             this.manutençãoVeículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pneusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.locaçãoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.novaLocaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnlocacaoprinc = new System.Windows.Forms.Button();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnpneuprinc = new System.Windows.Forms.Button();
+            this.btnlocacaoprinc = new System.Windows.Forms.Button();
+            this.btnfinanceiroprinc = new System.Windows.Forms.Button();
+            this.btnclienteprinc = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +84,7 @@
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1182, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -111,7 +111,7 @@
             this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.clientesToolStripMenuItem.Text = "C&lientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -119,14 +119,14 @@
             // 
             this.contatoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("contatoToolStripMenuItem1.Image")));
             this.contatoToolStripMenuItem1.Name = "contatoToolStripMenuItem1";
-            this.contatoToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.contatoToolStripMenuItem1.Size = new System.Drawing.Size(195, 26);
             this.contatoToolStripMenuItem1.Text = "Contato Cliente";
             this.contatoToolStripMenuItem1.Click += new System.EventHandler(this.contatoToolStripMenuItem1_Click);
             // 
             // tipoClienteToolStripMenuItem
             // 
             this.tipoClienteToolStripMenuItem.Name = "tipoClienteToolStripMenuItem";
-            this.tipoClienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tipoClienteToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.tipoClienteToolStripMenuItem.Text = "Tipo Cliente";
             this.tipoClienteToolStripMenuItem.Click += new System.EventHandler(this.tipoClienteToolStripMenuItem_Click_1);
             // 
@@ -135,7 +135,7 @@
             this.condutoresToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.condutoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("condutoresToolStripMenuItem.Image")));
             this.condutoresToolStripMenuItem.Name = "condutoresToolStripMenuItem";
-            this.condutoresToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.condutoresToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.condutoresToolStripMenuItem.Text = "C&ondutores";
             this.condutoresToolStripMenuItem.Click += new System.EventHandler(this.condutoresToolStripMenuItem_Click);
             // 
@@ -143,7 +143,7 @@
             // 
             this.fornecedoresToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.fornecedoresToolStripMenuItem.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
@@ -151,7 +151,7 @@
             // 
             this.usuáriosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.usuáriosToolStripMenuItem.Text = "&Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@
             // 
             this.seguroToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.seguroToolStripMenuItem.Name = "seguroToolStripMenuItem";
-            this.seguroToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.seguroToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.seguroToolStripMenuItem.Text = "&Seguro";
             this.seguroToolStripMenuItem.Click += new System.EventHandler(this.seguroToolStripMenuItem_Click);
             // 
@@ -167,14 +167,14 @@
             // 
             this.estadosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
-            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.estadosToolStripMenuItem.Text = "&Estados";
             this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
-            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.cidadesToolStripMenuItem.Text = "Cidades";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
             // 
@@ -193,6 +193,28 @@
             this.peçasToolStripMenuItem.Name = "peçasToolStripMenuItem";
             this.peçasToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
             this.peçasToolStripMenuItem.Text = "&Peças";
+            // 
+            // entradaSaídaDeMateriaisToolStripMenuItem
+            // 
+            this.entradaSaídaDeMateriaisToolStripMenuItem.Name = "entradaSaídaDeMateriaisToolStripMenuItem";
+            this.entradaSaídaDeMateriaisToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.entradaSaídaDeMateriaisToolStripMenuItem.Text = "Entrada/Saída de materiais";
+            // 
+            // locaçãoToolStripMenuItem1
+            // 
+            this.locaçãoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novaLocaçãoToolStripMenuItem});
+            this.locaçãoToolStripMenuItem1.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.locaçãoToolStripMenuItem1.Name = "locaçãoToolStripMenuItem1";
+            this.locaçãoToolStripMenuItem1.Size = new System.Drawing.Size(84, 23);
+            this.locaçãoToolStripMenuItem1.Text = "Locação";
+            // 
+            // novaLocaçãoToolStripMenuItem
+            // 
+            this.novaLocaçãoToolStripMenuItem.Name = "novaLocaçãoToolStripMenuItem";
+            this.novaLocaçãoToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.novaLocaçãoToolStripMenuItem.Text = "Nova locação";
+            this.novaLocaçãoToolStripMenuItem.Click += new System.EventHandler(this.novaLocaçãoToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -280,6 +302,27 @@
             this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(110, 23);
             this.manutençãoToolStripMenuItem.Text = "&Manutenção";
             // 
+            // manutençãoVeículoToolStripMenuItem
+            // 
+            this.manutençãoVeículoToolStripMenuItem.Name = "manutençãoVeículoToolStripMenuItem";
+            this.manutençãoVeículoToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.manutençãoVeículoToolStripMenuItem.Text = "Manutenção veículo";
+            // 
+            // pneusToolStripMenuItem
+            // 
+            this.pneusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem1});
+            this.pneusToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.pneusToolStripMenuItem.Name = "pneusToolStripMenuItem";
+            this.pneusToolStripMenuItem.Size = new System.Drawing.Size(67, 23);
+            this.pneusToolStripMenuItem.Text = "Pneus";
+            // 
+            // cadastroToolStripMenuItem1
+            // 
+            this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
+            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(150, 26);
+            this.cadastroToolStripMenuItem1.Text = "Cadastro";
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -300,74 +343,17 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // btnclienteprinc
+            // btnpneuprinc
             // 
-            this.btnclienteprinc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnclienteprinc.BackgroundImage")));
-            this.btnclienteprinc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnclienteprinc.Location = new System.Drawing.Point(12, 9);
-            this.btnclienteprinc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnclienteprinc.Name = "btnclienteprinc";
-            this.btnclienteprinc.Size = new System.Drawing.Size(72, 76);
-            this.btnclienteprinc.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnclienteprinc, "Consultar cliente");
-            this.btnclienteprinc.UseVisualStyleBackColor = true;
-            this.btnclienteprinc.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // entradaSaídaDeMateriaisToolStripMenuItem
-            // 
-            this.entradaSaídaDeMateriaisToolStripMenuItem.Name = "entradaSaídaDeMateriaisToolStripMenuItem";
-            this.entradaSaídaDeMateriaisToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.entradaSaídaDeMateriaisToolStripMenuItem.Text = "Entrada/Saída de materiais";
-            // 
-            // btnfinanceiroprinc
-            // 
-            this.btnfinanceiroprinc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnfinanceiroprinc.BackgroundImage")));
-            this.btnfinanceiroprinc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnfinanceiroprinc.Location = new System.Drawing.Point(90, 9);
-            this.btnfinanceiroprinc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnfinanceiroprinc.Name = "btnfinanceiroprinc";
-            this.btnfinanceiroprinc.Size = new System.Drawing.Size(72, 76);
-            this.btnfinanceiroprinc.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnfinanceiroprinc, "Consultar financeiro");
-            this.btnfinanceiroprinc.UseVisualStyleBackColor = true;
-            this.btnfinanceiroprinc.Click += new System.EventHandler(this.btnfinanceiro_Click);
-            // 
-            // manutençãoVeículoToolStripMenuItem
-            // 
-            this.manutençãoVeículoToolStripMenuItem.Name = "manutençãoVeículoToolStripMenuItem";
-            this.manutençãoVeículoToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
-            this.manutençãoVeículoToolStripMenuItem.Text = "Manutenção veículo";
-            // 
-            // pneusToolStripMenuItem
-            // 
-            this.pneusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem1});
-            this.pneusToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.pneusToolStripMenuItem.Name = "pneusToolStripMenuItem";
-            this.pneusToolStripMenuItem.Size = new System.Drawing.Size(67, 23);
-            this.pneusToolStripMenuItem.Text = "Pneus";
-            // 
-            // cadastroToolStripMenuItem1
-            // 
-            this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
-            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
-            this.cadastroToolStripMenuItem1.Text = "Cadastro";
-            // 
-            // locaçãoToolStripMenuItem1
-            // 
-            this.locaçãoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novaLocaçãoToolStripMenuItem});
-            this.locaçãoToolStripMenuItem1.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.locaçãoToolStripMenuItem1.Name = "locaçãoToolStripMenuItem1";
-            this.locaçãoToolStripMenuItem1.Size = new System.Drawing.Size(84, 23);
-            this.locaçãoToolStripMenuItem1.Text = "Locação";
-            // 
-            // novaLocaçãoToolStripMenuItem
-            // 
-            this.novaLocaçãoToolStripMenuItem.Name = "novaLocaçãoToolStripMenuItem";
-            this.novaLocaçãoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.novaLocaçãoToolStripMenuItem.Text = "Nova locação";
-            this.novaLocaçãoToolStripMenuItem.Click += new System.EventHandler(this.novaLocaçãoToolStripMenuItem_Click);
+            this.btnpneuprinc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnpneuprinc.BackgroundImage")));
+            this.btnpneuprinc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnpneuprinc.Location = new System.Drawing.Point(256, 9);
+            this.btnpneuprinc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnpneuprinc.Name = "btnpneuprinc";
+            this.btnpneuprinc.Size = new System.Drawing.Size(72, 76);
+            this.btnpneuprinc.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnpneuprinc, "Consultar pneus");
+            this.btnpneuprinc.UseVisualStyleBackColor = true;
             // 
             // btnlocacaoprinc
             // 
@@ -382,17 +368,31 @@
             this.btnlocacaoprinc.UseVisualStyleBackColor = true;
             this.btnlocacaoprinc.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnpneuprinc
+            // btnfinanceiroprinc
             // 
-            this.btnpneuprinc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnpneuprinc.BackgroundImage")));
-            this.btnpneuprinc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnpneuprinc.Location = new System.Drawing.Point(256, 9);
-            this.btnpneuprinc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnpneuprinc.Name = "btnpneuprinc";
-            this.btnpneuprinc.Size = new System.Drawing.Size(72, 76);
-            this.btnpneuprinc.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnpneuprinc, "Consultar pneus");
-            this.btnpneuprinc.UseVisualStyleBackColor = true;
+            this.btnfinanceiroprinc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnfinanceiroprinc.BackgroundImage")));
+            this.btnfinanceiroprinc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnfinanceiroprinc.Location = new System.Drawing.Point(90, 9);
+            this.btnfinanceiroprinc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnfinanceiroprinc.Name = "btnfinanceiroprinc";
+            this.btnfinanceiroprinc.Size = new System.Drawing.Size(72, 76);
+            this.btnfinanceiroprinc.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnfinanceiroprinc, "Consultar financeiro");
+            this.btnfinanceiroprinc.UseVisualStyleBackColor = true;
+            this.btnfinanceiroprinc.Click += new System.EventHandler(this.btnfinanceiro_Click);
+            // 
+            // btnclienteprinc
+            // 
+            this.btnclienteprinc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnclienteprinc.BackgroundImage")));
+            this.btnclienteprinc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnclienteprinc.Location = new System.Drawing.Point(12, 9);
+            this.btnclienteprinc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnclienteprinc.Name = "btnclienteprinc";
+            this.btnclienteprinc.Size = new System.Drawing.Size(72, 76);
+            this.btnclienteprinc.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btnclienteprinc, "Consultar cliente");
+            this.btnclienteprinc.UseVisualStyleBackColor = true;
+            this.btnclienteprinc.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmPrincipal
             // 
@@ -400,13 +400,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1182, 675);
+            this.ClientSize = new System.Drawing.Size(1006, 723);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eFleet";

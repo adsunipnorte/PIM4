@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,7 +46,16 @@ namespace PIM3.Desktop
             }
             else
             {
-                txtestado.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
+                txtid.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
+            }
+        }
+
+        private void btngravar_Click(object sender, EventArgs e)
+        {
+            if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text)))
+            {
+                MessageBox.Show("É necessario preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtid.Focus();
             }
         }
     }

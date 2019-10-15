@@ -43,5 +43,12 @@ namespace PIM3.Desktop
                 txtdescricao.Focus(); // Coloca foco na descrição caso digite "não" no messagebox
             }
         }
+
+        private void btnlimpar_Click(object sender, EventArgs e)
+        {
+            txtid.Clear();
+            txtdescricao.Clear();
+            txtdescricao.Focus();
+        }
     }
 }

@@ -68,7 +68,7 @@
             this.mskdtdevol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mskdtdevol.Mask = "00/00/0000 90:00";
             this.mskdtdevol.Name = "mskdtdevol";
-            this.mskdtdevol.Size = new System.Drawing.Size(124, 23);
+            this.mskdtdevol.Size = new System.Drawing.Size(124, 27);
             this.mskdtdevol.TabIndex = 5;
             this.mskdtdevol.ValidatingType = typeof(System.DateTime);
             // 
@@ -78,7 +78,7 @@
             this.mskdtloc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mskdtloc.Mask = "00/00/0000 90:00";
             this.mskdtloc.Name = "mskdtloc";
-            this.mskdtloc.Size = new System.Drawing.Size(124, 23);
+            this.mskdtloc.Size = new System.Drawing.Size(124, 27);
             this.mskdtloc.TabIndex = 4;
             this.mskdtloc.ValidatingType = typeof(System.DateTime);
             // 
@@ -88,7 +88,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblid.Location = new System.Drawing.Point(-65, 108);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(20, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 122;
             this.lblid.Text = "ID";
             // 
@@ -98,7 +98,7 @@
             this.lblkmf.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblkmf.Location = new System.Drawing.Point(33, 366);
             this.lblkmf.Name = "lblkmf";
-            this.lblkmf.Size = new System.Drawing.Size(60, 16);
+            this.lblkmf.Size = new System.Drawing.Size(73, 19);
             this.lblkmf.TabIndex = 118;
             this.lblkmf.Text = "KM Final";
             // 
@@ -108,7 +108,7 @@
             this.lblkmi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblkmi.Location = new System.Drawing.Point(33, 328);
             this.lblkmi.Name = "lblkmi";
-            this.lblkmi.Size = new System.Drawing.Size(65, 16);
+            this.lblkmi.Size = new System.Drawing.Size(81, 19);
             this.lblkmi.TabIndex = 117;
             this.lblkmi.Text = "KM Inicial";
             // 
@@ -118,7 +118,7 @@
             this.lbldias.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldias.Location = new System.Drawing.Point(37, 294);
             this.lbldias.Name = "lbldias";
-            this.lbldias.Size = new System.Drawing.Size(59, 16);
+            this.lbldias.Size = new System.Drawing.Size(72, 19);
             this.lbldias.TabIndex = 116;
             this.lbldias.Text = "Qtd Dias";
             // 
@@ -128,7 +128,7 @@
             this.lblbairro.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbairro.Location = new System.Drawing.Point(-65, 232);
             this.lblbairro.Name = "lblbairro";
-            this.lblbairro.Size = new System.Drawing.Size(42, 16);
+            this.lblbairro.Size = new System.Drawing.Size(54, 19);
             this.lblbairro.TabIndex = 115;
             this.lblbairro.Text = "Bairro";
             // 
@@ -138,7 +138,7 @@
             this.lbldtdev.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldtdev.Location = new System.Drawing.Point(33, 227);
             this.lbldtdev.Name = "lbldtdev";
-            this.lbldtdev.Size = new System.Drawing.Size(98, 16);
+            this.lbldtdev.Size = new System.Drawing.Size(124, 19);
             this.lbldtdev.TabIndex = 114;
             this.lbldtdev.Text = "Data Devolução";
             // 
@@ -147,7 +147,7 @@
             this.txtdiaria.Location = new System.Drawing.Point(189, 261);
             this.txtdiaria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdiaria.Name = "txtdiaria";
-            this.txtdiaria.Size = new System.Drawing.Size(124, 23);
+            this.txtdiaria.Size = new System.Drawing.Size(124, 27);
             this.txtdiaria.TabIndex = 6;
             // 
             // lblplaca
@@ -156,7 +156,7 @@
             this.lblplaca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblplaca.Location = new System.Drawing.Point(33, 151);
             this.lblplaca.Name = "lblplaca";
-            this.lblplaca.Size = new System.Drawing.Size(41, 16);
+            this.lblplaca.Size = new System.Drawing.Size(50, 19);
             this.lblplaca.TabIndex = 113;
             this.lblplaca.Text = "Placa";
             // 
@@ -165,7 +165,7 @@
             this.txtplaca.Location = new System.Drawing.Point(123, 148);
             this.txtplaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtplaca.Name = "txtplaca";
-            this.txtplaca.Size = new System.Drawing.Size(191, 23);
+            this.txtplaca.Size = new System.Drawing.Size(191, 27);
             this.txtplaca.TabIndex = 3;
             // 
             // lblveiculo
@@ -174,7 +174,7 @@
             this.lblveiculo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblveiculo.Location = new System.Drawing.Point(33, 115);
             this.lblveiculo.Name = "lblveiculo";
-            this.lblveiculo.Size = new System.Drawing.Size(50, 16);
+            this.lblveiculo.Size = new System.Drawing.Size(63, 19);
             this.lblveiculo.TabIndex = 1;
             this.lblveiculo.Text = "Veículo";
             // 
@@ -183,7 +183,7 @@
             this.txtkmi.Location = new System.Drawing.Point(189, 328);
             this.txtkmi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkmi.Name = "txtkmi";
-            this.txtkmi.Size = new System.Drawing.Size(124, 23);
+            this.txtkmi.Size = new System.Drawing.Size(124, 27);
             this.txtkmi.TabIndex = 8;
             // 
             // lblcel
@@ -192,7 +192,7 @@
             this.lblcel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcel.Location = new System.Drawing.Point(-65, 366);
             this.lblcel.Name = "lblcel";
-            this.lblcel.Size = new System.Drawing.Size(48, 16);
+            this.lblcel.Size = new System.Drawing.Size(60, 19);
             this.lblcel.TabIndex = 111;
             this.lblcel.Text = "Celular";
             // 
@@ -201,7 +201,7 @@
             this.txtdias.Location = new System.Drawing.Point(189, 294);
             this.txtdias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdias.Name = "txtdias";
-            this.txtdias.Size = new System.Drawing.Size(124, 23);
+            this.txtdias.Size = new System.Drawing.Size(124, 27);
             this.txtdias.TabIndex = 7;
             // 
             // lbldtini
@@ -210,7 +210,7 @@
             this.lbldtini.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldtini.Location = new System.Drawing.Point(32, 185);
             this.lbldtini.Name = "lbldtini";
-            this.lbldtini.Size = new System.Drawing.Size(88, 16);
+            this.lbldtini.Size = new System.Drawing.Size(111, 19);
             this.lbldtini.TabIndex = 109;
             this.lbldtini.Text = "Data Locação";
             // 
@@ -220,7 +220,7 @@
             this.lblvdiaria.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvdiaria.Location = new System.Drawing.Point(33, 261);
             this.lblvdiaria.Name = "lblvdiaria";
-            this.lblvdiaria.Size = new System.Drawing.Size(74, 16);
+            this.lblvdiaria.Size = new System.Drawing.Size(95, 19);
             this.lblvdiaria.TabIndex = 108;
             this.lblvdiaria.Text = "Valor Diária";
             // 
@@ -230,7 +230,7 @@
             this.lblcpf.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcpf.Location = new System.Drawing.Point(-65, 265);
             this.lblcpf.Name = "lblcpf";
-            this.lblcpf.Size = new System.Drawing.Size(34, 16);
+            this.lblcpf.Size = new System.Drawing.Size(42, 19);
             this.lblcpf.TabIndex = 107;
             this.lblcpf.Text = "CPF";
             // 
@@ -242,7 +242,7 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 23);
+            this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 105;
             this.txtid.TabStop = false;
             // 
@@ -251,7 +251,7 @@
             this.txtkmf.Location = new System.Drawing.Point(189, 366);
             this.txtkmf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkmf.Name = "txtkmf";
-            this.txtkmf.Size = new System.Drawing.Size(124, 23);
+            this.txtkmf.Size = new System.Drawing.Size(124, 27);
             this.txtkmf.TabIndex = 9;
             // 
             // lblcnh
@@ -260,7 +260,7 @@
             this.lblcnh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcnh.Location = new System.Drawing.Point(-65, 404);
             this.lblcnh.Name = "lblcnh";
-            this.lblcnh.Size = new System.Drawing.Size(35, 16);
+            this.lblcnh.Size = new System.Drawing.Size(43, 19);
             this.lblcnh.TabIndex = 106;
             this.lblcnh.Text = "CNH";
             // 
@@ -269,7 +269,7 @@
             this.txtveiculo.Location = new System.Drawing.Point(123, 112);
             this.txtveiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtveiculo.Name = "txtveiculo";
-            this.txtveiculo.Size = new System.Drawing.Size(535, 23);
+            this.txtveiculo.Size = new System.Drawing.Size(535, 27);
             this.txtveiculo.TabIndex = 2;
             this.txtveiculo.Tag = "";
             // 
@@ -279,7 +279,7 @@
             this.lblnome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnome.Location = new System.Drawing.Point(-65, 154);
             this.lblnome.Name = "lblnome";
-            this.lblnome.Size = new System.Drawing.Size(42, 16);
+            this.lblnome.Size = new System.Drawing.Size(51, 19);
             this.lblnome.TabIndex = 104;
             this.lblnome.Text = "Nome";
             // 
@@ -289,7 +289,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
+            this.label1.Size = new System.Drawing.Size(26, 19);
             this.label1.TabIndex = 123;
             this.label1.Text = "ID";
             // 
@@ -299,7 +299,7 @@
             this.lblcliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcliente.Location = new System.Drawing.Point(37, 78);
             this.lblcliente.Name = "lblcliente";
-            this.lblcliente.Size = new System.Drawing.Size(48, 16);
+            this.lblcliente.Size = new System.Drawing.Size(59, 19);
             this.lblcliente.TabIndex = 127;
             this.lblcliente.Text = "Cliente";
             // 
@@ -308,7 +308,7 @@
             this.txtcliente.Location = new System.Drawing.Point(120, 75);
             this.txtcliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcliente.Name = "txtcliente";
-            this.txtcliente.Size = new System.Drawing.Size(537, 23);
+            this.txtcliente.Size = new System.Drawing.Size(537, 27);
             this.txtcliente.TabIndex = 1;
             // 
             // textBox1
@@ -316,7 +316,7 @@
             this.textBox1.Location = new System.Drawing.Point(189, 403);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 23);
+            this.textBox1.Size = new System.Drawing.Size(124, 27);
             this.textBox1.TabIndex = 10;
             // 
             // lblseguro
@@ -325,7 +325,7 @@
             this.lblseguro.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblseguro.Location = new System.Drawing.Point(37, 403);
             this.lblseguro.Name = "lblseguro";
-            this.lblseguro.Size = new System.Drawing.Size(49, 16);
+            this.lblseguro.Size = new System.Drawing.Size(62, 19);
             this.lblseguro.TabIndex = 129;
             this.lblseguro.Text = "Seguro";
             // 
@@ -438,9 +438,9 @@
             // 
             // FrmCadLocacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 616);
+            this.ClientSize = new System.Drawing.Size(782, 555);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
@@ -475,6 +475,7 @@
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de locação";

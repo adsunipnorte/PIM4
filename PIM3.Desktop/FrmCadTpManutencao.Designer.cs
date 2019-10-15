@@ -33,13 +33,9 @@
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lblid = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.dgvtpmanutencao = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtpmanutencao)).BeginInit();
             this.SuspendLayout();
             // 
             // lbldescricao
@@ -48,7 +44,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lbldescricao.Location = new System.Drawing.Point(49, 103);
             this.lbldescricao.Name = "lbldescricao";
-            this.lbldescricao.Size = new System.Drawing.Size(71, 16);
+            this.lbldescricao.Size = new System.Drawing.Size(84, 19);
             this.lbldescricao.TabIndex = 77;
             this.lbldescricao.Text = "Descrição";
             // 
@@ -56,7 +52,7 @@
             // 
             this.txtdescricao.Location = new System.Drawing.Point(167, 100);
             this.txtdescricao.Name = "txtdescricao";
-            this.txtdescricao.Size = new System.Drawing.Size(430, 23);
+            this.txtdescricao.Size = new System.Drawing.Size(430, 27);
             this.txtdescricao.TabIndex = 76;
             // 
             // lblid
@@ -65,7 +61,7 @@
             this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
             this.lblid.Location = new System.Drawing.Point(49, 49);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(21, 16);
+            this.lblid.Size = new System.Drawing.Size(26, 19);
             this.lblid.TabIndex = 75;
             this.lblid.Text = "ID";
             // 
@@ -77,37 +73,9 @@
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 23);
+            this.txtid.Size = new System.Drawing.Size(62, 27);
             this.txtid.TabIndex = 74;
             this.txtid.TabStop = false;
-            // 
-            // dgvtpmanutencao
-            // 
-            this.dgvtpmanutencao.AllowUserToAddRows = false;
-            this.dgvtpmanutencao.AllowUserToDeleteRows = false;
-            this.dgvtpmanutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvtpmanutencao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Descricao});
-            this.dgvtpmanutencao.Location = new System.Drawing.Point(53, 161);
-            this.dgvtpmanutencao.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.dgvtpmanutencao.Name = "dgvtpmanutencao";
-            this.dgvtpmanutencao.RowTemplate.Height = 24;
-            this.dgvtpmanutencao.Size = new System.Drawing.Size(544, 211);
-            this.dgvtpmanutencao.TabIndex = 78;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 400;
             // 
             // btnlimpar
             // 
@@ -131,7 +99,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(258, 414);
+            this.btnlimpar.Location = new System.Drawing.Point(226, 196);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -167,7 +135,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(432, 414);
+            this.btnsair.Location = new System.Drawing.Point(400, 196);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -203,7 +171,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(85, 414);
+            this.btngravar.Location = new System.Drawing.Point(53, 196);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -216,16 +184,16 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // FrmCadTpManutencao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 534);
+            this.ClientSize = new System.Drawing.Size(622, 315);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
-            this.Controls.Add(this.dgvtpmanutencao);
             this.Controls.Add(this.lbldescricao);
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lblid);
@@ -233,11 +201,11 @@
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FrmCadTpManutencao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo de manutenção";
             this.Load += new System.EventHandler(this.FrmTpManutencao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtpmanutencao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,9 +217,6 @@
         private System.Windows.Forms.TextBox txtdescricao;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.DataGridView dgvtpmanutencao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;

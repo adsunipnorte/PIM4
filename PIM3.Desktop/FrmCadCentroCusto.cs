@@ -82,15 +82,29 @@ namespace PIM3.Desktop
             //classe.AbreConexao(query); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
 
             // --------------------------------------------------------------------------------------------------------------------
-            //ClasseConexaoBD con = new ClasseConexaoBD();
-            //string var = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
-            //con.AbreConexao(var);
+
+            if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text)))
+            {
+                MessageBox.Show("É necessario preencher o campo descrição.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtdescricao.Focus();
+            }
+
+            else
+            {
+                ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
+                string var = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+                con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
+
+            }
+
+            
             // --------------------------------------------------------------------------------------------------------------------
 
 
             // --------------------------------------------------------------------------------------------------------------------
             //SqlComandosDLL sql = new SqlComandosDLL();
             //sql.InsertCentroCusto(txtdescricao.Text);
+            //alert.Show("Registro inserido com sucesso.", alert.AlertType.success);
             // --------------------------------------------------------------------------------------------------------------------
 
 
@@ -121,17 +135,6 @@ namespace PIM3.Desktop
 
         }
 
-        private void bunifuTileButton1_Click(object sender, EventArgs e)
-        {
-            string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
-            string Query = "Select * from tb_centrocustos";
-            SqlConnection con = new SqlConnection(strConxao);
-            SqlDataAdapter da = new SqlDataAdapter(Query, con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dgvteste.DataSource = dt;
-
-
-        }
+       
     }
 }

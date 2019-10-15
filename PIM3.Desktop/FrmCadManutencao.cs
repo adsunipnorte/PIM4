@@ -46,7 +46,11 @@ namespace PIM3.Desktop
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-
+            if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text)))
+            {
+                MessageBox.Show("É necessario preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtdescricao.Focus();
+            }
         }
 
         private void btnlimpar_Click(object sender, EventArgs e)
