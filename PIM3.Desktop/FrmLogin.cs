@@ -52,12 +52,6 @@ namespace PIM3.Desktop
             }
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            btnsair.Enabled = false;
-            this.Close();
-        }
-
         private void btnentrar_Click(object sender, EventArgs e)
         {
             if (txtusuario.Text == "sa" && txtsenha.Text == "sa")

@@ -29,176 +29,128 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.btnlogin = new System.Windows.Forms.Button();
-            this.txtusuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.lblusuario = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblsenha = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtsenha = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnentrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtlogin = new System.Windows.Forms.Button();
+            this.txtsenha = new JTextBox2.JTextBox();
+            this.txtusuario = new JTextBox2.JTextBox();
+            this.lbllogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnlogin
+            // checkBox1
             // 
-            this.btnlogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(232, -5);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(141, 56);
-            this.btnlogin.TabIndex = 3;
-            this.btnlogin.Text = "Login";
-            this.btnlogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnlogin.UseVisualStyleBackColor = true;
-            this.btnlogin.Visible = false;
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(240, 351);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(116, 21);
+            this.checkBox1.TabIndex = 104;
+            this.checkBox1.Text = "Lembrar-me";
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // txtusuario
+            // label3
             // 
-            this.txtusuario.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtusuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtusuario.ForeColor = System.Drawing.Color.Transparent;
-            this.txtusuario.HintForeColor = System.Drawing.Color.Empty;
-            this.txtusuario.HintText = "";
-            this.txtusuario.isPassword = false;
-            this.txtusuario.LineFocusedColor = System.Drawing.Color.White;
-            this.txtusuario.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtusuario.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtusuario.LineThickness = 3;
-            this.txtusuario.Location = new System.Drawing.Point(232, 59);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(188, 33);
-            this.txtusuario.TabIndex = 5;
-            this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(395, 353);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 17);
+            this.label3.TabIndex = 103;
+            this.label3.Text = "Esqueci minha senha";
             // 
-            // lblusuario
+            // txtlogin
             // 
-            this.lblusuario.AutoSize = true;
-            this.lblusuario.Font = new System.Drawing.Font("Arial", 12F);
-            this.lblusuario.Location = new System.Drawing.Point(139, 69);
-            this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(76, 23);
-            this.lblusuario.TabIndex = 6;
-            this.lblusuario.Text = "Usuário";
-            // 
-            // lblsenha
-            // 
-            this.lblsenha.AutoSize = true;
-            this.lblsenha.Font = new System.Drawing.Font("Arial", 12F);
-            this.lblsenha.Location = new System.Drawing.Point(139, 129);
-            this.lblsenha.Name = "lblsenha";
-            this.lblsenha.Size = new System.Drawing.Size(65, 23);
-            this.lblsenha.TabIndex = 7;
-            this.lblsenha.Text = "Senha";
+            this.txtlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
+            this.txtlogin.FlatAppearance.BorderSize = 0;
+            this.txtlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtlogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlogin.ForeColor = System.Drawing.Color.White;
+            this.txtlogin.Location = new System.Drawing.Point(241, 378);
+            this.txtlogin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlogin.Name = "txtlogin";
+            this.txtlogin.Size = new System.Drawing.Size(305, 46);
+            this.txtlogin.TabIndex = 102;
+            this.txtlogin.Text = "ACESSAR";
+            this.txtlogin.UseVisualStyleBackColor = false;
             // 
             // txtsenha
             // 
-            this.txtsenha.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtsenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsenha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtsenha.ForeColor = System.Drawing.Color.Transparent;
-            this.txtsenha.HintForeColor = System.Drawing.Color.Empty;
-            this.txtsenha.HintText = "";
-            this.txtsenha.isPassword = false;
-            this.txtsenha.LineFocusedColor = System.Drawing.Color.White;
-            this.txtsenha.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtsenha.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtsenha.LineThickness = 3;
-            this.txtsenha.Location = new System.Drawing.Point(232, 119);
-            this.txtsenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtsenha.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtsenha.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtsenha.HintText = "SENHA";
+            this.txtsenha.IsPassword = true;
+            this.txtsenha.Location = new System.Drawing.Point(241, 298);
+            this.txtsenha.Margin = new System.Windows.Forms.Padding(5);
+            this.txtsenha.MaxLength = 32767;
             this.txtsenha.Name = "txtsenha";
-            this.txtsenha.Size = new System.Drawing.Size(188, 33);
-            this.txtsenha.TabIndex = 8;
-            this.txtsenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtsenha.OnFocusedColor = System.Drawing.Color.White;
+            this.txtsenha.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.txtsenha.ReadOnly = false;
+            this.txtsenha.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.txtsenha.Size = new System.Drawing.Size(305, 46);
+            this.txtsenha.TabIndex = 105;
+            this.txtsenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsenha.TextName = "SENHA";
             // 
-            // btnsair
+            // txtusuario
             // 
-            this.btnsair.Activecolor = System.Drawing.Color.Crimson;
-            this.btnsair.BackColor = System.Drawing.Color.Crimson;
-            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.BorderRadius = 7;
-            this.btnsair.ButtonText = "Sair";
-            this.btnsair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsair.DisabledColor = System.Drawing.Color.Gray;
-            this.btnsair.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnsair.Iconimage = null;
-            this.btnsair.Iconimage_right = null;
-            this.btnsair.Iconimage_right_Selected = null;
-            this.btnsair.Iconimage_Selected = null;
-            this.btnsair.IconMarginLeft = 0;
-            this.btnsair.IconMarginRight = 10;
-            this.btnsair.IconRightVisible = false;
-            this.btnsair.IconRightZoom = 0D;
-            this.btnsair.IconVisible = false;
-            this.btnsair.IconZoom = 90D;
-            this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(306, 208);
-            this.btnsair.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
-            this.btnsair.Name = "btnsair";
-            this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
-            this.btnsair.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(13)))), ((int)(((byte)(40)))));
-            this.btnsair.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnsair.selected = false;
-            this.btnsair.Size = new System.Drawing.Size(154, 70);
-            this.btnsair.TabIndex = 141;
-            this.btnsair.Text = "Sair";
-            this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnsair.Textcolor = System.Drawing.Color.White;
-            this.btnsair.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
-            this.btnsair.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtusuario.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtusuario.HintText = "USUÁRIO";
+            this.txtusuario.IsPassword = false;
+            this.txtusuario.Location = new System.Drawing.Point(241, 238);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(5);
+            this.txtusuario.MaxLength = 32767;
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.OnFocusedColor = System.Drawing.Color.White;
+            this.txtusuario.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.txtusuario.ReadOnly = false;
+            this.txtusuario.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.txtusuario.Size = new System.Drawing.Size(305, 46);
+            this.txtusuario.TabIndex = 106;
+            this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtusuario.TextName = "USUÁRIO";
             // 
-            // btnentrar
+            // lbllogin
             // 
-            this.btnentrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnentrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnentrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnentrar.BorderRadius = 7;
-            this.btnentrar.ButtonText = "Acessar";
-            this.btnentrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnentrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnentrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnentrar.Iconimage = null;
-            this.btnentrar.Iconimage_right = null;
-            this.btnentrar.Iconimage_right_Selected = null;
-            this.btnentrar.Iconimage_Selected = null;
-            this.btnentrar.IconMarginLeft = 0;
-            this.btnentrar.IconMarginRight = 10;
-            this.btnentrar.IconRightVisible = false;
-            this.btnentrar.IconRightZoom = 0D;
-            this.btnentrar.IconVisible = false;
-            this.btnentrar.IconZoom = 90D;
-            this.btnentrar.IsTab = false;
-            this.btnentrar.Location = new System.Drawing.Point(129, 208);
-            this.btnentrar.Margin = new System.Windows.Forms.Padding(4, 12, 4, 12);
-            this.btnentrar.Name = "btnentrar";
-            this.btnentrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnentrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnentrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnentrar.selected = false;
-            this.btnentrar.Size = new System.Drawing.Size(154, 70);
-            this.btnentrar.TabIndex = 140;
-            this.btnentrar.Text = "Acessar";
-            this.btnentrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnentrar.Textcolor = System.Drawing.Color.White;
-            this.btnentrar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
+            this.lbllogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbllogin.AutoSize = true;
+            this.lbllogin.BackColor = System.Drawing.Color.Transparent;
+            this.lbllogin.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllogin.ForeColor = System.Drawing.Color.White;
+            this.lbllogin.Location = new System.Drawing.Point(323, 50);
+            this.lbllogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbllogin.Name = "lbllogin";
+            this.lbllogin.Size = new System.Drawing.Size(143, 45);
+            this.lbllogin.TabIndex = 100;
+            this.lbllogin.Text = "LOGIN";
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 435);
-            this.Controls.Add(this.btnsair);
-            this.Controls.Add(this.btnentrar);
+            this.BackgroundImage = global::PIM3.Desktop.Properties.Resources.Imagem_fundo_Login;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(782, 555);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtlogin);
             this.Controls.Add(this.txtsenha);
-            this.Controls.Add(this.lblsenha);
-            this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.txtusuario);
-            this.Controls.Add(this.btnlogin);
-            this.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.Controls.Add(this.lbllogin);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -211,13 +163,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnlogin;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtusuario;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblusuario;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblsenha;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtsenha;
-        private Bunifu.Framework.UI.BunifuFlatButton btnsair;
-        private Bunifu.Framework.UI.BunifuFlatButton btnentrar;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button txtlogin;
+        private JTextBox2.JTextBox txtsenha;
+        private JTextBox2.JTextBox txtusuario;
+        private System.Windows.Forms.Label lbllogin;
     }
 }
 

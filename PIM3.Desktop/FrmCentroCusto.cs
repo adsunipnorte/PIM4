@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DLLComando;
+
 
 namespace PIM3.Desktop
 {
@@ -30,7 +33,7 @@ namespace PIM3.Desktop
                 this.Close();
         }
 
-        
+
         private void cmbfiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -38,7 +41,7 @@ namespace PIM3.Desktop
 
         private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCadCentroCusto altcentrocusto= new FrmCadCentroCusto();
+            FrmCadCentroCusto altcentrocusto = new FrmCadCentroCusto();
             altcentrocusto.Show();
         }
 
@@ -66,19 +69,87 @@ namespace PIM3.Desktop
             altcentrocusto.Show();
         }
 
-        private void chkpesquisar_OnChange(object sender, EventArgs e)
+        private void addFromDb(Bunifu.Framework.UI.BunifuDropdown cmbpesqcentrocusto)
         {
-            if (chkpesquisar.Checked == true)
+            SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=efleet;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from tb_centrocustos", con);
+            SqlDataReader read = cmd.ExecuteReader();
+            while (read.Read())
             {
-                cmbpesqcentrocusto.Visible = true;
+                cmbpesqcentrocusto.AddItem(read.GetString(0));
             }
+            con.Close();
+        }
 
-            else
+        private void FrmCentroCusto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(27)) // Verifica se a tecla ESC foi pressionada
             {
-                cmbpesqcentrocusto.Visible = false;
+                if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo, // Caso escolha "sim" é fechada janela
+                    MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+
+                    this.Close();
+                }
             }
         }
 
-        
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+            if (txtpesquisar.TextName == "") // Verifica se o textbox estão em branco
+            {
+                MessageBox.Show("Digite um termo para pesquisa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtpesquisar.Focus();
+            }
+
+            else if (rdbid.Checked == true) // Caso radiobutton ID esteja marcado, faz select pesquisando por número contido no textbox
+            {
+
+                txtpesquisar.Focus();
+                string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+                string Query = "select id, descricao, situacao from tb_centrocustos where id =" + Convert.ToString(txtpesquisar.TextName);
+                SqlConnection con = new SqlConnection(strConxao);
+                SqlDataAdapter da = new SqlDataAdapter(Query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvcentrocusto.DataSource = dt;
+                txtpesquisar.Focus();
+            }
+
+            else if (rdbdescricao.Checked == true) // Caso radiobutton esteja marcado, faz pesquisa pela descrição contida no textbox
+            {
+                txtpesquisar.Focus();
+                string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+                string Query = "select id, descricao, situacao from tb_centrocustos where Descricao like \'%" + txtpesquisar.TextName + "%\'";
+                SqlConnection con = new SqlConnection(strConxao);
+                SqlDataAdapter da = new SqlDataAdapter(Query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvcentrocusto.DataSource = dt;
+                txtpesquisar.Focus();
+            }
+
+
+        }
+
+              
+        private void rdbid_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbid.Checked==true) // Verifica se radiobutton ID está marcado, caso esteja coloca o foco no textbox pesquisar
+            {
+                txtpesquisar.Focus();
+            }
+        }
+
+        private void rdbdescricao_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbdescricao.Checked == true) // Verifica se radiobutton descrição está marcado, sendo verdadeiro coloca o foco no textbox pesquisar
+            {
+                txtpesquisar.Focus();
+            }
+        }
     }
 }
+
+
