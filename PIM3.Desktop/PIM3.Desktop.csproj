@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClasseConexaoBD.cs" />
+    <Compile Include="Cmethods.cs" />
     <Compile Include="FrmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -457,6 +458,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagens\Imagem fundo Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

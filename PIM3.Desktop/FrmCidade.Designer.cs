@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCidade));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,19 +42,23 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbfiltro = new System.Windows.Forms.ComboBox();
-            this.chkfiltro = new System.Windows.Forms.CheckBox();
+            this.txtestado = new JTextBox2.JTextBox();
             this.btnsair = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbestado = new System.Windows.Forms.RadioButton();
+            this.rdbcidade = new System.Windows.Forms.RadioButton();
+            this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btncalt = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dgvpesqcidade = new System.Windows.Forms.DataGridView();
-            this.codcidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idestados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvcidade = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqcidade)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcidade)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,47 +116,45 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbfiltro);
-            this.groupBox1.Controls.Add(this.chkfiltro);
+            this.groupBox1.Controls.Add(this.txtestado);
             this.groupBox1.Controls.Add(this.btnsair);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.btnpesquisar);
             this.groupBox1.Controls.Add(this.btncalt);
             this.groupBox1.Controls.Add(this.btnnovo);
-            this.groupBox1.Location = new System.Drawing.Point(14, 56);
+            this.groupBox1.Location = new System.Drawing.Point(14, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(838, 128);
+            this.groupBox1.Size = new System.Drawing.Size(756, 128);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // cmbfiltro
+            // txtestado
             // 
-            this.cmbfiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfiltro.FormattingEnabled = true;
-            this.cmbfiltro.Location = new System.Drawing.Point(530, 18);
-            this.cmbfiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbfiltro.Name = "cmbfiltro";
-            this.cmbfiltro.Size = new System.Drawing.Size(147, 27);
-            this.cmbfiltro.TabIndex = 7;
-            this.cmbfiltro.Visible = false;
-            // 
-            // chkfiltro
-            // 
-            this.chkfiltro.AutoSize = true;
-            this.chkfiltro.Location = new System.Drawing.Point(436, 23);
-            this.chkfiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chkfiltro.Name = "chkfiltro";
-            this.chkfiltro.Size = new System.Drawing.Size(67, 23);
-            this.chkfiltro.TabIndex = 6;
-            this.chkfiltro.Text = "Filtro";
-            this.chkfiltro.UseVisualStyleBackColor = true;
-            this.chkfiltro.CheckedChanged += new System.EventHandler(this.chkfiltro_CheckedChanged);
+            this.txtestado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtestado.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtestado.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtestado.HintText = null;
+            this.txtestado.IsPassword = false;
+            this.txtestado.Location = new System.Drawing.Point(520, 39);
+            this.txtestado.Margin = new System.Windows.Forms.Padding(5);
+            this.txtestado.MaxLength = 50;
+            this.txtestado.Name = "txtestado";
+            this.txtestado.OnFocusedColor = System.Drawing.Color.White;
+            this.txtestado.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.txtestado.ReadOnly = false;
+            this.txtestado.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.txtestado.Size = new System.Drawing.Size(213, 30);
+            this.txtestado.TabIndex = 0;
+            this.txtestado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtestado.TextName = "";
             // 
             // btnsair
             // 
             this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
             this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Location = new System.Drawing.Point(271, 20);
+            this.btnsair.Location = new System.Drawing.Point(208, 20);
             this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(81, 90);
@@ -156,11 +163,72 @@
             this.btnsair.UseVisualStyleBackColor = true;
             this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdbestado);
+            this.groupBox2.Controls.Add(this.rdbcidade);
+            this.groupBox2.Location = new System.Drawing.Point(297, 20);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(178, 93);
+            this.groupBox2.TabIndex = 1005;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tipo de pesquisa";
+            // 
+            // rdbestado
+            // 
+            this.rdbestado.AutoSize = true;
+            this.rdbestado.Location = new System.Drawing.Point(16, 56);
+            this.rdbestado.Name = "rdbestado";
+            this.rdbestado.Size = new System.Drawing.Size(80, 23);
+            this.rdbestado.TabIndex = 1;
+            this.rdbestado.TabStop = true;
+            this.rdbestado.Text = "Estado";
+            this.rdbestado.UseVisualStyleBackColor = true;
+            this.rdbestado.CheckedChanged += new System.EventHandler(this.rdbestado_CheckedChanged);
+            // 
+            // rdbcidade
+            // 
+            this.rdbcidade.AutoSize = true;
+            this.rdbcidade.Location = new System.Drawing.Point(16, 26);
+            this.rdbcidade.Name = "rdbcidade";
+            this.rdbcidade.Size = new System.Drawing.Size(82, 23);
+            this.rdbcidade.TabIndex = 0;
+            this.rdbcidade.TabStop = true;
+            this.rdbcidade.Text = "Cidade";
+            this.rdbcidade.UseVisualStyleBackColor = true;
+            this.rdbcidade.CheckedChanged += new System.EventHandler(this.rdbcidade_CheckedChanged);
+            // 
+            // btnpesquisar
+            // 
+            this.btnpesquisar.ActiveBorderThickness = 1;
+            this.btnpesquisar.ActiveCornerRadius = 20;
+            this.btnpesquisar.ActiveFillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnpesquisar.ActiveLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnpesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnpesquisar.BackgroundImage")));
+            this.btnpesquisar.ButtonText = "Pesquisar";
+            this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnpesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.IdleBorderThickness = 1;
+            this.btnpesquisar.IdleCornerRadius = 20;
+            this.btnpesquisar.IdleFillColor = System.Drawing.Color.White;
+            this.btnpesquisar.IdleForecolor = System.Drawing.Color.Black;
+            this.btnpesquisar.IdleLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.Location = new System.Drawing.Point(575, 75);
+            this.btnpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(117, 35);
+            this.btnpesquisar.TabIndex = 1004;
+            this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
+            // 
             // btncalt
             // 
             this.btncalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncalt.BackgroundImage")));
             this.btncalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncalt.Location = new System.Drawing.Point(156, 23);
+            this.btncalt.Location = new System.Drawing.Point(113, 23);
             this.btncalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncalt.Name = "btncalt";
             this.btncalt.Size = new System.Drawing.Size(81, 90);
@@ -173,7 +241,7 @@
             // 
             this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
             this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnovo.Location = new System.Drawing.Point(38, 23);
+            this.btnnovo.Location = new System.Drawing.Point(15, 23);
             this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(81, 90);
@@ -182,50 +250,94 @@
             this.btnnovo.UseVisualStyleBackColor = true;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 
-            // dgvpesqcidade
+            // dgvcidade
             // 
-            this.dgvpesqcidade.AllowUserToAddRows = false;
-            this.dgvpesqcidade.AllowUserToDeleteRows = false;
-            this.dgvpesqcidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpesqcidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codcidade,
-            this.nome,
-            this.idestados});
-            this.dgvpesqcidade.Location = new System.Drawing.Point(14, 204);
-            this.dgvpesqcidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvpesqcidade.Name = "dgvpesqcidade";
-            this.dgvpesqcidade.ReadOnly = true;
-            this.dgvpesqcidade.RowTemplate.Height = 24;
-            this.dgvpesqcidade.Size = new System.Drawing.Size(838, 337);
-            this.dgvpesqcidade.TabIndex = 4;
+            this.dgvcidade.AllowUserToAddRows = false;
+            this.dgvcidade.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvcidade.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvcidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvcidade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvcidade.BackgroundColor = System.Drawing.Color.White;
+            this.dgvcidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvcidade.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvcidade.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcidade.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvcidade.ColumnHeadersHeight = 50;
+            this.dgvcidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcidade.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvcidade.DoubleBuffered = true;
+            this.dgvcidade.EnableHeadersVisualStyles = false;
+            this.dgvcidade.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.dgvcidade.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvcidade.Location = new System.Drawing.Point(16, 185);
+            this.dgvcidade.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvcidade.Name = "dgvcidade";
+            this.dgvcidade.ReadOnly = true;
+            this.dgvcidade.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcidade.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvcidade.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvcidade.RowTemplate.DividerHeight = 1;
+            this.dgvcidade.RowTemplate.Height = 40;
+            this.dgvcidade.RowTemplate.ReadOnly = true;
+            this.dgvcidade.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcidade.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvcidade.Size = new System.Drawing.Size(754, 369);
+            this.dgvcidade.TabIndex = 1002;
             // 
-            // codcidade
+            // dataGridViewTextBoxColumn2
             // 
-            this.codcidade.HeaderText = "Código Cidade";
-            this.codcidade.Name = "codcidade";
-            this.codcidade.ReadOnly = true;
-            this.codcidade.Width = 200;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "codcidade";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cod.Cidade";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // nome
+            // dataGridViewTextBoxColumn3
             // 
-            this.nome.HeaderText = "Cidade";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Width = 300;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cidade";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // idestados
+            // dataGridViewTextBoxColumn4
             // 
-            this.idestados.HeaderText = "Estado";
-            this.idestados.Name = "idestados";
-            this.idestados.ReadOnly = true;
-            this.idestados.Width = 300;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // FrmCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 555);
-            this.Controls.Add(this.dgvpesqcidade);
+            this.Controls.Add(this.dgvcidade);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -235,11 +347,13 @@
             this.Name = "FrmCidade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de cidade";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCidade_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqcidade)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,15 +368,18 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbfiltro;
-        private System.Windows.Forms.CheckBox chkfiltro;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.Button btncalt;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DataGridView dgvpesqcidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codcidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idestados;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvcidade;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdbestado;
+        private System.Windows.Forms.RadioButton rdbcidade;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
+        private JTextBox2.JTextBox txtestado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

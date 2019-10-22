@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,7 +37,7 @@ namespace PIM3.Desktop
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+            if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 this.Close();
@@ -64,15 +65,56 @@ namespace PIM3.Desktop
             altveiculo.Show();
         }
 
-        private void chkfitro_CheckedChanged(object sender, EventArgs e)
+        private void btnpesquisar_Click(object sender, EventArgs e)
         {
-            if (chkfitro.Checked == true)
+            if (txtpesquisar.TextName == "") // Verifica se o textbox está em branco
             {
-                cmbfiltro.Show();
+                MessageBox.Show("Digite um termo para pesquisar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtpesquisar.Focus();
             }
-            else
+
+
+            else if (rdbdescricao.Checked == true) // Caso radiobutton ID esteja marcado, faz select pesquisando pelo texto contido no textbox
             {
-                cmbfiltro.Visible = false;
+
+
+                txtpesquisar.Focus(); // Foco é colocado em textbox
+
+                string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+                string Query = "select tb_tipoveiculo.id, tb_tipoveiculo.descricao, tb_situacao.id from tb_tipoveiculo left join tb_situacao on tb_situacao.id=tb_tipoveiculo.situacao where upper(descricao) like '%" + txtpesquisar.Text + "%'";
+                SqlConnection con = new SqlConnection(strConxao);
+
+                try
+                {
+                    con.Open();
+                    SqlDataAdapter da = new SqlDataAdapter(Query, con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgvtpveiculo.DataSource = dt;
+                    txtpesquisar.Focus();
+                }
+                catch (Exception erro)
+                {
+                    string mensagem = erro.Message;
+                    mensagem += "Não foi possivel conectar ao banco de dados.";
+
+                }
+
+            }
+
+            else if (rdbsituacao.Checked == true) // Caso radiobutton esteja marcado, faz pesquisa pela descrição contida no textbox
+            {
+
+                txtpesquisar.Focus(); // Foco é colocado em textbox
+                string strCnxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+                string Query = "select tb_tipoveiculo.id, tb_tipoveiculo.descricao, tb_situacao.id from tb_tipoveiculo left join tb_situacao on tb_situacao.id=tb_tipoveiculo.situacao where upper(situacao) like '%" + txtpesquisar.TextName + "%'";
+                SqlConnection con = new SqlConnection(strCnxao);
+                SqlDataAdapter da = new SqlDataAdapter(Query, strCnxao);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvtpveiculo.DataSource = dt;
+                txtpesquisar.Focus();
+
             }
         }
     }

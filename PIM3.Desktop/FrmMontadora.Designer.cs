@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMontadora));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,19 +42,23 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkfitro = new System.Windows.Forms.CheckBox();
-            this.cmbfiltro = new System.Windows.Forms.ComboBox();
             this.btnsair = new System.Windows.Forms.Button();
             this.btnalt = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
-            this.dgvpesqmontadora = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dgvmontadora = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtpesquisar = new JTextBox2.JTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbsituacao = new System.Windows.Forms.RadioButton();
+            this.rdbdescricao = new System.Windows.Forms.RadioButton();
+            this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqmontadora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmontadora)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,43 +116,20 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chkfitro);
-            this.groupBox1.Controls.Add(this.cmbfiltro);
             this.groupBox1.Controls.Add(this.btnsair);
             this.groupBox1.Controls.Add(this.btnalt);
             this.groupBox1.Controls.Add(this.btnnovo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 44);
+            this.groupBox1.Location = new System.Drawing.Point(8, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 108);
+            this.groupBox1.Size = new System.Drawing.Size(252, 108);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            // 
-            // chkfitro
-            // 
-            this.chkfitro.AutoSize = true;
-            this.chkfitro.Location = new System.Drawing.Point(280, 19);
-            this.chkfitro.Name = "chkfitro";
-            this.chkfitro.Size = new System.Drawing.Size(67, 23);
-            this.chkfitro.TabIndex = 7;
-            this.chkfitro.Text = "Filtro";
-            this.chkfitro.UseVisualStyleBackColor = true;
-            this.chkfitro.CheckedChanged += new System.EventHandler(this.chkfitro_CheckedChanged);
-            // 
-            // cmbfiltro
-            // 
-            this.cmbfiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfiltro.FormattingEnabled = true;
-            this.cmbfiltro.Location = new System.Drawing.Point(353, 15);
-            this.cmbfiltro.Name = "cmbfiltro";
-            this.cmbfiltro.Size = new System.Drawing.Size(130, 27);
-            this.cmbfiltro.TabIndex = 6;
-            this.cmbfiltro.Visible = false;
             // 
             // btnsair
             // 
             this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
             this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Location = new System.Drawing.Point(190, 19);
+            this.btnsair.Location = new System.Drawing.Point(168, 19);
             this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(72, 76);
@@ -156,7 +142,7 @@
             // 
             this.btnalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnalt.BackgroundImage")));
             this.btnalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnalt.Location = new System.Drawing.Point(101, 19);
+            this.btnalt.Location = new System.Drawing.Point(88, 19);
             this.btnalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnalt.Name = "btnalt";
             this.btnalt.Size = new System.Drawing.Size(72, 76);
@@ -169,7 +155,7 @@
             // 
             this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
             this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnovo.Location = new System.Drawing.Point(23, 19);
+            this.btnnovo.Location = new System.Drawing.Point(10, 19);
             this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(72, 76);
@@ -178,48 +164,178 @@
             this.btnnovo.UseVisualStyleBackColor = true;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 
-            // dgvpesqmontadora
+            // dgvmontadora
             // 
-            this.dgvpesqmontadora.AllowUserToAddRows = false;
-            this.dgvpesqmontadora.AllowUserToDeleteRows = false;
-            this.dgvpesqmontadora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpesqmontadora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvmontadora.AllowUserToAddRows = false;
+            this.dgvmontadora.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvmontadora.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvmontadora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvmontadora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvmontadora.BackgroundColor = System.Drawing.Color.White;
+            this.dgvmontadora.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvmontadora.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvmontadora.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvmontadora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvmontadora.ColumnHeadersHeight = 50;
+            this.dgvmontadora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descricao,
             this.situacao});
-            this.dgvpesqmontadora.Location = new System.Drawing.Point(12, 176);
-            this.dgvpesqmontadora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvpesqmontadora.Name = "dgvpesqmontadora";
-            this.dgvpesqmontadora.ReadOnly = true;
-            this.dgvpesqmontadora.RowTemplate.Height = 24;
-            this.dgvpesqmontadora.Size = new System.Drawing.Size(544, 255);
-            this.dgvpesqmontadora.TabIndex = 9;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvmontadora.DefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvmontadora.DoubleBuffered = true;
+            this.dgvmontadora.EnableHeadersVisualStyles = false;
+            this.dgvmontadora.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.dgvmontadora.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvmontadora.Location = new System.Drawing.Point(8, 144);
+            this.dgvmontadora.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvmontadora.Name = "dgvmontadora";
+            this.dgvmontadora.ReadOnly = true;
+            this.dgvmontadora.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvmontadora.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvmontadora.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvmontadora.RowTemplate.DividerHeight = 1;
+            this.dgvmontadora.RowTemplate.Height = 40;
+            this.dgvmontadora.RowTemplate.ReadOnly = true;
+            this.dgvmontadora.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvmontadora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvmontadora.Size = new System.Drawing.Size(756, 398);
+            this.dgvmontadora.TabIndex = 1013;
             // 
             // id
             // 
-            this.id.HeaderText = "Id";
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
             // descricao
             // 
+            this.descricao.DataPropertyName = "descricao";
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
-            this.descricao.Width = 300;
             // 
             // situacao
             // 
+            this.situacao.DataPropertyName = "situacao";
             this.situacao.HeaderText = "Situação";
             this.situacao.Name = "situacao";
             this.situacao.ReadOnly = true;
+            // 
+            // txtpesquisar
+            // 
+            this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpesquisar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtpesquisar.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtpesquisar.HintText = null;
+            this.txtpesquisar.IsPassword = false;
+            this.txtpesquisar.Location = new System.Drawing.Point(461, 61);
+            this.txtpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtpesquisar.MaxLength = 50;
+            this.txtpesquisar.Name = "txtpesquisar";
+            this.txtpesquisar.OnFocusedColor = System.Drawing.Color.White;
+            this.txtpesquisar.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.txtpesquisar.ReadOnly = false;
+            this.txtpesquisar.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.txtpesquisar.Size = new System.Drawing.Size(245, 30);
+            this.txtpesquisar.TabIndex = 1024;
+            this.txtpesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtpesquisar.TextName = "";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdbsituacao);
+            this.groupBox2.Controls.Add(this.rdbdescricao);
+            this.groupBox2.Location = new System.Drawing.Point(266, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(167, 108);
+            this.groupBox2.TabIndex = 1026;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tipo de pesquisa";
+            // 
+            // rdbsituacao
+            // 
+            this.rdbsituacao.AutoSize = true;
+            this.rdbsituacao.Location = new System.Drawing.Point(16, 67);
+            this.rdbsituacao.Name = "rdbsituacao";
+            this.rdbsituacao.Size = new System.Drawing.Size(94, 23);
+            this.rdbsituacao.TabIndex = 1;
+            this.rdbsituacao.TabStop = true;
+            this.rdbsituacao.Text = "Situação";
+            this.rdbsituacao.UseVisualStyleBackColor = true;
+            this.rdbsituacao.CheckedChanged += new System.EventHandler(this.rdbsituacao_CheckedChanged);
+            // 
+            // rdbdescricao
+            // 
+            this.rdbdescricao.AutoSize = true;
+            this.rdbdescricao.Location = new System.Drawing.Point(16, 37);
+            this.rdbdescricao.Name = "rdbdescricao";
+            this.rdbdescricao.Size = new System.Drawing.Size(105, 23);
+            this.rdbdescricao.TabIndex = 0;
+            this.rdbdescricao.TabStop = true;
+            this.rdbdescricao.Text = "Descrição";
+            this.rdbdescricao.UseVisualStyleBackColor = true;
+            this.rdbdescricao.CheckedChanged += new System.EventHandler(this.rdbdescricao_CheckedChanged);
+            // 
+            // btnpesquisar
+            // 
+            this.btnpesquisar.ActiveBorderThickness = 1;
+            this.btnpesquisar.ActiveCornerRadius = 20;
+            this.btnpesquisar.ActiveFillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnpesquisar.ActiveLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnpesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnpesquisar.BackgroundImage")));
+            this.btnpesquisar.ButtonText = "Pesquisar";
+            this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnpesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.IdleBorderThickness = 1;
+            this.btnpesquisar.IdleCornerRadius = 20;
+            this.btnpesquisar.IdleFillColor = System.Drawing.Color.White;
+            this.btnpesquisar.IdleForecolor = System.Drawing.Color.Black;
+            this.btnpesquisar.IdleLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.Location = new System.Drawing.Point(529, 101);
+            this.btnpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(117, 35);
+            this.btnpesquisar.TabIndex = 1025;
+            this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // FrmMontadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 555);
-            this.Controls.Add(this.dgvpesqmontadora);
+            this.Controls.Add(this.txtpesquisar);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnpesquisar);
+            this.Controls.Add(this.dgvmontadora);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -229,11 +345,13 @@
             this.Name = "FrmMontadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de montadora";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMontadora_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqmontadora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmontadora)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,15 +366,18 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chkfitro;
-        private System.Windows.Forms.ComboBox cmbfiltro;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.Button btnalt;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DataGridView dgvpesqmontadora;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvmontadora;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
+        private JTextBox2.JTextBox txtpesquisar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdbsituacao;
+        private System.Windows.Forms.RadioButton rdbdescricao;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
     }
 }

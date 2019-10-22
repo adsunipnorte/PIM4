@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCentroCusto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,9 +119,9 @@
             this.groupBox1.Controls.Add(this.btnsair);
             this.groupBox1.Controls.Add(this.btncalt);
             this.groupBox1.Controls.Add(this.btnnovo);
-            this.groupBox1.Location = new System.Drawing.Point(15, 45);
+            this.groupBox1.Location = new System.Drawing.Point(15, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(317, 108);
+            this.groupBox1.Size = new System.Drawing.Size(282, 108);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -129,7 +129,7 @@
             // 
             this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
             this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Location = new System.Drawing.Point(224, 17);
+            this.btnsair.Location = new System.Drawing.Point(188, 17);
             this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(72, 76);
@@ -142,7 +142,7 @@
             // 
             this.btncalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncalt.BackgroundImage")));
             this.btncalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btncalt.Location = new System.Drawing.Point(122, 19);
+            this.btncalt.Location = new System.Drawing.Point(97, 17);
             this.btncalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncalt.Name = "btncalt";
             this.btncalt.Size = new System.Drawing.Size(72, 76);
@@ -155,7 +155,7 @@
             // 
             this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
             this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnovo.Location = new System.Drawing.Point(17, 19);
+            this.btnnovo.Location = new System.Drawing.Point(10, 17);
             this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(72, 76);
@@ -168,7 +168,7 @@
             // 
             this.btnpesquisar.ActiveBorderThickness = 1;
             this.btnpesquisar.ActiveCornerRadius = 20;
-            this.btnpesquisar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnpesquisar.ActiveFillColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnpesquisar.ActiveForecolor = System.Drawing.Color.White;
             this.btnpesquisar.ActiveLineColor = System.Drawing.Color.White;
             this.btnpesquisar.BackColor = System.Drawing.SystemColors.Control;
@@ -180,9 +180,9 @@
             this.btnpesquisar.IdleBorderThickness = 1;
             this.btnpesquisar.IdleCornerRadius = 20;
             this.btnpesquisar.IdleFillColor = System.Drawing.Color.White;
-            this.btnpesquisar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnpesquisar.IdleForecolor = System.Drawing.Color.Black;
             this.btnpesquisar.IdleLineColor = System.Drawing.Color.White;
-            this.btnpesquisar.Location = new System.Drawing.Point(598, 109);
+            this.btnpesquisar.Location = new System.Drawing.Point(577, 99);
             this.btnpesquisar.Margin = new System.Windows.Forms.Padding(5);
             this.btnpesquisar.Name = "btnpesquisar";
             this.btnpesquisar.Size = new System.Drawing.Size(117, 35);
@@ -194,8 +194,8 @@
             // 
             this.dgvcentrocusto.AllowUserToAddRows = false;
             this.dgvcentrocusto.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgvcentrocusto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvcentrocusto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvcentrocusto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvcentrocusto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -203,27 +203,27 @@
             this.dgvcentrocusto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvcentrocusto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvcentrocusto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcentrocusto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcentrocusto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvcentrocusto.ColumnHeadersHeight = 50;
             this.dgvcentrocusto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcentrocusto.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcentrocusto.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvcentrocusto.DoubleBuffered = true;
             this.dgvcentrocusto.EnableHeadersVisualStyles = false;
             this.dgvcentrocusto.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
@@ -233,16 +233,16 @@
             this.dgvcentrocusto.Name = "dgvcentrocusto";
             this.dgvcentrocusto.ReadOnly = true;
             this.dgvcentrocusto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcentrocusto.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvcentrocusto.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcentrocusto.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvcentrocusto.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvcentrocusto.RowTemplate.DividerHeight = 1;
             this.dgvcentrocusto.RowTemplate.Height = 40;
             this.dgvcentrocusto.RowTemplate.ReadOnly = true;
@@ -276,9 +276,9 @@
             // 
             this.groupBox2.Controls.Add(this.rdbdescricao);
             this.groupBox2.Controls.Add(this.rdbid);
-            this.groupBox2.Location = new System.Drawing.Point(350, 53);
+            this.groupBox2.Location = new System.Drawing.Point(303, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(178, 100);
+            this.groupBox2.Size = new System.Drawing.Size(167, 108);
             this.groupBox2.TabIndex = 1002;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipo de pesquisa";
@@ -314,29 +314,28 @@
             this.txtpesquisar.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
             this.txtpesquisar.HintText = null;
             this.txtpesquisar.IsPassword = false;
-            this.txtpesquisar.Location = new System.Drawing.Point(546, 59);
+            this.txtpesquisar.Location = new System.Drawing.Point(514, 59);
             this.txtpesquisar.Margin = new System.Windows.Forms.Padding(5);
-            this.txtpesquisar.MaxLength = 32767;
+            this.txtpesquisar.MaxLength = 50;
             this.txtpesquisar.Name = "txtpesquisar";
             this.txtpesquisar.OnFocusedColor = System.Drawing.Color.White;
             this.txtpesquisar.OnFocusedTextColor = System.Drawing.Color.Gray;
             this.txtpesquisar.ReadOnly = false;
             this.txtpesquisar.Right_To_Left = System.Windows.Forms.RightToLeft.No;
-            this.txtpesquisar.Size = new System.Drawing.Size(213, 30);
+            this.txtpesquisar.Size = new System.Drawing.Size(245, 30);
             this.txtpesquisar.TabIndex = 1;
             this.txtpesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtpesquisar.TextName = "";
-            this.txtpesquisar.Load += new System.EventHandler(this.txtpesquisar_Load);
             // 
             // msktxtpesquisa
             // 
             this.msktxtpesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.msktxtpesquisa.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.msktxtpesquisa.ForeColor = System.Drawing.Color.Gray;
-            this.msktxtpesquisa.Location = new System.Drawing.Point(546, 59);
+            this.msktxtpesquisa.Location = new System.Drawing.Point(514, 19);
             this.msktxtpesquisa.Margin = new System.Windows.Forms.Padding(5);
             this.msktxtpesquisa.Name = "msktxtpesquisa";
-            this.msktxtpesquisa.Size = new System.Drawing.Size(213, 30);
+            this.msktxtpesquisa.Size = new System.Drawing.Size(245, 30);
             this.msktxtpesquisa.TabIndex = 1003;
             this.msktxtpesquisa.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.msktxtpesquisa.Visible = false;
@@ -363,6 +362,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de centro de custo";
+            this.Load += new System.EventHandler(this.FrmCentroCusto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCentroCusto_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

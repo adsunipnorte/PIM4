@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTpCliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,18 +41,22 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkfitro = new System.Windows.Forms.CheckBox();
-            this.cmbfiltro = new System.Windows.Forms.ComboBox();
             this.btnsair = new System.Windows.Forms.Button();
             this.btnalt = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
-            this.dgvpesqtpcliente = new System.Windows.Forms.DataGridView();
+            this.dgvtpcliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txtpesquisar = new JTextBox2.JTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbsituacao = new System.Windows.Forms.RadioButton();
+            this.rdbdescricao = new System.Windows.Forms.RadioButton();
+            this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqtpcliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtpcliente)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -104,43 +113,20 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chkfitro);
-            this.groupBox1.Controls.Add(this.cmbfiltro);
             this.groupBox1.Controls.Add(this.btnsair);
             this.groupBox1.Controls.Add(this.btnalt);
             this.groupBox1.Controls.Add(this.btnnovo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 42);
+            this.groupBox1.Location = new System.Drawing.Point(9, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(758, 108);
+            this.groupBox1.Size = new System.Drawing.Size(283, 108);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            // 
-            // chkfitro
-            // 
-            this.chkfitro.AutoSize = true;
-            this.chkfitro.Location = new System.Drawing.Point(321, 23);
-            this.chkfitro.Name = "chkfitro";
-            this.chkfitro.Size = new System.Drawing.Size(67, 23);
-            this.chkfitro.TabIndex = 7;
-            this.chkfitro.Text = "Filtro";
-            this.chkfitro.UseVisualStyleBackColor = true;
-            this.chkfitro.CheckedChanged += new System.EventHandler(this.chkfitro_CheckedChanged);
-            // 
-            // cmbfiltro
-            // 
-            this.cmbfiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfiltro.FormattingEnabled = true;
-            this.cmbfiltro.Location = new System.Drawing.Point(394, 19);
-            this.cmbfiltro.Name = "cmbfiltro";
-            this.cmbfiltro.Size = new System.Drawing.Size(130, 27);
-            this.cmbfiltro.TabIndex = 6;
-            this.cmbfiltro.Visible = false;
             // 
             // btnsair
             // 
             this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
             this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Location = new System.Drawing.Point(220, 19);
+            this.btnsair.Location = new System.Drawing.Point(196, 19);
             this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(72, 76);
@@ -152,7 +138,7 @@
             // 
             this.btnalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnalt.BackgroundImage")));
             this.btnalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnalt.Location = new System.Drawing.Point(129, 19);
+            this.btnalt.Location = new System.Drawing.Point(105, 19);
             this.btnalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnalt.Name = "btnalt";
             this.btnalt.Size = new System.Drawing.Size(72, 76);
@@ -164,7 +150,7 @@
             // 
             this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
             this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnovo.Location = new System.Drawing.Point(34, 19);
+            this.btnnovo.Location = new System.Drawing.Point(10, 19);
             this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(72, 76);
@@ -172,38 +158,165 @@
             this.btnnovo.UseVisualStyleBackColor = true;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 
-            // dgvpesqtpcliente
+            // dgvtpcliente
             // 
-            this.dgvpesqtpcliente.AllowUserToAddRows = false;
-            this.dgvpesqtpcliente.AllowUserToDeleteRows = false;
-            this.dgvpesqtpcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpesqtpcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvtpcliente.AllowUserToAddRows = false;
+            this.dgvtpcliente.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dgvtpcliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvtpcliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvtpcliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvtpcliente.BackgroundColor = System.Drawing.Color.White;
+            this.dgvtpcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvtpcliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvtpcliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvtpcliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvtpcliente.ColumnHeadersHeight = 50;
+            this.dgvtpcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descricao,
             this.situacao});
-            this.dgvpesqtpcliente.Location = new System.Drawing.Point(12, 155);
-            this.dgvpesqtpcliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvpesqtpcliente.Name = "dgvpesqtpcliente";
-            this.dgvpesqtpcliente.ReadOnly = true;
-            this.dgvpesqtpcliente.RowTemplate.Height = 24;
-            this.dgvpesqtpcliente.Size = new System.Drawing.Size(758, 255);
-            this.dgvpesqtpcliente.TabIndex = 12;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvtpcliente.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvtpcliente.DoubleBuffered = true;
+            this.dgvtpcliente.EnableHeadersVisualStyles = false;
+            this.dgvtpcliente.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.dgvtpcliente.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvtpcliente.Location = new System.Drawing.Point(9, 144);
+            this.dgvtpcliente.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvtpcliente.Name = "dgvtpcliente";
+            this.dgvtpcliente.ReadOnly = true;
+            this.dgvtpcliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvtpcliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvtpcliente.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvtpcliente.RowTemplate.DividerHeight = 1;
+            this.dgvtpcliente.RowTemplate.Height = 40;
+            this.dgvtpcliente.RowTemplate.ReadOnly = true;
+            this.dgvtpcliente.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvtpcliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvtpcliente.Size = new System.Drawing.Size(756, 398);
+            this.dgvtpcliente.TabIndex = 1009;
+            // 
+            // txtpesquisar
+            // 
+            this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpesquisar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtpesquisar.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtpesquisar.HintText = null;
+            this.txtpesquisar.IsPassword = false;
+            this.txtpesquisar.Location = new System.Drawing.Point(492, 62);
+            this.txtpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtpesquisar.MaxLength = 50;
+            this.txtpesquisar.Name = "txtpesquisar";
+            this.txtpesquisar.OnFocusedColor = System.Drawing.Color.White;
+            this.txtpesquisar.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.txtpesquisar.ReadOnly = false;
+            this.txtpesquisar.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.txtpesquisar.Size = new System.Drawing.Size(245, 30);
+            this.txtpesquisar.TabIndex = 1012;
+            this.txtpesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtpesquisar.TextName = "";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdbsituacao);
+            this.groupBox2.Controls.Add(this.rdbdescricao);
+            this.groupBox2.Location = new System.Drawing.Point(298, 25);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(167, 108);
+            this.groupBox2.TabIndex = 1014;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tipo de pesquisa";
+            // 
+            // rdbsituacao
+            // 
+            this.rdbsituacao.AutoSize = true;
+            this.rdbsituacao.Location = new System.Drawing.Point(16, 67);
+            this.rdbsituacao.Name = "rdbsituacao";
+            this.rdbsituacao.Size = new System.Drawing.Size(94, 23);
+            this.rdbsituacao.TabIndex = 1;
+            this.rdbsituacao.TabStop = true;
+            this.rdbsituacao.Text = "Situação";
+            this.rdbsituacao.UseVisualStyleBackColor = true;
+            this.rdbsituacao.CheckedChanged += new System.EventHandler(this.rdbsituacao_CheckedChanged);
+            // 
+            // rdbdescricao
+            // 
+            this.rdbdescricao.AutoSize = true;
+            this.rdbdescricao.Location = new System.Drawing.Point(16, 37);
+            this.rdbdescricao.Name = "rdbdescricao";
+            this.rdbdescricao.Size = new System.Drawing.Size(105, 23);
+            this.rdbdescricao.TabIndex = 0;
+            this.rdbdescricao.TabStop = true;
+            this.rdbdescricao.Text = "Descrição";
+            this.rdbdescricao.UseVisualStyleBackColor = true;
+            this.rdbdescricao.CheckedChanged += new System.EventHandler(this.rdbdescricao_CheckedChanged);
+            // 
+            // btnpesquisar
+            // 
+            this.btnpesquisar.ActiveBorderThickness = 1;
+            this.btnpesquisar.ActiveCornerRadius = 20;
+            this.btnpesquisar.ActiveFillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnpesquisar.ActiveLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnpesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnpesquisar.BackgroundImage")));
+            this.btnpesquisar.ButtonText = "Pesquisar";
+            this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnpesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.IdleBorderThickness = 1;
+            this.btnpesquisar.IdleCornerRadius = 20;
+            this.btnpesquisar.IdleFillColor = System.Drawing.Color.White;
+            this.btnpesquisar.IdleForecolor = System.Drawing.Color.Black;
+            this.btnpesquisar.IdleLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.Location = new System.Drawing.Point(548, 102);
+            this.btnpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(117, 35);
+            this.btnpesquisar.TabIndex = 1013;
+            this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // id
             // 
-            this.id.HeaderText = "Id";
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
             // descricao
             // 
+            this.descricao.DataPropertyName = "descricao";
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
-            this.descricao.Width = 300;
             // 
             // situacao
             // 
+            this.situacao.DataPropertyName = "situacao";
             this.situacao.HeaderText = "Situação";
             this.situacao.Name = "situacao";
             this.situacao.ReadOnly = true;
@@ -213,7 +326,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 555);
-            this.Controls.Add(this.dgvpesqtpcliente);
+            this.Controls.Add(this.txtpesquisar);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnpesquisar);
+            this.Controls.Add(this.dgvtpcliente);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -223,11 +339,13 @@
             this.Name = "FrmTpCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo de cliente";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTpCliente_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqtpcliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtpcliente)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,12 +360,15 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chkfitro;
-        private System.Windows.Forms.ComboBox cmbfiltro;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.Button btnalt;
         private System.Windows.Forms.Button btnnovo;
-        private System.Windows.Forms.DataGridView dgvpesqtpcliente;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvtpcliente;
+        private JTextBox2.JTextBox txtpesquisar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdbsituacao;
+        private System.Windows.Forms.RadioButton rdbdescricao;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn situacao;

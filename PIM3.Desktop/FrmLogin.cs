@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,53 +24,79 @@ namespace PIM3.Desktop
             this.Close();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void txtlogin_Click(object sender, EventArgs e)
         {
+
+            // Melhorar sistema de login, cria classe usuario com atributos          
+            string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+            //cria a conexão
+            SqlConnection com = new SqlConnection(strConxao);
+
+            //cria a instrução de consulta ao banco
+            string query = "select login, senha from tb_usuarios where login = '" + txtusuario.TextName + "' and senha = '" + txtsenha.TextName + "'";
+
+            //cria o objeto sqladapter
+            SqlDataAdapter comando = new SqlDataAdapter(query, com);
+
+            //instancia o datatable
+            DataTable dt = new DataTable();
+
+            //preenche o datatable
+
+            comando.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                FrmPrincipal menu = new FrmPrincipal();
+                menu.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Login/Senha inválido");
+
+            }
+
 
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
+        {
             
-        {
-                
-                
+            // Melhorar sistema de login, cria classe usuario com atributos          
+            string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+            //cria a conexão
+            SqlConnection com = new SqlConnection(strConxao);
 
-            if (txtusuario.Text=="sa" && txtsenha.Text=="sa")
+            //cria a instrução de consulta ao banco
+            string query = "select login, senha from tb_usuarios where login = '" + txtusuario.TextName + "' and senha = '" + txtsenha.TextName + "'";
+
+            //cria o objeto sqladapter
+            SqlDataAdapter comando = new SqlDataAdapter(query, com);
+
+            //instancia o datatable
+            DataTable dt = new DataTable();
+
+            //preenche o datatable
+
+            comando.Fill(dt);
+
+            if (dt.Rows.Count > 0)
             {
-               FrmLogin login = new FrmLogin();
-                FrmPrincipal principal = new FrmPrincipal();
-
-                login.Close();
-                principal.Show();
-               
-                
+                FrmPrincipal menu = new FrmPrincipal();
+                menu.Show();
+                this.Hide();
 
             }
             else
             {
-                MessageBox.Show("Usuário ou senha inválido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtusuario.Focus();
+                MessageBox.Show("Login/Senha inválido");
+
             }
         }
 
-        private void btnentrar_Click(object sender, EventArgs e)
-        {
-            if (txtusuario.Text == "sa" && txtsenha.Text == "sa")
-            {
-                FrmLogin login = new FrmLogin();
-                FrmPrincipal principal = new FrmPrincipal();
-
-                login.Close();
-                principal.Show();
-
-
-
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha inválido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtusuario.Focus();
-            }
-        }
+        
+       
     }
 }

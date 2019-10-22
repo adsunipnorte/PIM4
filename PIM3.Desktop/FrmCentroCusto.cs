@@ -20,7 +20,6 @@ namespace PIM3.Desktop
             InitializeComponent();
         }
 
-        
 
         private void novoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -66,107 +65,88 @@ namespace PIM3.Desktop
             altcentrocusto.Show();
         }
 
-        private void addFromDb(Bunifu.Framework.UI.BunifuDropdown cmbpesqcentrocusto)
-        {
-            SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=efleet;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select * from tb_centrocustos", con);
-            SqlDataReader read = cmd.ExecuteReader();
-            while (read.Read())
-            {
-                cmbpesqcentrocusto.AddItem(read.GetString(0));
-            }
-            con.Close();
-        }
-
-        private void FrmCentroCusto_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue.Equals(27)) // Verifica se a tecla ESC foi pressionada
-            {
-                if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo, // Caso escolha "sim" é fechada janela
-                    MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-
-                    this.Close();
-                }
-            }
-        }
 
         private void btnpesquisar_Click(object sender, EventArgs e)
         {
-            if (txtpesquisar.TextName == "" && msktxtpesquisa.Text=="") // Verifica se o textbox ou maskedtextbox estão em branco
+            if (txtpesquisar.TextName == "" && msktxtpesquisa.Text == "") // Verifica se o textbox ou maskedtextbox estão em branco
             {
-                MessageBox.Show("Digite um termo para pesquisa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Digite um termo para pesquisar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtpesquisar.Focus();
             }
+
 
             else if (rdbid.Checked == true) // Caso radiobutton ID esteja marcado, faz select pesquisando por número contido no maskedtextbox
             {
 
-
                 msktxtpesquisa.Visible = true; // maskedtextbox fica visivel
                 msktxtpesquisa.Focus(); // Foco é colocado em maskedtextbox
-
-
 
                 string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
                 string Query = "select id, descricao, situacao from tb_centrocustos where id =" + Convert.ToString(msktxtpesquisa.Text);
                 SqlConnection con = new SqlConnection(strConxao);
-                SqlDataAdapter da = new SqlDataAdapter(Query, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvcentrocusto.DataSource = dt;
-                msktxtpesquisa.Focus();
-                
+
+                try
+                {
+                    con.Open();
+                    SqlDataAdapter da = new SqlDataAdapter(Query, con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgvcentrocusto.DataSource = dt;
+                    msktxtpesquisa.Focus();
+                }
+                catch (Exception erro)
+                {
+                    string mensagem = erro.Message;
+                    mensagem += "Não foi possivel conectar ao banco de dados.";
+
+                }
+
             }
 
             else if (rdbdescricao.Checked == true) // Caso radiobutton esteja marcado, faz pesquisa pela descrição contida no textbox
             {
-                txtpesquisar.TextName = ""; // textbox recebe vazio
+
                 txtpesquisar.Focus(); // Foco é colocado em textbox
-                string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
-                string Query = "select id, descricao, situacao from tb_centrocustos where Descricao like \'%" + txtpesquisar.TextName + "%\'";
-                SqlConnection con = new SqlConnection(strConxao);
-                SqlDataAdapter da = new SqlDataAdapter(Query, con);
+                string strCnxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
+                string Query = "select id, descricao, situacao from tb_centrocustos where upper(Descricao) like '%" + txtpesquisar.TextName + "%'";
+                SqlConnection con = new SqlConnection(strCnxao);
+                SqlDataAdapter da = new SqlDataAdapter(Query, strCnxao);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvcentrocusto.DataSource = dt;
                 txtpesquisar.Focus();
-            }
 
+            }
 
         }
 
-              
+
         private void rdbid_CheckedChanged(object sender, EventArgs e) // Método verifica se check de radiobutton ID é alterado
         {
-            if (rdbid.Checked==true) // Verifica se radiobutton ID está marcado, caso esteja coloca o foco no maskedtextbox pesquisar
+            
+            if (rdbid.Checked == true) // Verifica se radiobutton ID está marcado, caso esteja coloca o foco no maskedtextbox pesquisar
             {
-
                 msktxtpesquisa.Visible = true; // maskedtextbox fica visivel
                 txtpesquisar.Visible = false; // textbox pesquisar fica invisível
                 msktxtpesquisa.Clear(); // Limpa maskedtextbox
                 msktxtpesquisa.Focus(); // Foco no maskedtextbox
-
-
-
-
+                
             }
+            
         }
 
         private void rdbdescricao_CheckedChanged(object sender, EventArgs e) // Método verifica se check de radiobutton descrição é alterado
         {
+            
             if (rdbdescricao.Checked == true) // Verifica se radiobutton descrição está marcado, sendo verdadeiro coloca o foco no maskedtextbox pesquisar
             {
                 msktxtpesquisa.Visible = false; // Maskedtextbox fica invisível
                 txtpesquisar.Visible = true; // Textbox pesquisar fica visível
                 txtpesquisar.TextName = ""; // Textbox pesquisar é limpo
                 txtpesquisar.Focus(); // Coloca foco no textbox pesquisar
-
-
-
-
+                
             }
+            
         }
 
         public static void AllowNumber(KeyPressEventArgs e) // Método permite somente digitar número em maskedtextbox
@@ -187,11 +167,57 @@ namespace PIM3.Desktop
             AllowNumber(e); // Chamando método que permite somente número no maskedtextbox
         }
 
-        
-
-        private void txtpesquisar_Load(object sender, EventArgs e)
+        private void FrmCentroCusto_Load(object sender, EventArgs e)
         {
+            rdbid.Checked = false;
+            rdbdescricao.Checked = false;
+            msktxtpesquisa.Location = new Point(514, 59); // Coloca maskedtextbox na mesma posição do textbox descrição
+        }
 
+        private void FrmCentroCusto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+
+                else
+                {
+                    txtpesquisar.Focus();
+                    msktxtpesquisa.Focus();
+
+                }
+            }
+        }
+
+
+        private void consultar() // Metodo para teste
+        {
+            string sql = "select id, descricao, situacao from tb_centrocustos where upper(Descricao) like '%" + txtpesquisar.TextName.ToUpper() + "%'";
+            SqlConnection conn = new SqlConnection("Data Source=(local);Initial Catalog=efleet;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            conn.Open();
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            conn.Close();
+            da.Dispose();
+
+            dgvcentrocusto.DataSource = dt;
+        }
+
+        public void validacheckbox() // Método para testar se textbox e maskedtextbox estão preenchidos
+        {
+            if (txtpesquisar.TextName == "" && msktxtpesquisa.Text == "") // Verifica se o textbox ou maskedtextbox estão em branco
+            {
+                MessageBox.Show("Digite um termo para pesquisar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtpesquisar.Focus();
+            }
         }
     }
 }
