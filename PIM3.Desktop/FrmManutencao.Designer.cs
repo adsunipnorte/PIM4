@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManutencao));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,21 +42,17 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkfitro = new System.Windows.Forms.CheckBox();
-            this.cmbfiltro = new System.Windows.Forms.ComboBox();
             this.btnsair = new System.Windows.Forms.Button();
             this.btnalt = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dgvpesqmanutencao = new System.Windows.Forms.DataGridView();
+            this.dgvmanutencao = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idveiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placaveiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtipomanutencao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqmanutencao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmanutencao)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -108,43 +109,20 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chkfitro);
-            this.groupBox1.Controls.Add(this.cmbfiltro);
             this.groupBox1.Controls.Add(this.btnsair);
             this.groupBox1.Controls.Add(this.btnalt);
             this.groupBox1.Controls.Add(this.btnnovo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 48);
+            this.groupBox1.Location = new System.Drawing.Point(7, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(842, 108);
+            this.groupBox1.Size = new System.Drawing.Size(253, 108);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            // 
-            // chkfitro
-            // 
-            this.chkfitro.AutoSize = true;
-            this.chkfitro.Location = new System.Drawing.Point(394, 27);
-            this.chkfitro.Name = "chkfitro";
-            this.chkfitro.Size = new System.Drawing.Size(67, 23);
-            this.chkfitro.TabIndex = 7;
-            this.chkfitro.Text = "Filtro";
-            this.chkfitro.UseVisualStyleBackColor = true;
-            this.chkfitro.CheckedChanged += new System.EventHandler(this.chkfitro_CheckedChanged);
-            // 
-            // cmbfiltro
-            // 
-            this.cmbfiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfiltro.FormattingEnabled = true;
-            this.cmbfiltro.Location = new System.Drawing.Point(492, 23);
-            this.cmbfiltro.Name = "cmbfiltro";
-            this.cmbfiltro.Size = new System.Drawing.Size(130, 27);
-            this.cmbfiltro.TabIndex = 6;
-            this.cmbfiltro.Visible = false;
             // 
             // btnsair
             // 
             this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
             this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Location = new System.Drawing.Point(240, 19);
+            this.btnsair.Location = new System.Drawing.Point(168, 19);
             this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(72, 76);
@@ -157,7 +135,7 @@
             // 
             this.btnalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnalt.BackgroundImage")));
             this.btnalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnalt.Location = new System.Drawing.Point(139, 19);
+            this.btnalt.Location = new System.Drawing.Point(86, 19);
             this.btnalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnalt.Name = "btnalt";
             this.btnalt.Size = new System.Drawing.Size(72, 76);
@@ -170,7 +148,7 @@
             // 
             this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
             this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnovo.Location = new System.Drawing.Point(34, 19);
+            this.btnnovo.Location = new System.Drawing.Point(8, 19);
             this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(72, 76);
@@ -179,63 +157,94 @@
             this.btnnovo.UseVisualStyleBackColor = true;
             this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
             // 
-            // dgvpesqmanutencao
+            // dgvmanutencao
             // 
-            this.dgvpesqmanutencao.AllowUserToAddRows = false;
-            this.dgvpesqmanutencao.AllowUserToDeleteRows = false;
-            this.dgvpesqmanutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpesqmanutencao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvmanutencao.AllowUserToAddRows = false;
+            this.dgvmanutencao.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvmanutencao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvmanutencao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvmanutencao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvmanutencao.BackgroundColor = System.Drawing.Color.White;
+            this.dgvmanutencao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvmanutencao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvmanutencao.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvmanutencao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvmanutencao.ColumnHeadersHeight = 50;
+            this.dgvmanutencao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descricao,
-            this.idveiculo,
-            this.placaveiculo,
-            this.idtipomanutencao});
-            this.dgvpesqmanutencao.Location = new System.Drawing.Point(12, 177);
-            this.dgvpesqmanutencao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvpesqmanutencao.Name = "dgvpesqmanutencao";
-            this.dgvpesqmanutencao.ReadOnly = true;
-            this.dgvpesqmanutencao.RowTemplate.Height = 24;
-            this.dgvpesqmanutencao.Size = new System.Drawing.Size(842, 255);
-            this.dgvpesqmanutencao.TabIndex = 8;
+            this.situacao});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvmanutencao.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvmanutencao.DoubleBuffered = true;
+            this.dgvmanutencao.EnableHeadersVisualStyles = false;
+            this.dgvmanutencao.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.dgvmanutencao.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvmanutencao.Location = new System.Drawing.Point(7, 138);
+            this.dgvmanutencao.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvmanutencao.Name = "dgvmanutencao";
+            this.dgvmanutencao.ReadOnly = true;
+            this.dgvmanutencao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvmanutencao.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvmanutencao.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvmanutencao.RowTemplate.DividerHeight = 1;
+            this.dgvmanutencao.RowTemplate.Height = 40;
+            this.dgvmanutencao.RowTemplate.ReadOnly = true;
+            this.dgvmanutencao.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvmanutencao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvmanutencao.Size = new System.Drawing.Size(971, 398);
+            this.dgvmanutencao.TabIndex = 1013;
             // 
             // id
             // 
-            this.id.HeaderText = "Id";
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
             // descricao
             // 
+            this.descricao.DataPropertyName = "descricao";
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
-            this.descricao.Width = 300;
             // 
-            // idveiculo
+            // situacao
             // 
-            this.idveiculo.HeaderText = "Veículo";
-            this.idveiculo.Name = "idveiculo";
-            this.idveiculo.ReadOnly = true;
-            // 
-            // placaveiculo
-            // 
-            this.placaveiculo.HeaderText = "Placa";
-            this.placaveiculo.Name = "placaveiculo";
-            this.placaveiculo.ReadOnly = true;
-            // 
-            // idtipomanutencao
-            // 
-            this.idtipomanutencao.HeaderText = "Tipo manutenção";
-            this.idtipomanutencao.Name = "idtipomanutencao";
-            this.idtipomanutencao.ReadOnly = true;
-            this.idtipomanutencao.Width = 200;
+            this.situacao.DataPropertyName = "situacao";
+            this.situacao.HeaderText = "Situação";
+            this.situacao.Name = "situacao";
+            this.situacao.ReadOnly = true;
             // 
             // FrmManutencao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 723);
-            this.Controls.Add(this.dgvpesqmanutencao);
+            this.Controls.Add(this.dgvmanutencao);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -249,8 +258,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqmanutencao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmanutencao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,17 +273,13 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chkfitro;
-        private System.Windows.Forms.ComboBox cmbfiltro;
         private System.Windows.Forms.Button btnsair;
         private System.Windows.Forms.Button btnalt;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.DataGridView dgvpesqmanutencao;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvmanutencao;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idveiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placaveiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idtipomanutencao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
     }
 }

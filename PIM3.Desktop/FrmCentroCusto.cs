@@ -82,7 +82,7 @@ namespace PIM3.Desktop
                 msktxtpesquisa.Focus(); // Foco é colocado em maskedtextbox
 
                 string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
-                string Query = "select id, descricao, situacao from tb_centrocustos where id =" + Convert.ToString(msktxtpesquisa.Text);
+                string Query = "select tb_centrocustos.id, tb_centrocustos.descricao as DESCRICAO, tb_situacao.descricao as SITUACAO from tb_centrocustos inner join tb_situacao on tb_situacao.id=tb_centrocustos.situacao where tb_centrocustos.id =" + Convert.ToString(msktxtpesquisa.Text);
                 SqlConnection con = new SqlConnection(strConxao);
 
                 try
@@ -108,7 +108,7 @@ namespace PIM3.Desktop
 
                 txtpesquisar.Focus(); // Foco é colocado em textbox
                 string strCnxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
-                string Query = "select id, descricao, situacao from tb_centrocustos where upper(Descricao) like '%" + txtpesquisar.TextName + "%'";
+                string Query = "select tb_centrocustos.id, tb_centrocustos.descricao as DESCRICAO, tb_situacao.descricao as SITUACAO from tb_centrocustos inner join tb_situacao on tb_situacao.id=tb_centrocustos.situacao where upper(tb_centrocustos.descricao) like '%" + txtpesquisar.TextName + "%'";
                 SqlConnection con = new SqlConnection(strCnxao);
                 SqlDataAdapter da = new SqlDataAdapter(Query, strCnxao);
                 DataTable dt = new DataTable();

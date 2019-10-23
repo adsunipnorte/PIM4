@@ -17,17 +17,7 @@ namespace PIM3.Desktop
             InitializeComponent();
         }
 
-        private void chkfitro_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkfitro.Checked == true)
-            {
-                cmbfiltro.Show();
-            }
-            else
-            {
-                cmbfiltro.Visible = false;
-            }
-        }
+
 
         private void btnnovo_Click(object sender, EventArgs e)
         {

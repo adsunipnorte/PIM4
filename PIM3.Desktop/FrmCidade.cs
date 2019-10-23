@@ -97,7 +97,7 @@ namespace PIM3.Desktop
                 
                 txtestado.Focus();
                 string strConxao = "Data Source=(local);Initial Catalog=efleet;Integrated Security=True";
-                string Query = "select codcidade, nome from tb_cidades INNER join tb_estados on tb_estados.id= tb_cidades.idestados where upper(nome) like '%" + txtestado.TextName + "%''";
+                string Query = "select codcidade, nome, estado from tb_cidades INNER join tb_estados on tb_estados.id= tb_cidades.idestados where upper(nome) like '%" + txtestado.TextName + "%'";
                 SqlConnection con = new SqlConnection(strConxao);
                 SqlDataAdapter da = new SqlDataAdapter(Query, con);
                 DataTable dt = new DataTable();

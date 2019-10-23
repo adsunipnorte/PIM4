@@ -47,8 +47,8 @@ namespace PIM3.Desktop
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja encerrar a aplicação?", "Aviso", MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("Deseja encerrar a aplicação?", "Aviso", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -62,7 +62,7 @@ namespace PIM3.Desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace PIM3.Desktop
 
         private void locaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void seguroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,12 +84,12 @@ namespace PIM3.Desktop
 
         private void tipoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void contatoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -133,12 +133,6 @@ namespace PIM3.Desktop
             contatoCliente.Show();
         }
 
-        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmUsuario usuario = new FrmUsuario();
-            usuario.Show();
-        }
-
         private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FrmClientes Cliente = new FrmClientes();
@@ -177,7 +171,7 @@ namespace PIM3.Desktop
 
         private void usuáriosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -238,6 +232,36 @@ namespace PIM3.Desktop
         {
             FrmLocacao consultalocacao = new FrmLocacao();
             consultalocacao.Show();
+        }
+
+        private void usuárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmUsuario usuario = new FrmUsuario();
+            usuario.Show();
+        }
+
+        private void tipoVeículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTpVeiculo tipoveiculo = new FrmTpVeiculo();
+            tipoveiculo.Show();
+        }
+
+        private void tipoManutençãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTpManutencao tipomanutencao = new FrmTpManutencao();
+            tipomanutencao.Show();
+        }
+
+        private void perfilUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPerfilUsuario perfilusuario = new FrmPerfilUsuario();
+            perfilusuario.Show();
+        }
+
+        private void montadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMontadora montadora = new FrmMontadora();
+            montadora.Show();
         }
     }
 }
