@@ -35,11 +35,7 @@ namespace PIM3.Desktop
             }
         }
 
-        private void btnlimpar_Click(object sender, EventArgs e)
-        {
-            txtid.Clear();
-            txtdescricao.Clear();
-        }
+
 
         private void btnsair_Click_1(object sender, EventArgs e)
         {
@@ -57,9 +53,30 @@ namespace PIM3.Desktop
 
         private void btngravar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtdescricao.Text)){
+            if (string.IsNullOrEmpty(txtdescricao.Text))
+            {
                 MessageBox.Show("Campo descrição não está preenchido.", "Aviso", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
+                string var = "INSERT INTO tb_tipomanutencao(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+
+                try
+                {
+                    con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
+                    MessageBox.Show("Registro inserido com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtdescricao.Clear();
+                    txtdescricao.Focus();
+                }
+                catch (Exception ex)
+                {
+
+                    string erro = ex.Message;
+                    erro += "Não foi possivel concluir a operacao";
+
+                }
             }
         }
     }

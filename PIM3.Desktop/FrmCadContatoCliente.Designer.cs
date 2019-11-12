@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadContatoCliente));
-            this.lblid = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.lblnome = new System.Windows.Forms.Label();
             this.txtend = new System.Windows.Forms.TextBox();
@@ -49,39 +47,14 @@
             this.lblcel = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
-            this.dgvccusto = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdClientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbidcliente = new System.Windows.Forms.ComboBox();
             this.lblcliente = new System.Windows.Forms.Label();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvccusto)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbtipocliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.lblid.Location = new System.Drawing.Point(33, 30);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
-            this.lblid.TabIndex = 88;
-            this.lblid.Text = "ID";
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.Yellow;
-            this.txtid.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtid.Location = new System.Drawing.Point(78, 27);
-            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
-            this.txtid.TabIndex = 87;
-            this.txtid.TabStop = false;
             // 
             // txtnome
             // 
@@ -90,7 +63,7 @@
             this.txtnome.Location = new System.Drawing.Point(119, 69);
             this.txtnome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(637, 27);
+            this.txtnome.Size = new System.Drawing.Size(531, 27);
             this.txtnome.TabIndex = 89;
             this.txtnome.Tag = "";
             // 
@@ -248,56 +221,11 @@
             this.lblemail.TabIndex = 106;
             this.lblemail.Text = "E-mail";
             // 
-            // dgvccusto
-            // 
-            this.dgvccusto.AllowUserToAddRows = false;
-            this.dgvccusto.AllowUserToDeleteRows = false;
-            this.dgvccusto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvccusto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Nome,
-            this.IdClientes});
-            this.dgvccusto.Location = new System.Drawing.Point(37, 282);
-            this.dgvccusto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvccusto.Name = "dgvccusto";
-            this.dgvccusto.RowTemplate.Height = 24;
-            this.dgvccusto.Size = new System.Drawing.Size(803, 178);
-            this.dgvccusto.TabIndex = 110;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 350;
-            // 
-            // IdClientes
-            // 
-            this.IdClientes.HeaderText = "Cliente";
-            this.IdClientes.Name = "IdClientes";
-            this.IdClientes.ReadOnly = true;
-            this.IdClientes.Width = 308;
-            // 
-            // cmbidcliente
-            // 
-            this.cmbidcliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbidcliente.FormattingEnabled = true;
-            this.cmbidcliente.Location = new System.Drawing.Point(313, 27);
-            this.cmbidcliente.Name = "cmbidcliente";
-            this.cmbidcliente.Size = new System.Drawing.Size(121, 27);
-            this.cmbidcliente.TabIndex = 111;
-            // 
             // lblcliente
             // 
             this.lblcliente.AutoSize = true;
             this.lblcliente.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.lblcliente.Location = new System.Drawing.Point(248, 30);
+            this.lblcliente.Location = new System.Drawing.Point(33, 27);
             this.lblcliente.Name = "lblcliente";
             this.lblcliente.Size = new System.Drawing.Size(59, 19);
             this.lblcliente.TabIndex = 112;
@@ -325,7 +253,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(340, 483);
+            this.btnlimpar.Location = new System.Drawing.Point(233, 316);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -360,7 +288,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(536, 482);
+            this.btnsair.Location = new System.Drawing.Point(429, 315);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -396,7 +324,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(144, 483);
+            this.btngravar.Location = new System.Drawing.Point(37, 316);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -409,18 +337,54 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(78, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 28);
+            this.label1.TabIndex = 116;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(94, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 28);
+            this.label2.TabIndex = 117;
+            this.label2.Text = "*";
+            // 
+            // cmbtipocliente
+            // 
+            this.cmbtipocliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbtipocliente.FormattingEnabled = true;
+            this.cmbtipocliente.ItemHeight = 19;
+            this.cmbtipocliente.Location = new System.Drawing.Point(119, 21);
+            this.cmbtipocliente.Name = "cmbtipocliente";
+            this.cmbtipocliente.Size = new System.Drawing.Size(168, 27);
+            this.cmbtipocliente.TabIndex = 118;
+            this.cmbtipocliente.SelectedIndexChanged += new System.EventHandler(this.cmbtipocliente_SelectedIndexChanged);
+            this.cmbtipocliente.Click += new System.EventHandler(this.cmbtipocliente_Click);
             // 
             // FrmCadContatoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 723);
+            this.ClientSize = new System.Drawing.Size(687, 419);
+            this.Controls.Add(this.cmbtipocliente);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
             this.Controls.Add(this.lblcliente);
-            this.Controls.Add(this.cmbidcliente);
-            this.Controls.Add(this.dgvccusto);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.txtcel);
@@ -439,25 +403,20 @@
             this.Controls.Add(this.lblend);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.lblnome);
-            this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadContatoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contato cliente";
             this.Load += new System.EventHandler(this.FrmContatoCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvccusto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label lblnome;
         private System.Windows.Forms.TextBox txtend;
@@ -476,14 +435,12 @@
         private System.Windows.Forms.Label lblcel;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.DataGridView dgvccusto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdClientes;
-        private System.Windows.Forms.ComboBox cmbidcliente;
         private System.Windows.Forms.Label lblcliente;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbtipocliente;
     }
 }

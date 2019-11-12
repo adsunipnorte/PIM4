@@ -131,5 +131,11 @@ namespace PIM3.Desktop
                 }
             }
         }
+
+        private void btnnovo_Click(object sender, EventArgs e)
+        {
+            FrmCadPerfilUsuario perfiluser = new FrmCadPerfilUsuario();
+            perfiluser.Show();
+        }
     }
 }

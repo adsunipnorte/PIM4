@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,22 +42,27 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbfiltro = new System.Windows.Forms.ComboBox();
-            this.chkfiltro = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dgvpesqcliente = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtipocliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcodcidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dgvcliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.msktxtpesquisa = new System.Windows.Forms.MaskedTextBox();
+            this.txtpesquisar = new JTextBox2.JTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbemail = new System.Windows.Forms.RadioButton();
+            this.rdbnome = new System.Windows.Forms.RadioButton();
+            this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqcliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -110,45 +120,22 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbfiltro);
-            this.groupBox1.Controls.Add(this.chkfiltro);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 29);
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1095, 108);
+            this.groupBox1.Size = new System.Drawing.Size(251, 110);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            // 
-            // cmbfiltro
-            // 
-            this.cmbfiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbfiltro.FormattingEnabled = true;
-            this.cmbfiltro.Location = new System.Drawing.Point(520, 18);
-            this.cmbfiltro.Name = "cmbfiltro";
-            this.cmbfiltro.Size = new System.Drawing.Size(157, 27);
-            this.cmbfiltro.TabIndex = 4;
-            this.cmbfiltro.Visible = false;
-            // 
-            // chkfiltro
-            // 
-            this.chkfiltro.AutoSize = true;
-            this.chkfiltro.Location = new System.Drawing.Point(399, 22);
-            this.chkfiltro.Name = "chkfiltro";
-            this.chkfiltro.Size = new System.Drawing.Size(67, 23);
-            this.chkfiltro.TabIndex = 3;
-            this.chkfiltro.Text = "Filtro";
-            this.chkfiltro.UseVisualStyleBackColor = true;
-            this.chkfiltro.CheckedChanged += new System.EventHandler(this.chkfiltro_CheckedChanged);
             // 
             // button3
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(237, 20);
+            this.button3.Location = new System.Drawing.Point(167, 20);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(72, 76);
@@ -161,7 +148,7 @@
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(135, 22);
+            this.button2.Location = new System.Drawing.Point(86, 22);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 76);
@@ -174,7 +161,7 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(30, 22);
+            this.button1.Location = new System.Drawing.Point(8, 22);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 76);
@@ -183,88 +170,234 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgvpesqcliente
+            // dgvcliente
             // 
-            this.dgvpesqcliente.AllowUserToAddRows = false;
-            this.dgvpesqcliente.AllowUserToDeleteRows = false;
-            this.dgvpesqcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpesqcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Nome,
-            this.idtipocliente,
+            this.dgvcliente.AllowUserToAddRows = false;
+            this.dgvcliente.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvcliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvcliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvcliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvcliente.BackgroundColor = System.Drawing.Color.White;
+            this.dgvcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvcliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvcliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvcliente.ColumnHeadersHeight = 50;
+            this.dgvcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.Tipo_cliente,
+            this.dataGridViewTextBoxColumn4,
             this.telefone,
-            this.Email,
-            this.idcodcidade});
-            this.dgvpesqcliente.Location = new System.Drawing.Point(12, 155);
-            this.dgvpesqcliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvpesqcliente.Name = "dgvpesqcliente";
-            this.dgvpesqcliente.ReadOnly = true;
-            this.dgvpesqcliente.RowTemplate.Height = 24;
-            this.dgvpesqcliente.Size = new System.Drawing.Size(1095, 350);
-            this.dgvpesqcliente.TabIndex = 2;
-            this.dgvpesqcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.cidade});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvcliente.DoubleBuffered = true;
+            this.dgvcliente.EnableHeadersVisualStyles = false;
+            this.dgvcliente.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            this.dgvcliente.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvcliente.Location = new System.Drawing.Point(13, 143);
+            this.dgvcliente.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvcliente.Name = "dgvcliente";
+            this.dgvcliente.ReadOnly = true;
+            this.dgvcliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvcliente.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvcliente.RowTemplate.DividerHeight = 1;
+            this.dgvcliente.RowTemplate.Height = 40;
+            this.dgvcliente.RowTemplate.ReadOnly = true;
+            this.dgvcliente.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvcliente.Size = new System.Drawing.Size(986, 571);
+            this.dgvcliente.TabIndex = 1004;
             // 
-            // id
+            // dataGridViewTextBoxColumn2
             // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // Nome
+            // dataGridViewTextBoxColumn3
             // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 300;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // idtipocliente
+            // Tipo_cliente
             // 
-            this.idtipocliente.HeaderText = "Tipo Cliente";
-            this.idtipocliente.Name = "idtipocliente";
-            this.idtipocliente.ReadOnly = true;
-            this.idtipocliente.Width = 200;
+            this.Tipo_cliente.DataPropertyName = "Tipo_cliente";
+            this.Tipo_cliente.HeaderText = "Tipo cliente";
+            this.Tipo_cliente.Name = "Tipo_cliente";
+            this.Tipo_cliente.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn4.HeaderText = "E-mail";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // telefone
             // 
-            this.telefone.HeaderText = "Telefone";
+            this.telefone.DataPropertyName = "Telefone_fixo";
+            this.telefone.HeaderText = "Telefone fixo";
             this.telefone.Name = "telefone";
             this.telefone.ReadOnly = true;
             // 
-            // Email
+            // cidade
             // 
-            this.Email.HeaderText = "E-mail";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 150;
+            this.cidade.DataPropertyName = "cidade";
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            this.cidade.ReadOnly = true;
             // 
-            // idcodcidade
+            // msktxtpesquisa
             // 
-            this.idcodcidade.HeaderText = "Cidade";
-            this.idcodcidade.Name = "idcodcidade";
-            this.idcodcidade.ReadOnly = true;
-            this.idcodcidade.Width = 200;
+            this.msktxtpesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.msktxtpesquisa.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.msktxtpesquisa.ForeColor = System.Drawing.Color.Gray;
+            this.msktxtpesquisa.Location = new System.Drawing.Point(480, 18);
+            this.msktxtpesquisa.Margin = new System.Windows.Forms.Padding(5);
+            this.msktxtpesquisa.Name = "msktxtpesquisa";
+            this.msktxtpesquisa.Size = new System.Drawing.Size(245, 30);
+            this.msktxtpesquisa.TabIndex = 1008;
+            this.msktxtpesquisa.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.msktxtpesquisa.Visible = false;
+            // 
+            // txtpesquisar
+            // 
+            this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpesquisar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtpesquisar.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtpesquisar.HintText = null;
+            this.txtpesquisar.IsPassword = false;
+            this.txtpesquisar.Location = new System.Drawing.Point(480, 58);
+            this.txtpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtpesquisar.MaxLength = 50;
+            this.txtpesquisar.Name = "txtpesquisar";
+            this.txtpesquisar.OnFocusedColor = System.Drawing.Color.White;
+            this.txtpesquisar.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.txtpesquisar.ReadOnly = false;
+            this.txtpesquisar.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.txtpesquisar.Size = new System.Drawing.Size(245, 30);
+            this.txtpesquisar.TabIndex = 1005;
+            this.txtpesquisar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtpesquisar.TextName = "";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdbemail);
+            this.groupBox2.Controls.Add(this.rdbnome);
+            this.groupBox2.Location = new System.Drawing.Point(269, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(167, 108);
+            this.groupBox2.TabIndex = 1007;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tipo de pesquisa";
+            // 
+            // rdbemail
+            // 
+            this.rdbemail.AutoSize = true;
+            this.rdbemail.Location = new System.Drawing.Point(16, 69);
+            this.rdbemail.Name = "rdbemail";
+            this.rdbemail.Size = new System.Drawing.Size(76, 23);
+            this.rdbemail.TabIndex = 1;
+            this.rdbemail.TabStop = true;
+            this.rdbemail.Text = "E-mail";
+            this.rdbemail.UseVisualStyleBackColor = true;
+            this.rdbemail.CheckedChanged += new System.EventHandler(this.rdbemail_CheckedChanged);
+            // 
+            // rdbnome
+            // 
+            this.rdbnome.AutoSize = true;
+            this.rdbnome.Location = new System.Drawing.Point(16, 39);
+            this.rdbnome.Name = "rdbnome";
+            this.rdbnome.Size = new System.Drawing.Size(72, 23);
+            this.rdbnome.TabIndex = 0;
+            this.rdbnome.TabStop = true;
+            this.rdbnome.Text = "Nome";
+            this.rdbnome.UseVisualStyleBackColor = true;
+            this.rdbnome.CheckedChanged += new System.EventHandler(this.rdbnome_CheckedChanged);
+            // 
+            // btnpesquisar
+            // 
+            this.btnpesquisar.ActiveBorderThickness = 1;
+            this.btnpesquisar.ActiveCornerRadius = 20;
+            this.btnpesquisar.ActiveFillColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnpesquisar.ActiveLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnpesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnpesquisar.BackgroundImage")));
+            this.btnpesquisar.ButtonText = "Pesquisar";
+            this.btnpesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnpesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnpesquisar.IdleBorderThickness = 1;
+            this.btnpesquisar.IdleCornerRadius = 20;
+            this.btnpesquisar.IdleFillColor = System.Drawing.Color.White;
+            this.btnpesquisar.IdleForecolor = System.Drawing.Color.Black;
+            this.btnpesquisar.IdleLineColor = System.Drawing.Color.White;
+            this.btnpesquisar.Location = new System.Drawing.Point(543, 98);
+            this.btnpesquisar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(117, 35);
+            this.btnpesquisar.TabIndex = 1006;
+            this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 723);
-            this.Controls.Add(this.dgvpesqcliente);
+            this.Controls.Add(this.msktxtpesquisa);
+            this.Controls.Add(this.txtpesquisar);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnpesquisar);
+            this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de cliente";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmClientes_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvpesqcliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,16 +414,20 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvpesqcliente;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idtipocliente;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvcliente;
+        private System.Windows.Forms.MaskedTextBox msktxtpesquisa;
+        private JTextBox2.JTextBox txtpesquisar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdbemail;
+        private System.Windows.Forms.RadioButton rdbnome;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcodcidade;
-        private System.Windows.Forms.ComboBox cmbfiltro;
-        private System.Windows.Forms.CheckBox chkfiltro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
     }
 }

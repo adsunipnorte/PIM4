@@ -38,6 +38,9 @@
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtestado
@@ -213,11 +216,47 @@
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(51, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 28);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(83, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 28);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(72, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 28);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "*";
+            // 
             // FrmCadEstados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 315);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
@@ -228,6 +267,7 @@
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadEstados";
@@ -248,5 +288,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

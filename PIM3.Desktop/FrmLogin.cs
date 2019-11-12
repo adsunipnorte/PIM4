@@ -17,6 +17,7 @@ namespace PIM3.Desktop
         public FrmLogin()
         {
             InitializeComponent();
+            
         }
 
         private void btnsair_Click(object sender, EventArgs e)

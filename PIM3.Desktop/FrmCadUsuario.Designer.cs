@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadUsuario));
-            this.lblid = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.chksituacao = new System.Windows.Forms.CheckBox();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.lblnome = new System.Windows.Forms.Label();
             this.txtlogin = new System.Windows.Forms.TextBox();
@@ -46,41 +43,11 @@
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.lblid.Location = new System.Drawing.Point(29, 27);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
-            this.lblid.TabIndex = 9;
-            this.lblid.Text = "ID";
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.Yellow;
-            this.txtid.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtid.Location = new System.Drawing.Point(65, 23);
-            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
-            this.txtid.TabIndex = 8;
-            this.txtid.TabStop = false;
-            // 
-            // chksituacao
-            // 
-            this.chksituacao.AutoSize = true;
-            this.chksituacao.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.chksituacao.Location = new System.Drawing.Point(176, 27);
-            this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(66, 23);
-            this.chksituacao.TabIndex = 39;
-            this.chksituacao.Text = "Ativo";
-            this.chksituacao.UseVisualStyleBackColor = true;
             // 
             // txtnome
             // 
@@ -122,13 +89,14 @@
             // 
             // txtsenha
             // 
-            this.txtsenha.Location = new System.Drawing.Point(492, 105);
+            this.txtsenha.Location = new System.Drawing.Point(511, 105);
             this.txtsenha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.PasswordChar = '*';
             this.txtsenha.Size = new System.Drawing.Size(142, 27);
             this.txtsenha.TabIndex = 3;
             this.txtsenha.Tag = "";
+            this.txtsenha.UseSystemPasswordChar = true;
             // 
             // lblsenha
             // 
@@ -163,7 +131,7 @@
             // 
             this.lblpuser.AutoSize = true;
             this.lblpuser.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpuser.Location = new System.Drawing.Point(378, 31);
+            this.lblpuser.Location = new System.Drawing.Point(29, 30);
             this.lblpuser.Name = "lblpuser";
             this.lblpuser.Size = new System.Drawing.Size(108, 19);
             this.lblpuser.TabIndex = 52;
@@ -173,10 +141,11 @@
             // 
             this.cmbpuser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbpuser.FormattingEnabled = true;
-            this.cmbpuser.Location = new System.Drawing.Point(492, 25);
+            this.cmbpuser.Location = new System.Drawing.Point(157, 22);
             this.cmbpuser.Name = "cmbpuser";
-            this.cmbpuser.Size = new System.Drawing.Size(142, 27);
+            this.cmbpuser.Size = new System.Drawing.Size(249, 27);
             this.cmbpuser.TabIndex = 58;
+            this.cmbpuser.Click += new System.EventHandler(this.cmbpuser_Click);
             // 
             // btnlimpar
             // 
@@ -293,11 +262,59 @@
             this.richTextBox1.TabIndex = 143;
             this.richTextBox1.Text = "";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(75, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 28);
+            this.label1.TabIndex = 144;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(75, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 28);
+            this.label2.TabIndex = 145;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(483, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 28);
+            this.label3.TabIndex = 146;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(131, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 28);
+            this.label4.TabIndex = 147;
+            this.label4.Text = "*";
+            // 
             // FrmCadUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 555);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
@@ -312,10 +329,8 @@
             this.Controls.Add(this.lbllogin);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.lblnome);
-            this.Controls.Add(this.chksituacao);
-            this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadUsuario";
@@ -329,10 +344,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.CheckBox chksituacao;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label lblnome;
         private System.Windows.Forms.TextBox txtlogin;
@@ -347,5 +358,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

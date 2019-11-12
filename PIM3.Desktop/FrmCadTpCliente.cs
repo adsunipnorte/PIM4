@@ -47,7 +47,6 @@ namespace PIM3.Desktop
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
-            txtid.Clear();
             txtdescricao.Clear();
             txtdescricao.Focus();
         }
@@ -66,14 +65,13 @@ namespace PIM3.Desktop
                 ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
                 string var = "INSERT INTO tb_tipocliente(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
                 con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
-                txtid.Clear();
                 txtdescricao.Clear();
                 txtdescricao.Focus();
 
             }
-            
-            
-            
+
+
+
 
             //-------------------------------------------------------------
 
@@ -82,9 +80,9 @@ namespace PIM3.Desktop
             //SqlConnection con = new SqlConnection(strConxao);
             //SqlCommand sqlCommand = new SqlCommand(Query, con);
 
-            
 
-            
+
+
 
             //try             // Início Try/Catch
             //{
@@ -104,13 +102,13 @@ namespace PIM3.Desktop
             //    alert.Show("Não foi possivel conectar ao banco de dados.", alert.AlertType.error);
             //}
 
-           
+
 
 
         }
 
         //---------
-       
+
 
     }
 }

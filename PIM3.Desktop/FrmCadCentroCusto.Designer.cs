@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCentroCusto));
             this.txtdescricao = new System.Windows.Forms.TextBox();
-            this.lblidcc = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.chksituacao = new Bunifu.Framework.UI.BunifuCheckbox();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -42,49 +39,12 @@
             // 
             // txtdescricao
             // 
-            this.txtdescricao.Location = new System.Drawing.Point(133, 66);
+            this.txtdescricao.Location = new System.Drawing.Point(141, 31);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescricao.Name = "txtdescricao";
             this.txtdescricao.Size = new System.Drawing.Size(247, 27);
             this.txtdescricao.TabIndex = 1;
             this.txtdescricao.Tag = "";
-            // 
-            // lblidcc
-            // 
-            this.lblidcc.AutoSize = true;
-            this.lblidcc.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.lblidcc.ForeColor = System.Drawing.Color.Black;
-            this.lblidcc.Location = new System.Drawing.Point(12, 21);
-            this.lblidcc.Name = "lblidcc";
-            this.lblidcc.Size = new System.Drawing.Size(37, 28);
-            this.lblidcc.TabIndex = 41;
-            this.lblidcc.Text = "ID";
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.Yellow;
-            this.txtid.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtid.Location = new System.Drawing.Point(133, 22);
-            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(78, 27);
-            this.txtid.TabIndex = 39;
-            this.txtid.TabStop = false;
-            // 
-            // chksituacao
-            // 
-            this.chksituacao.AccessibleName = "";
-            this.chksituacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.chksituacao.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chksituacao.Checked = true;
-            this.chksituacao.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.chksituacao.ForeColor = System.Drawing.Color.White;
-            this.chksituacao.Location = new System.Drawing.Point(233, 25);
-            this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(20, 20);
-            this.chksituacao.TabIndex = 48;
             // 
             // btnsair
             // 
@@ -108,7 +68,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = true;
-            this.btnsair.Location = new System.Drawing.Point(417, 178);
+            this.btnsair.Location = new System.Drawing.Point(374, 101);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -146,7 +106,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = true;
-            this.btnlimpar.Location = new System.Drawing.Point(243, 178);
+            this.btnlimpar.Location = new System.Drawing.Point(200, 101);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -183,7 +143,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = true;
-            this.btngravar.Location = new System.Drawing.Point(68, 179);
+            this.btngravar.Location = new System.Drawing.Point(25, 102);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -203,7 +163,7 @@
             this.lbldescricao.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldescricao.ForeColor = System.Drawing.Color.Black;
             this.lbldescricao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbldescricao.Location = new System.Drawing.Point(12, 67);
+            this.lbldescricao.Location = new System.Drawing.Point(20, 32);
             this.lbldescricao.Name = "lbldescricao";
             this.lbldescricao.Size = new System.Drawing.Size(115, 26);
             this.lbldescricao.TabIndex = 42;
@@ -214,7 +174,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(108, 65);
+            this.label1.Location = new System.Drawing.Point(116, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 28);
             this.label1.TabIndex = 49;
@@ -225,18 +185,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(622, 315);
+            this.ClientSize = new System.Drawing.Size(564, 191);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
-            this.Controls.Add(this.chksituacao);
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lbldescricao);
-            this.Controls.Add(this.lblidcc);
-            this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadCentroCusto";
@@ -251,9 +209,6 @@
         #endregion
         private System.Windows.Forms.TextBox txtdescricao;
         private System.Windows.Forms.Label lbldescricao;
-        private System.Windows.Forms.Label lblidcc;
-        private System.Windows.Forms.TextBox txtid;
-        private Bunifu.Framework.UI.BunifuCheckbox chksituacao;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;

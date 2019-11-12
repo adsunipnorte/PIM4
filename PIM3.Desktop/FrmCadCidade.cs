@@ -61,11 +61,13 @@ namespace PIM3.Desktop
         {
             txtcodcidade.Clear();
             txtnomecid.Clear();
-            estado();
+            cmbestado.Text = "";
         }
 
         private void btngravar_Click(object sender, EventArgs e)
         {
+            
+            
             if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text)))
             {
                 MessageBox.Show("É necessario preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -74,9 +76,52 @@ namespace PIM3.Desktop
 
             else
             {
-                ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
-                string var = "INSERT INTO tb_cidades(codcidade, nome)VALUES('" + txtcodcidade.Text + "'," + "'" + txtnomecid.Text + "'" + ")"; // Variável que recebe comando SQL
-                con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
+                //ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
+                //string var = "INSERT INTO tb_cidades(codcidade, nome, idestados)VALUES('" + txtcodcidade.Text + "'," + "'" + txtnomecid.Text + "'," + "'" + cmbestado.GetItemText(cmbestado.SelectedItem) + "'" + ")"; // Variável que recebe comando SQL
+                //con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
+
+
+                // ----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                
+                string combo = cmbestado.Text; // Variavel combo utilizada para pegar string ID do estado
+
+                using (SqlConnection con = new SqlConnection("Data Source=(local); Initial Catalog=efleet;Integrated Security=True"))
+                {
+                    try
+                    {
+
+                        using (var cmd = new SqlCommand("INSERT INTO tb_cidades (codcidade, nome, idestados) VALUES (@codcidade, @nome, @idestados)"))
+                        {
+
+                            cmd.Connection = con;
+                            cmd.Parameters.Add("@codcidade", txtcodcidade.Text);
+                            cmd.Parameters.Add("@nome", txtnomecid.Text);
+                            cmd.Parameters.Add("@idestados", combo.Substring(0,2)); //utilzada variavel para pegar ID do estado
+
+                            con.Open();
+                            if (cmd.ExecuteNonQuery() > 0)
+                            {
+                                MessageBox.Show("Registro inserido com sucesso");
+                                cmbestado.Text = "";
+                                txtnomecid.Clear();
+                                txtcodcidade.Clear();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Não foi possive efetuar a gravação");
+                            }
+                        }
+                    }
+                    catch (Exception a)
+                    {
+                        MessageBox.Show("Error during insert: " + a.Message);
+                    }
+                }
+
+
+
             }
         }
 
@@ -85,10 +130,11 @@ namespace PIM3.Desktop
             this.BackColor = Color.Beige;
         }
 
-        private void estado()
+        public void estado()
         {
             string con = ("Data Source=(local);Initial Catalog=efleet;Integrated Security=True");
             string QuerySQL = "SELECT cast(id as varchar)  + ' - ' + estado as estado from tb_estados";
+            
 
             try
             {
@@ -103,11 +149,11 @@ namespace PIM3.Desktop
                         //Faz um fill dos dados do DataAdapter para o DataTable
                         da.Fill(dt);
                         //Fonte de dados do Combobox recebe o datatable
-                        this.comboBox1.DataSource = dt;
+                        this.cmbestado.DataSource = dt;
                         //DisplayMember = recebe o nome que está no banco de dados
-                        this.comboBox1.DisplayMember = "estado";
-                        //ValueMember = recebe o código e guarda internamente em cada item do combobox.
-                        this.comboBox1.ValueMember = "Estado";
+                        this.cmbestado.DisplayMember = "estado";
+                        //ValueMember = recebe o código e guarda internamente em cada item do combobox. (nome das colunas concatenadas
+                        this.cmbestado.ValueMember = "Estado";
                     }
                 }
             }
@@ -121,11 +167,7 @@ namespace PIM3.Desktop
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void comboBox1_Click(object sender, EventArgs e)
         {
             estado();

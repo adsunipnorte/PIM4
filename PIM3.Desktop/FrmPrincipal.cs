@@ -263,5 +263,17 @@ namespace PIM3.Desktop
             FrmMontadora montadora = new FrmMontadora();
             montadora.Show();
         }
+
+        private void manutençãoVeículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmManutencao manut = new FrmManutencao();
+            manut.Show();
+        }
+
+        private void veículoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmVeiculo formveiculo = new FrmVeiculo();
+            formveiculo.Show();
+        }
     }
 }

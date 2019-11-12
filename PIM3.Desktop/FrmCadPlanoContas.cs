@@ -43,7 +43,6 @@ namespace PIM3.Desktop
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
-            txtid.Clear();
             txtdescricao.Clear();
         }
 

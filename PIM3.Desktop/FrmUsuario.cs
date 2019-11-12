@@ -184,5 +184,18 @@ namespace PIM3.Desktop
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            easyHTMLReports1.AddString("<h1>RELATÓRIO DE USUÁRIOS <h1> ");
+            easyHTMLReports1.AddLineBreak();
+            
+            easyHTMLReports1.AddDatagridView(dgvusuario, "width='100%' border=1");
+           
+            
+
+            easyHTMLReports1.AddHorizontalRule();
+            easyHTMLReports1.ShowPrintPreviewDialog();
+        }
     }
 }

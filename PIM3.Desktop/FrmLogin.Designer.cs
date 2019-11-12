@@ -134,7 +134,7 @@
             this.lbllogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbllogin.Name = "lbllogin";
             this.lbllogin.Size = new System.Drawing.Size(143, 45);
-            this.lbllogin.TabIndex = 100;
+            this.lbllogin.TabIndex = 0;
             this.lbllogin.Text = "LOGIN";
             // 
             // FrmLogin
@@ -152,6 +152,7 @@
             this.Controls.Add(this.lbllogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

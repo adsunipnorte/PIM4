@@ -31,18 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadTpManutencao));
             this.lbldescricao = new System.Windows.Forms.Label();
             this.txtdescricao = new System.Windows.Forms.TextBox();
-            this.lblid = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbldescricao
             // 
             this.lbldescricao.AutoSize = true;
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.lbldescricao.Location = new System.Drawing.Point(49, 103);
+            this.lbldescricao.Location = new System.Drawing.Point(24, 45);
             this.lbldescricao.Name = "lbldescricao";
             this.lbldescricao.Size = new System.Drawing.Size(84, 19);
             this.lbldescricao.TabIndex = 77;
@@ -50,32 +49,10 @@
             // 
             // txtdescricao
             // 
-            this.txtdescricao.Location = new System.Drawing.Point(167, 100);
+            this.txtdescricao.Location = new System.Drawing.Point(142, 42);
             this.txtdescricao.Name = "txtdescricao";
             this.txtdescricao.Size = new System.Drawing.Size(430, 27);
             this.txtdescricao.TabIndex = 76;
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.lblid.Location = new System.Drawing.Point(49, 49);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
-            this.lblid.TabIndex = 75;
-            this.lblid.Text = "ID";
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.Yellow;
-            this.txtid.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtid.Location = new System.Drawing.Point(85, 45);
-            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
-            this.txtid.TabIndex = 74;
-            this.txtid.TabStop = false;
             // 
             // btnlimpar
             // 
@@ -99,7 +76,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(226, 196);
+            this.btnlimpar.Location = new System.Drawing.Point(201, 109);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -112,7 +89,6 @@
             this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnlimpar.Textcolor = System.Drawing.Color.White;
             this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
-            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
             // btnsair
             // 
@@ -135,7 +111,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(400, 196);
+            this.btnsair.Location = new System.Drawing.Point(375, 109);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -171,7 +147,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(53, 196);
+            this.btngravar.Location = new System.Drawing.Point(28, 109);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -186,20 +162,31 @@
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(104, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 28);
+            this.label1.TabIndex = 140;
+            this.label1.Text = "*";
+            // 
             // FrmCadTpManutencao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 315);
+            this.ClientSize = new System.Drawing.Size(596, 227);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
             this.Controls.Add(this.lbldescricao);
             this.Controls.Add(this.txtdescricao);
-            this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadTpManutencao";
@@ -215,10 +202,9 @@
 
         private System.Windows.Forms.Label lbldescricao;
         private System.Windows.Forms.TextBox txtdescricao;
-        private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.TextBox txtid;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
+        private System.Windows.Forms.Label label1;
     }
 }

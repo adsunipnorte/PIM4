@@ -37,8 +37,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
     <Reference Include="JTextBox2">
       <HintPath>DLL Bunifu\JTextBox2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -47,6 +61,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,6 +76,29 @@
   <ItemGroup>
     <Compile Include="ClasseConexaoBD.cs" />
     <Compile Include="Cmethods.cs" />
+    <Compile Include="efleetDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>efleetDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadVeiculo.Designer.cs">
+      <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVeiculo.Designer.cs">
+      <DependentUpon>FrmVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelUsuarios.Designer.cs">
+      <DependentUpon>RelUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +329,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Teste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +342,15 @@
     <Compile Include="testeMessageBox.Designer.cs">
       <DependentUpon>testeMessageBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmCadVeiculo.resx">
+      <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVeiculo.resx">
+      <DependentUpon>FrmVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelUsuarios.resx">
+      <DependentUpon>RelUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadCliente.resx">
       <DependentUpon>FrmCadCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,12 +475,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RelUsuarios.rdlc" />
     <EmbeddedResource Include="Teste.resx">
       <DependentUpon>Teste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testeMessageBox.resx">
       <DependentUpon>testeMessageBox.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="efleetDataSet1.xsc">
+      <DependentUpon>efleetDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="efleetDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>efleetDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="efleetDataSet1.xss">
+      <DependentUpon>efleetDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -461,6 +522,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

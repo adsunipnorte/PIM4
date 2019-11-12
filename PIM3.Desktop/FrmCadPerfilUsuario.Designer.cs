@@ -29,42 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadPerfilUsuario));
-            this.lblid = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.txtdescricao = new System.Windows.Forms.TextBox();
             this.lbldescricao = new System.Windows.Forms.Label();
-            this.chksituacao = new System.Windows.Forms.CheckBox();
-            this.chkfiltro = new System.Windows.Forms.CheckBox();
             this.btnlimpar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsair = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.lblid.Location = new System.Drawing.Point(34, 28);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(26, 19);
-            this.lblid.TabIndex = 11;
-            this.lblid.Text = "ID";
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.Yellow;
-            this.txtid.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtid.Location = new System.Drawing.Point(70, 24);
-            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtid.Name = "txtid";
-            this.txtid.ReadOnly = true;
-            this.txtid.Size = new System.Drawing.Size(62, 27);
-            this.txtid.TabIndex = 0;
-            this.txtid.TabStop = false;
             // 
             // txtdescricao
             // 
-            this.txtdescricao.Location = new System.Drawing.Point(142, 72);
+            this.txtdescricao.Location = new System.Drawing.Point(135, 31);
             this.txtdescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdescricao.Name = "txtdescricao";
             this.txtdescricao.Size = new System.Drawing.Size(273, 27);
@@ -75,35 +50,11 @@
             // 
             this.lbldescricao.AutoSize = true;
             this.lbldescricao.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldescricao.Location = new System.Drawing.Point(37, 80);
+            this.lbldescricao.Location = new System.Drawing.Point(30, 36);
             this.lbldescricao.Name = "lbldescricao";
             this.lbldescricao.Size = new System.Drawing.Size(84, 19);
             this.lbldescricao.TabIndex = 43;
             this.lbldescricao.Text = "Descrição";
-            // 
-            // chksituacao
-            // 
-            this.chksituacao.AutoSize = true;
-            this.chksituacao.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.chksituacao.Location = new System.Drawing.Point(175, 28);
-            this.chksituacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chksituacao.Name = "chksituacao";
-            this.chksituacao.Size = new System.Drawing.Size(66, 23);
-            this.chksituacao.TabIndex = 5;
-            this.chksituacao.Text = "Ativo";
-            this.chksituacao.UseVisualStyleBackColor = true;
-            // 
-            // chkfiltro
-            // 
-            this.chkfiltro.AutoSize = true;
-            this.chkfiltro.Location = new System.Drawing.Point(287, 28);
-            this.chkfiltro.Name = "chkfiltro";
-            this.chkfiltro.Size = new System.Drawing.Size(98, 23);
-            this.chkfiltro.TabIndex = 59;
-            this.chkfiltro.Text = "Pesquisa";
-            this.chkfiltro.UseVisualStyleBackColor = true;
-            this.chkfiltro.Visible = false;
-            this.chkfiltro.CheckedChanged += new System.EventHandler(this.chkfiltro_CheckedChanged);
             // 
             // btnlimpar
             // 
@@ -127,7 +78,7 @@
             this.btnlimpar.IconVisible = false;
             this.btnlimpar.IconZoom = 90D;
             this.btnlimpar.IsTab = false;
-            this.btnlimpar.Location = new System.Drawing.Point(219, 169);
+            this.btnlimpar.Location = new System.Drawing.Point(205, 94);
             this.btnlimpar.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -140,6 +91,7 @@
             this.btnlimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnlimpar.Textcolor = System.Drawing.Color.White;
             this.btnlimpar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnlimpar.Click += new System.EventHandler(this.btnlimpar_Click);
             // 
             // btnsair
             // 
@@ -162,7 +114,7 @@
             this.btnsair.IconVisible = false;
             this.btnsair.IconZoom = 90D;
             this.btnsair.IsTab = false;
-            this.btnsair.Location = new System.Drawing.Point(402, 169);
+            this.btnsair.Location = new System.Drawing.Point(388, 94);
             this.btnsair.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.btnsair.Name = "btnsair";
             this.btnsair.Normalcolor = System.Drawing.Color.Crimson;
@@ -175,6 +127,7 @@
             this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnsair.Textcolor = System.Drawing.Color.White;
             this.btnsair.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F);
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click_1);
             // 
             // btngravar
             // 
@@ -197,7 +150,7 @@
             this.btngravar.IconVisible = true;
             this.btngravar.IconZoom = 90D;
             this.btngravar.IsTab = false;
-            this.btngravar.Location = new System.Drawing.Point(38, 169);
+            this.btngravar.Location = new System.Drawing.Point(24, 94);
             this.btngravar.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.btngravar.Name = "btngravar";
             this.btngravar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -210,43 +163,50 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(109, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 28);
+            this.label1.TabIndex = 140;
+            this.label1.Text = "*";
             // 
             // FrmCadPerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 315);
+            this.ClientSize = new System.Drawing.Size(592, 206);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btngravar);
-            this.Controls.Add(this.chkfiltro);
-            this.Controls.Add(this.chksituacao);
             this.Controls.Add(this.txtdescricao);
             this.Controls.Add(this.lbldescricao);
-            this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtid);
             this.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadPerfilUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil de usuário";
             this.Load += new System.EventHandler(this.FrmCadPerfilUsuario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadPerfilUsuario_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblid;
-        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtdescricao;
         private System.Windows.Forms.Label lbldescricao;
-        private System.Windows.Forms.CheckBox chksituacao;
-        private System.Windows.Forms.CheckBox chkfiltro;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimpar;
         private Bunifu.Framework.UI.BunifuFlatButton btnsair;
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
+        private System.Windows.Forms.Label label1;
     }
 }

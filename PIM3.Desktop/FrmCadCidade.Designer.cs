@@ -38,7 +38,7 @@
             this.btngravar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -216,16 +216,17 @@
             this.label2.TabIndex = 77;
             this.label2.Text = "*";
             // 
-            // comboBox1
+            // cmbestado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 19;
-            this.comboBox1.Location = new System.Drawing.Point(217, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(273, 27);
-            this.comboBox1.TabIndex = 79;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.ItemHeight = 19;
+            this.cmbestado.Location = new System.Drawing.Point(217, 26);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(273, 27);
+            this.cmbestado.TabIndex = 79;
+            
+            this.cmbestado.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // label3
             // 
@@ -256,7 +257,7 @@
             this.ClientSize = new System.Drawing.Size(622, 315);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbestado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlimpar);
@@ -269,6 +270,7 @@
             this.Font = new System.Drawing.Font("Arial", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FrmCadCidade";
@@ -289,7 +291,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btngravar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbestado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }

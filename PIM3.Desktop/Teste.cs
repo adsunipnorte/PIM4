@@ -57,5 +57,17 @@ namespace PIM3.Desktop
         {
             alert.Show("Registro inserido com sucesso.", alert.AlertType.warnig);
         }
+
+        private void Teste_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmRelusuarios ftm = new FrmRelusuarios();
+            ftm.Show();
+        }
     }
 }

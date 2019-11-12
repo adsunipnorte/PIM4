@@ -47,7 +47,7 @@ namespace PIM3.Desktop
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
-            txtid.Clear();
+            
             txtseguro.Clear();
             txtobs.Clear();
         }
@@ -66,7 +66,7 @@ namespace PIM3.Desktop
                 ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
                 string var = "INSERT INTO tb_seguros(descricao, observacao)VALUES('" + txtseguro.Text + "'," + "'" + txtobs.Text + "'" + ")"; // Variável que recebe comando SQL
                 con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
-                txtid.Clear();
+               
                 txtseguro.Clear();
                 txtobs.Clear();
                 txtseguro.Focus();
