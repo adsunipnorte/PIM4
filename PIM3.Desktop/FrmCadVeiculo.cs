@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
+
+
 namespace PIM3.Desktop
 {
     public partial class FrmCadVeiculo : Form
@@ -31,21 +33,25 @@ namespace PIM3.Desktop
         {
             txtplaca.Clear();
             txtrenavam.Clear();
-            txtmarca.Clear();
             txtmodelo.Clear();
             txtcor.Clear();
+            cmbanofabricacao.Text = "";
+            cmbanomodelo.Text = "";
+            cmbmontadora.Text = "";
+            cmbtipoveiculo.Text = "";
+            cmbmotor.Text = "";
             cmblugares.Text = "";
             cmbcambio.Text = "";
             cmbcombustivel.Text = "";
             cmbporta.Text = "";
             rtbobs.Clear();
-            //Cmethods.limpar(this.Controls);
+
         }
 
         private void btnsucesso_Click(object sender, EventArgs e)
         {
-            if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text))) 
-                
+            if (this.Controls.OfType<TextBox>().Any(f => string.IsNullOrEmpty(f.Text)))
+
             {
                 MessageBox.Show("É necessario preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtplaca.Focus();
@@ -72,27 +78,27 @@ namespace PIM3.Desktop
                     try
                     {
 
-                        using (var cmd = new SqlCommand("INSERT INTO tb_veiculos (placa, renavam, marca, modelo, anofabricacao, anomodelo, cor, porta," +
+                        using (var cmd = new SqlCommand("INSERT INTO tb_veiculos (placa, renavam, modelo, anofabricacao, anomodelo, cor, porta," +
                             "motor, cambio, combustivel, lugares, idtipoveiculo, idmontadoras, observacao) " +
-                            "VALUES (@placa, @renavam, @marca, @modelo, @anofabricacao, @anomodelo, @cor, @porta, @motor, @cambio, @combustivel, @lugares, @idtipoveiculo, @idmontadoras, @observacao)"))
+                            "VALUES (@placa, @renavam, @modelo, @anofabricacao, @anomodelo, @cor, @porta, @motor, @cambio, @combustivel, @lugares, @idtipoveiculo, @idmontadoras, @observacao)"))
                         {
 
                             cmd.Connection = con;
                             cmd.Parameters.Add("@placa", txtplaca.Text);
                             //cmd.Parameters.Add("@nome", txtplaca.Text);
                             cmd.Parameters.Add("@renavam", txtrenavam.Text);
-                            cmd.Parameters.Add("@marca", txtmarca.Text);
-                            cmd.Parameters.Add("@modelo", txtmodelo.Text);
-                            cmd.Parameters.Add("@anomodelo", anomodel.Substring(0,4)); //
-                            cmd.Parameters.Add("@anofabricacao", anofab.Substring(0,4));
-                            cmd.Parameters.Add("@cor", txtcor.Text);
-                            cmd.Parameters.Add("@porta", numporta.Substring(0,1)); //
-                            cmd.Parameters.Add("@motor", motor.Substring(0,3)); //
+                            //cmd.Parameters.Add("@marca", txtmarca.Text);
+                            cmd.Parameters.Add("@modelo", txtmodelo.Text.ToUpper());
+                            cmd.Parameters.Add("@anomodelo", anomodel.Substring(0, 4)); //
+                            cmd.Parameters.Add("@anofabricacao", anofab.Substring(0, 4));
+                            cmd.Parameters.Add("@cor", txtcor.Text.ToUpper());
+                            cmd.Parameters.Add("@porta", numporta.Substring(0, 1)); //
+                            cmd.Parameters.Add("@motor", motor.Substring(0, 3)); //
                             cmd.Parameters.Add("@cambio", cmbcambio.Text); //
                             cmd.Parameters.Add("@combustivel", cmbcombustivel.Text);
-                            cmd.Parameters.Add("@lugares", lugares.Substring(0,1));
+                            cmd.Parameters.Add("@lugares", lugares.Substring(0, 1));
                             cmd.Parameters.Add("@idtipoveiculo", tipoveiculo.Substring(0, 1));
-                            cmd.Parameters.Add("@idmontadoras", tpmontadora.Substring(0,2));
+                            cmd.Parameters.Add("@idmontadoras", tpmontadora.Substring(0, 2));
                             cmd.Parameters.Add("@observacao", rtbobs.Text);
 
                             //cmd.Parameters.Add("@idclientes", combotipocliente.Substring(0, 2)); //utilzada variavel para pegar ID do cliente
@@ -124,7 +130,7 @@ namespace PIM3.Desktop
         public void tipoVeiculo()
         {
             string con = ("Data Source=(local);Initial Catalog=efleet;Integrated Security=True");
-            string QuerySQL = "SELECT cast(tb_tipoveiculo.id as varchar) +  ' - ' + tb_tipoveiculo.descricao as TIPOVEICULO from tb_tipoveiculo";
+            string QuerySQL = "SELECT cast(tb_tipoveiculo.id as varchar)   +  ' - ' +  tb_tipoveiculo.descricao as TIPOVEICULO from tb_tipoveiculo order by tb_tipoveiculo.descricao";
 
             try
             {
@@ -147,7 +153,7 @@ namespace PIM3.Desktop
                     }
                 }
             }
-            
+
 
             catch (Exception ex)
             {
@@ -159,14 +165,14 @@ namespace PIM3.Desktop
         private void cmbtipoveiculo_Click(object sender, EventArgs e)
         {
             tipoVeiculo();
-            
+
         }
 
 
         public void consultamontadora()
         {
             string con = ("Data Source=(local);Initial Catalog=efleet;Integrated Security=True");
-            string QuerySQL = "SELECT cast(tb_montadoras.id as varchar) +  ' - ' + tb_montadoras.descricao as MONTADORA from tb_montadoras";
+            string QuerySQL = "SELECT cast(tb_montadoras.id as varchar) +  ' - ' + tb_montadoras.descricao as MONTADORA from tb_montadoras order by tb_montadoras.descricao";
 
             try
             {
@@ -204,8 +210,8 @@ namespace PIM3.Desktop
         }
     }
     //-----------------------------------------------------------------------------------------------------
-    
-    
+
+
 
 
 

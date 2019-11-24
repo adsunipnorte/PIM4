@@ -81,11 +81,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>efleetDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmCadPeca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadPeca.Designer.cs">
+      <DependentUpon>FrmCadPeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadPneu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadPneu.Designer.cs">
+      <DependentUpon>FrmCadPneu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCadVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCadVeiculo.Designer.cs">
       <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPecas.Designer.cs">
+      <DependentUpon>FrmPecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmpneu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmpneu.Designer.cs">
+      <DependentUpon>Frmpneu.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVeiculo.cs">
       <SubType>Form</SubType>
@@ -342,8 +366,20 @@
     <Compile Include="testeMessageBox.Designer.cs">
       <DependentUpon>testeMessageBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmCadPeca.resx">
+      <DependentUpon>FrmCadPeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadPneu.resx">
+      <DependentUpon>FrmCadPneu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadVeiculo.resx">
       <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPecas.resx">
+      <DependentUpon>FrmPecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmpneu.resx">
+      <DependentUpon>Frmpneu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVeiculo.resx">
       <DependentUpon>FrmVeiculo.cs</DependentUpon>

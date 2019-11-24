@@ -69,7 +69,7 @@ namespace PIM3.Desktop
             else
             {
                 ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
-                string var = "INSERT INTO tb_perfilusuarios(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+                string var = "INSERT INTO tb_perfilusuarios(descricao)VALUES('" + txtdescricao.Text.ToUpper() + "'" + ")"; // Variável que recebe comando SQL
 
                 try
                 {
@@ -81,7 +81,7 @@ namespace PIM3.Desktop
                 catch (Exception ex)
                 {
                     string erro = ex.Message;
-                    erro += "Não foi possivel concluir a operacao";
+                    erro += "Erro ao inserir registro.";
                 }
             }
         }

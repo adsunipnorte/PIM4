@@ -82,7 +82,20 @@ namespace PIM3.Desktop
             }
         }
 
-        
+
+        public void limparCampos(Control.ControlCollection controles)
+        {
+            //Faz um laço para todos os controles passados no parâmetro
+            foreach (Control ctrl in controles)
+            {
+                //Se o contorle for um TextBox...
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)(ctrl)).Text = String.Empty;
+                }
+            }
+        }
+
 
 
 

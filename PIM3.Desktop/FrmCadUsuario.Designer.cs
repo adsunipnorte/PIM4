@@ -253,6 +253,7 @@
             this.btngravar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngravar.Textcolor = System.Drawing.Color.White;
             this.btngravar.TextFont = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngravar.Click += new System.EventHandler(this.btngravar_Click);
             // 
             // richTextBox1
             // 

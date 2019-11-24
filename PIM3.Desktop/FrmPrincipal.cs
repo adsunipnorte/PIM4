@@ -275,5 +275,23 @@ namespace PIM3.Desktop
             FrmVeiculo formveiculo = new FrmVeiculo();
             formveiculo.Show();
         }
+
+        private void seguroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmSeguro formseguro = new FrmSeguro();
+            formseguro.Show();
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frmpneu formpneu = new Frmpneu();
+            formpneu.Show();
+        }
+
+        private void peçasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPecas formpeca = new FrmPecas();
+            formpeca.Show();
+        }
     }
 }

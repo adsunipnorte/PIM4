@@ -96,7 +96,7 @@ namespace PIM3.Desktop
 
                             cmd.Connection = con;
                             cmd.Parameters.Add("@codcidade", txtcodcidade.Text);
-                            cmd.Parameters.Add("@nome", txtnomecid.Text);
+                            cmd.Parameters.Add("@nome", txtnomecid.Text.ToUpper());
                             cmd.Parameters.Add("@idestados", combo.Substring(0,2)); //utilzada variavel para pegar ID do estado
 
                             con.Open();

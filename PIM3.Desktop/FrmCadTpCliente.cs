@@ -63,7 +63,7 @@ namespace PIM3.Desktop
             else
             {
                 ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
-                string var = "INSERT INTO tb_tipocliente(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+                string var = "INSERT INTO tb_tipocliente(descricao)VALUES('" + txtdescricao.Text.ToUpper() + "'" + ")"; // Variável que recebe comando SQL
                 con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
                 txtdescricao.Clear();
                 txtdescricao.Focus();

@@ -37,7 +37,6 @@
             this.tipoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.condutoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seguroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +63,7 @@
             this.tipoManutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pneusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,7 +107,6 @@
             this.tipoClienteToolStripMenuItem,
             this.condutoresToolStripMenuItem,
             this.fornecedoresToolStripMenuItem,
-            this.seguroToolStripMenuItem,
             this.estadosToolStripMenuItem,
             this.cidadesToolStripMenuItem});
             this.cadastroToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -157,14 +156,6 @@
             this.fornecedoresToolStripMenuItem.Text = "&Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
-            // seguroToolStripMenuItem
-            // 
-            this.seguroToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.seguroToolStripMenuItem.Name = "seguroToolStripMenuItem";
-            this.seguroToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.seguroToolStripMenuItem.Text = "&Seguro";
-            this.seguroToolStripMenuItem.Click += new System.EventHandler(this.seguroToolStripMenuItem_Click);
-            // 
             // estadosToolStripMenuItem
             // 
             this.estadosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
@@ -195,6 +186,7 @@
             this.peçasToolStripMenuItem.Name = "peçasToolStripMenuItem";
             this.peçasToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
             this.peçasToolStripMenuItem.Text = "&Peças";
+            this.peçasToolStripMenuItem.Click += new System.EventHandler(this.peçasToolStripMenuItem_Click);
             // 
             // entradaSaídaDeMateriaisToolStripMenuItem
             // 
@@ -247,15 +239,16 @@
             // novaLocaçãoToolStripMenuItem
             // 
             this.novaLocaçãoToolStripMenuItem.Name = "novaLocaçãoToolStripMenuItem";
-            this.novaLocaçãoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.novaLocaçãoToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.novaLocaçãoToolStripMenuItem.Text = "Nova locação";
             this.novaLocaçãoToolStripMenuItem.Click += new System.EventHandler(this.novaLocaçãoToolStripMenuItem_Click);
             // 
             // seguroToolStripMenuItem1
             // 
             this.seguroToolStripMenuItem1.Name = "seguroToolStripMenuItem1";
-            this.seguroToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.seguroToolStripMenuItem1.Size = new System.Drawing.Size(182, 26);
             this.seguroToolStripMenuItem1.Text = "Seguro";
+            this.seguroToolStripMenuItem1.Click += new System.EventHandler(this.seguroToolStripMenuItem1_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -361,7 +354,8 @@
             // pneusToolStripMenuItem
             // 
             this.pneusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem1});
+            this.cadastroToolStripMenuItem1,
+            this.consultaToolStripMenuItem});
             this.pneusToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.pneusToolStripMenuItem.Name = "pneusToolStripMenuItem";
             this.pneusToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
@@ -372,6 +366,13 @@
             this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
             this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(150, 26);
             this.cadastroToolStripMenuItem1.Text = "Cadastro";
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
             // usuárioToolStripMenuItem
             // 
@@ -519,7 +520,6 @@
         private System.Windows.Forms.ToolStripMenuItem clientesCanceladosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seguroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem centroDeCustoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planoDeContasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem peçasToolStripMenuItem;
@@ -549,5 +549,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem montadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
     }
 }

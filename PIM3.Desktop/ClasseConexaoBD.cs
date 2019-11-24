@@ -25,14 +25,15 @@ namespace PIM3.Desktop
             {
                 conexao.Open(); // Variável do tipo SqlConnection com método Open
                 comandosql.ExecuteNonQuery(); // Variável do tipo SqlCommand com método ExecuteNoQuery
-                //alert.Show("Registro inserido com sucesso.", alert.AlertType.success);
+                alert.Show("Registro inserido com sucesso.", alert.AlertType.success);
+                
             }
             catch (Exception excecao)
             {
 
                 string erro = excecao.Message;
                 erro += "Não foi possivel conectar ao banco de dados.";
-                //alert.Show("Não foi possivel conectar ao banco de dados.", alert.AlertType.error);
+                alert.Show("Não foi possivel conectar ao banco de dados.", alert.AlertType.error);
 
             }
 

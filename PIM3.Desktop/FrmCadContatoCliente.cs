@@ -123,11 +123,20 @@ namespace PIM3.Desktop
                     try
                     {
 
-                        using (var cmd = new SqlCommand("INSERT INTO tb_contatos (nome, idclientes) VALUES (@nome, @idclientes)"))
+                        using (var cmd = new SqlCommand("INSERT INTO tb_contatos (nome, endereco, numero, complemento, bairro, cep, telefone, celular, email, idclientes) " +
+                            "VALUES (@nome, @endereco, @numero, @complemento, @bairro, @cep, @telefone, @celular, @email, @idclientes)"))
                         {
 
                             cmd.Connection = con;
-                            cmd.Parameters.Add("@nome", txtnome.Text);
+                            cmd.Parameters.Add("@nome", txtnome.Text.ToUpper());
+                            cmd.Parameters.Add("@endereco", txtend.Text.ToUpper());
+                            cmd.Parameters.Add("@numero", txtnumero.Text);
+                            cmd.Parameters.Add("@complemento", txtcompl.Text);
+                            cmd.Parameters.Add("@bairro", txtbairro.Text.ToUpper());
+                            cmd.Parameters.Add("@cep", txtcep.Text);
+                            cmd.Parameters.Add("@telefone", txttel.Text);
+                            cmd.Parameters.Add("@celular", txtcel.Text);
+                            cmd.Parameters.Add("@email", txtemail.Text);
                             cmd.Parameters.Add("@idclientes", combotipocliente.Substring(0, 2)); //utilzada variavel para pegar ID do cliente
 
                             con.Open();
@@ -137,13 +146,13 @@ namespace PIM3.Desktop
                             }
                             else
                             {
-                                MessageBox.Show("Não foi possive efetuar a gravação");
+                                MessageBox.Show("Não foi possivel efetuar a gravação");
                             }
                         }
                     }
                     catch (Exception a)
                     {
-                        MessageBox.Show("Error during insert: " + a.Message);
+                        MessageBox.Show("Error ao inserir registro: " + a.Message);
                     }
                 }
 

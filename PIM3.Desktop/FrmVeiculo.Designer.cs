@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVeiculo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbmarca = new System.Windows.Forms.RadioButton();
+            this.rdbtpveiculo = new System.Windows.Forms.RadioButton();
+            this.rdbmontadora = new System.Windows.Forms.RadioButton();
+            this.rdbmodelo = new System.Windows.Forms.RadioButton();
             this.rdbplaca = new System.Windows.Forms.RadioButton();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dgvveiculo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -47,14 +49,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idmontadora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtipoveiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdbmontadora = new System.Windows.Forms.RadioButton();
-            this.rdbmodelo = new System.Windows.Forms.RadioButton();
-            this.rdbtpveiculo = new System.Windows.Forms.RadioButton();
+            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montadora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPOVEICULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvveiculo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,7 +84,6 @@
             this.groupBox2.Controls.Add(this.rdbtpveiculo);
             this.groupBox2.Controls.Add(this.rdbmontadora);
             this.groupBox2.Controls.Add(this.rdbmodelo);
-            this.groupBox2.Controls.Add(this.rdbmarca);
             this.groupBox2.Controls.Add(this.rdbplaca);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(277, 34);
@@ -96,16 +93,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipo de pesquisa";
             // 
-            // rdbmarca
+            // rdbtpveiculo
             // 
-            this.rdbmarca.AutoSize = true;
-            this.rdbmarca.Location = new System.Drawing.Point(16, 56);
-            this.rdbmarca.Name = "rdbmarca";
-            this.rdbmarca.Size = new System.Drawing.Size(76, 23);
-            this.rdbmarca.TabIndex = 1;
-            this.rdbmarca.TabStop = true;
-            this.rdbmarca.Text = "Marca";
-            this.rdbmarca.UseVisualStyleBackColor = true;
+            this.rdbtpveiculo.AutoSize = true;
+            this.rdbtpveiculo.Location = new System.Drawing.Point(163, 57);
+            this.rdbtpveiculo.Name = "rdbtpveiculo";
+            this.rdbtpveiculo.Size = new System.Drawing.Size(116, 23);
+            this.rdbtpveiculo.TabIndex = 4;
+            this.rdbtpveiculo.TabStop = true;
+            this.rdbtpveiculo.Text = "Tipo veículo";
+            this.rdbtpveiculo.UseVisualStyleBackColor = true;
+            this.rdbtpveiculo.CheckedChanged += new System.EventHandler(this.rdbtpveiculo_CheckedChanged);
+            // 
+            // rdbmontadora
+            // 
+            this.rdbmontadora.AutoSize = true;
+            this.rdbmontadora.Location = new System.Drawing.Point(16, 57);
+            this.rdbmontadora.Name = "rdbmontadora";
+            this.rdbmontadora.Size = new System.Drawing.Size(107, 23);
+            this.rdbmontadora.TabIndex = 3;
+            this.rdbmontadora.TabStop = true;
+            this.rdbmontadora.Text = "Montadora";
+            this.rdbmontadora.UseVisualStyleBackColor = true;
+            this.rdbmontadora.CheckedChanged += new System.EventHandler(this.rdbmontadora_CheckedChanged);
+            // 
+            // rdbmodelo
+            // 
+            this.rdbmodelo.AutoSize = true;
+            this.rdbmodelo.Location = new System.Drawing.Point(163, 22);
+            this.rdbmodelo.Name = "rdbmodelo";
+            this.rdbmodelo.Size = new System.Drawing.Size(82, 23);
+            this.rdbmodelo.TabIndex = 2;
+            this.rdbmodelo.TabStop = true;
+            this.rdbmodelo.Text = "Modelo";
+            this.rdbmodelo.UseVisualStyleBackColor = true;
+            this.rdbmodelo.CheckedChanged += new System.EventHandler(this.rdbmodelo_CheckedChanged);
             // 
             // rdbplaca
             // 
@@ -117,6 +139,7 @@
             this.rdbplaca.TabStop = true;
             this.rdbplaca.Text = "Placa";
             this.rdbplaca.UseVisualStyleBackColor = true;
+            this.rdbplaca.CheckedChanged += new System.EventHandler(this.rdbplaca_CheckedChanged);
             // 
             // btnpesquisar
             // 
@@ -142,13 +165,14 @@
             this.btnpesquisar.Size = new System.Drawing.Size(117, 35);
             this.btnpesquisar.TabIndex = 1014;
             this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // dgvveiculo
             // 
             this.dgvveiculo.AllowUserToAddRows = false;
             this.dgvveiculo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.dgvveiculo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.dgvveiculo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvveiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvveiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -156,29 +180,28 @@
             this.dgvveiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvveiculo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvveiculo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvveiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvveiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvveiculo.ColumnHeadersHeight = 50;
             this.dgvveiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.idmontadora,
-            this.idtipoveiculo});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvveiculo.DefaultCellStyle = dataGridViewCellStyle18;
+            this.placa,
+            this.montadora,
+            this.modelo,
+            this.TIPOVEICULO});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvveiculo.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvveiculo.DoubleBuffered = true;
             this.dgvveiculo.EnableHeadersVisualStyles = false;
             this.dgvveiculo.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
@@ -188,16 +211,16 @@
             this.dgvveiculo.Name = "dgvveiculo";
             this.dgvveiculo.ReadOnly = true;
             this.dgvveiculo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvveiculo.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvveiculo.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvveiculo.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvveiculo.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvveiculo.RowTemplate.DividerHeight = 1;
             this.dgvveiculo.RowTemplate.Height = 40;
             this.dgvveiculo.RowTemplate.ReadOnly = true;
@@ -279,73 +302,33 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(51, 23);
             this.sairToolStripMenuItem.Text = "&Sair";
             // 
-            // dataGridViewTextBoxColumn2
+            // placa
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "placa";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Placa";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.placa.DataPropertyName = "placa";
+            this.placa.HeaderText = "Placa";
+            this.placa.Name = "placa";
+            this.placa.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // montadora
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "marca";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.montadora.DataPropertyName = "montadora";
+            this.montadora.HeaderText = "Montadora";
+            this.montadora.Name = "montadora";
+            this.montadora.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // modelo
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "modelo";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Modelo";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.modelo.DataPropertyName = "modelo";
+            this.modelo.HeaderText = "Modelo";
+            this.modelo.Name = "modelo";
+            this.modelo.ReadOnly = true;
             // 
-            // idmontadora
+            // TIPOVEICULO
             // 
-            this.idmontadora.DataPropertyName = "idmontadoras";
-            this.idmontadora.HeaderText = "Montadora";
-            this.idmontadora.Name = "idmontadora";
-            this.idmontadora.ReadOnly = true;
-            // 
-            // idtipoveiculo
-            // 
-            this.idtipoveiculo.DataPropertyName = "idtipoveiculo";
-            this.idtipoveiculo.HeaderText = "Tipo veículo";
-            this.idtipoveiculo.Name = "idtipoveiculo";
-            this.idtipoveiculo.ReadOnly = true;
-            // 
-            // rdbmontadora
-            // 
-            this.rdbmontadora.AutoSize = true;
-            this.rdbmontadora.Location = new System.Drawing.Point(114, 54);
-            this.rdbmontadora.Name = "rdbmontadora";
-            this.rdbmontadora.Size = new System.Drawing.Size(107, 23);
-            this.rdbmontadora.TabIndex = 3;
-            this.rdbmontadora.TabStop = true;
-            this.rdbmontadora.Text = "Montadora";
-            this.rdbmontadora.UseVisualStyleBackColor = true;
-            // 
-            // rdbmodelo
-            // 
-            this.rdbmodelo.AutoSize = true;
-            this.rdbmodelo.Location = new System.Drawing.Point(114, 24);
-            this.rdbmodelo.Name = "rdbmodelo";
-            this.rdbmodelo.Size = new System.Drawing.Size(82, 23);
-            this.rdbmodelo.TabIndex = 2;
-            this.rdbmodelo.TabStop = true;
-            this.rdbmodelo.Text = "Modelo";
-            this.rdbmodelo.UseVisualStyleBackColor = true;
-            // 
-            // rdbtpveiculo
-            // 
-            this.rdbtpveiculo.AutoSize = true;
-            this.rdbtpveiculo.Location = new System.Drawing.Point(223, 24);
-            this.rdbtpveiculo.Name = "rdbtpveiculo";
-            this.rdbtpveiculo.Size = new System.Drawing.Size(116, 23);
-            this.rdbtpveiculo.TabIndex = 4;
-            this.rdbtpveiculo.TabStop = true;
-            this.rdbtpveiculo.Text = "Tipo veículo";
-            this.rdbtpveiculo.UseVisualStyleBackColor = true;
+            this.TIPOVEICULO.DataPropertyName = "tipoveiculo";
+            this.TIPOVEICULO.HeaderText = "Tipo veículo";
+            this.TIPOVEICULO.Name = "TIPOVEICULO";
+            this.TIPOVEICULO.ReadOnly = true;
             // 
             // FrmVeiculo
             // 
@@ -378,7 +361,6 @@
 
         private JTextBox2.JTextBox txtpesquisar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rdbmarca;
         private System.Windows.Forms.RadioButton rdbplaca;
         private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvveiculo;
@@ -389,13 +371,12 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmontadora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idtipoveiculo;
         private System.Windows.Forms.RadioButton rdbtpveiculo;
         private System.Windows.Forms.RadioButton rdbmontadora;
         private System.Windows.Forms.RadioButton rdbmodelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montadora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPOVEICULO;
     }
 }

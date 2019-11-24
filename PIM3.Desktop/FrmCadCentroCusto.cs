@@ -77,9 +77,9 @@ namespace PIM3.Desktop
             //con.Close();
 
             // --------------------------------------------------------------------------------------------------------------------
-            //ClasseConexaoBD classe = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
-            //string query = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
-            //classe.AbreConexao(query); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
+            //ClasseConexaoBD CLASSE = new ClasseConexaoBD(); // VARIÁVEL DO TIPO DA CLASSE DE CONEXÃO
+            //string QUERY = "INSERT INTO TB_CENTROCUSTOS(DESCRICAO)VALUES('" + txtdescricao.Text + "'" + ")"; // VARIÁVEL QUE RECEBE COMANDO SQL
+            //CLASSE.AbreConexao(QUERY); // VARIÁVEL DO TIPO DA CLASSE DE CONEXÃO COM MÉTODO DE CONEXÃO E VARIÁVEL PASSADA COMO PARÂMETRO
 
             // --------------------------------------------------------------------------------------------------------------------
 
@@ -92,12 +92,13 @@ namespace PIM3.Desktop
             else
             {
                 ClasseConexaoBD con = new ClasseConexaoBD(); // Variável do tipo da classe de conexão
-                string var = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text + "'" + ")"; // Variável que recebe comando SQL
+                string var = "INSERT INTO tb_centrocustos(descricao)VALUES('" + txtdescricao.Text.ToUpper() + "'" + ")"; // Variável que recebe comando SQL
                 con.AbreConexao(var); // Variável do tipo da classe de conexão com método de conexão e variável passada como parâmetro
-
+                
+                
             }
 
-            
+
             // --------------------------------------------------------------------------------------------------------------------
 
 
