@@ -83,6 +83,7 @@
             this.btnsair.TabIndex = 5;
             this.toolTip1.SetToolTip(this.btnsair, "Sair");
             this.btnsair.UseVisualStyleBackColor = true;
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
             // btnalt
             // 

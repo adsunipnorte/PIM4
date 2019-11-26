@@ -31,7 +31,8 @@ namespace PIM3.Desktop
         {
             if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
                  MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
+            this.Close();
         }
 
 
@@ -123,30 +124,30 @@ namespace PIM3.Desktop
 
         private void rdbid_CheckedChanged(object sender, EventArgs e) // Método verifica se check de radiobutton ID é alterado
         {
-            
+
             if (rdbid.Checked == true) // Verifica se radiobutton ID está marcado, caso esteja coloca o foco no maskedtextbox pesquisar
             {
                 msktxtpesquisa.Visible = true; // maskedtextbox fica visivel
                 txtpesquisar.Visible = false; // textbox pesquisar fica invisível
                 msktxtpesquisa.Clear(); // Limpa maskedtextbox
                 msktxtpesquisa.Focus(); // Foco no maskedtextbox
-                
+
             }
-            
+
         }
 
         private void rdbdescricao_CheckedChanged(object sender, EventArgs e) // Método verifica se check de radiobutton descrição é alterado
         {
-            
+
             if (rdbdescricao.Checked == true) // Verifica se radiobutton descrição está marcado, sendo verdadeiro coloca o foco no maskedtextbox pesquisar
             {
                 msktxtpesquisa.Visible = false; // Maskedtextbox fica invisível
                 txtpesquisar.Visible = true; // Textbox pesquisar fica visível
                 txtpesquisar.TextName = ""; // Textbox pesquisar é limpo
                 txtpesquisar.Focus(); // Coloca foco no textbox pesquisar
-                
+
             }
-            
+
         }
 
         public static void AllowNumber(KeyPressEventArgs e) // Método permite somente digitar número em maskedtextbox

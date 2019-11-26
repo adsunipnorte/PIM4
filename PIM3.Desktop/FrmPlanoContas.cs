@@ -34,11 +34,17 @@ namespace PIM3.Desktop
         private void btnsair_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Information) == DialogResult.Yes)
+               MessageBoxIcon.Information) == DialogResult.Yes)
             {
+
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
                 this.Close();
             }
-                
+            else
+            {
+                txtpesquisar.Focus();
+            }
+
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

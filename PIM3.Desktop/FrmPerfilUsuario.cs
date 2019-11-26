@@ -137,5 +137,20 @@ namespace PIM3.Desktop
             FrmCadPerfilUsuario perfiluser = new FrmCadPerfilUsuario();
             perfiluser.Show();
         }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Aviso", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+
+                btnsair.Enabled = false; // Botao foi desabilitado pois estava com erro ao fechar form
+                this.Close();
+            }
+            else
+            {
+                txtpesquisar.Focus();
+            }
+        }
     }
 }
