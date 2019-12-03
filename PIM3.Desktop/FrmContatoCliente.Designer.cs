@@ -47,15 +47,15 @@
             this.btnnovo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dgvcontatocliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idclientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbcliente = new System.Windows.Forms.RadioButton();
             this.rdbnome = new System.Windows.Forms.RadioButton();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idclientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcontatocliente)).BeginInit();
@@ -226,34 +226,6 @@
             this.dgvcontatocliente.Size = new System.Drawing.Size(986, 571);
             this.dgvcontatocliente.TabIndex = 1003;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn4.HeaderText = "E-mail";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // idclientes
-            // 
-            this.idclientes.DataPropertyName = "cliente";
-            this.idclientes.HeaderText = "Cliente";
-            this.idclientes.Name = "idclientes";
-            this.idclientes.ReadOnly = true;
-            // 
             // txtpesquisar
             // 
             this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -334,6 +306,35 @@
             this.btnpesquisar.TabIndex = 1007;
             this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn2.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn4.HeaderText = "E-mail";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // idclientes
+            // 
+            this.idclientes.DataPropertyName = "cliente";
+            this.idclientes.HeaderText = "Cliente";
+            this.idclientes.Name = "idclientes";
+            this.idclientes.ReadOnly = true;
             // 
             // FrmContatoCliente
             // 

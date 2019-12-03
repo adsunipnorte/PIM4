@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.caToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,23 +42,23 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnsair = new System.Windows.Forms.Button();
+            this.btnalt = new System.Windows.Forms.Button();
+            this.btnnovo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbdescricao = new System.Windows.Forms.RadioButton();
             this.rdbid = new System.Windows.Forms.RadioButton();
             this.dgvusuario = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.msktxtpesquisa = new System.Windows.Forms.MaskedTextBox();
             this.easyHTMLReports1 = new KimToo.EasyHTMLReports(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnsair = new System.Windows.Forms.Button();
-            this.btnalt = new System.Windows.Forms.Button();
-            this.btnnovo = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -127,6 +127,45 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
+            // btnsair
+            // 
+            this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
+            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsair.Location = new System.Drawing.Point(183, 19);
+            this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnsair.Name = "btnsair";
+            this.btnsair.Size = new System.Drawing.Size(72, 76);
+            this.btnsair.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnsair, "Sair");
+            this.btnsair.UseVisualStyleBackColor = true;
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
+            // 
+            // btnalt
+            // 
+            this.btnalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnalt.BackgroundImage")));
+            this.btnalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnalt.Location = new System.Drawing.Point(96, 19);
+            this.btnalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnalt.Name = "btnalt";
+            this.btnalt.Size = new System.Drawing.Size(72, 76);
+            this.btnalt.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnalt, "Alterar usuário");
+            this.btnalt.UseVisualStyleBackColor = true;
+            this.btnalt.Click += new System.EventHandler(this.btnalt_Click);
+            // 
+            // btnnovo
+            // 
+            this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
+            this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnnovo.Location = new System.Drawing.Point(14, 19);
+            this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnnovo.Name = "btnnovo";
+            this.btnnovo.Size = new System.Drawing.Size(72, 76);
+            this.btnnovo.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnnovo, "Novo usuário");
+            this.btnnovo.UseVisualStyleBackColor = true;
+            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
+            // 
             // txtpesquisar
             // 
             this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -186,8 +225,8 @@
             // 
             this.dgvusuario.AllowUserToAddRows = false;
             this.dgvusuario.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle81.BackColor = System.Drawing.Color.White;
-            this.dgvusuario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvusuario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvusuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvusuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -195,28 +234,28 @@
             this.dgvusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvusuario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvusuario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle82.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle82.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvusuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvusuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvusuario.ColumnHeadersHeight = 50;
             this.dgvusuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.DataGridViewTextBoxColumn});
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle83.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle83.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvusuario.DefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvusuario.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvusuario.DoubleBuffered = true;
             this.dgvusuario.EnableHeadersVisualStyles = false;
             this.dgvusuario.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
@@ -226,16 +265,16 @@
             this.dgvusuario.Name = "dgvusuario";
             this.dgvusuario.ReadOnly = true;
             this.dgvusuario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvusuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle84;
-            dataGridViewCellStyle85.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvusuario.RowsDefaultCellStyle = dataGridViewCellStyle85;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvusuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvusuario.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvusuario.RowTemplate.DividerHeight = 1;
             this.dgvusuario.RowTemplate.Height = 40;
             this.dgvusuario.RowTemplate.ReadOnly = true;
@@ -243,34 +282,6 @@
             this.dgvusuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvusuario.Size = new System.Drawing.Size(756, 369);
             this.dgvusuario.TabIndex = 1006;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "login";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Login";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Situação";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // DataGridViewTextBoxColumn
-            // 
-            this.DataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.DataGridViewTextBoxColumn.HeaderText = "E-mail";
-            this.DataGridViewTextBoxColumn.Name = "DataGridViewTextBoxColumn";
-            this.DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // msktxtpesquisa
             // 
@@ -334,44 +345,34 @@
             this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
-            // btnsair
+            // dataGridViewTextBoxColumn2
             // 
-            this.btnsair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsair.BackgroundImage")));
-            this.btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsair.Location = new System.Drawing.Point(183, 19);
-            this.btnsair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsair.Name = "btnsair";
-            this.btnsair.Size = new System.Drawing.Size(72, 76);
-            this.btnsair.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnsair, "Sair");
-            this.btnsair.UseVisualStyleBackColor = true;
-            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn2.FillWeight = 60F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // btnalt
+            // dataGridViewTextBoxColumn3
             // 
-            this.btnalt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnalt.BackgroundImage")));
-            this.btnalt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnalt.Location = new System.Drawing.Point(96, 19);
-            this.btnalt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnalt.Name = "btnalt";
-            this.btnalt.Size = new System.Drawing.Size(72, 76);
-            this.btnalt.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnalt, "Alterar usuário");
-            this.btnalt.UseVisualStyleBackColor = true;
-            this.btnalt.Click += new System.EventHandler(this.btnalt_Click);
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "login";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Login";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // btnnovo
+            // dataGridViewTextBoxColumn4
             // 
-            this.btnnovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnnovo.BackgroundImage")));
-            this.btnnovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnnovo.Location = new System.Drawing.Point(14, 19);
-            this.btnnovo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnnovo.Name = "btnnovo";
-            this.btnnovo.Size = new System.Drawing.Size(72, 76);
-            this.btnnovo.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnnovo, "Novo usuário");
-            this.btnnovo.UseVisualStyleBackColor = true;
-            this.btnnovo.Click += new System.EventHandler(this.btnnovo_Click);
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Situação";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // DataGridViewTextBoxColumn
+            // 
+            this.DataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.DataGridViewTextBoxColumn.HeaderText = "E-mail";
+            this.DataGridViewTextBoxColumn.Name = "DataGridViewTextBoxColumn";
+            this.DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmUsuario
             // 
@@ -427,11 +428,11 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvusuario;
         private System.Windows.Forms.MaskedTextBox msktxtpesquisa;
+        private KimToo.EasyHTMLReports easyHTMLReports1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn;
-        private KimToo.EasyHTMLReports easyHTMLReports1;
-        private System.Windows.Forms.Button button1;
     }
 }

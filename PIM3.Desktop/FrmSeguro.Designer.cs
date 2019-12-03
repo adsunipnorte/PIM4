@@ -45,14 +45,14 @@
             this.btnalt = new System.Windows.Forms.Button();
             this.btnnovo = new System.Windows.Forms.Button();
             this.dgvseguros = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbobservacao = new System.Windows.Forms.RadioButton();
             this.rdbdescricao = new System.Windows.Forms.RadioButton();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvseguros)).BeginInit();
@@ -219,27 +219,6 @@
             this.dgvseguros.Size = new System.Drawing.Size(756, 398);
             this.dgvseguros.TabIndex = 1010;
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // observacao
-            // 
-            this.observacao.DataPropertyName = "observacao";
-            this.observacao.HeaderText = "Observação";
-            this.observacao.Name = "observacao";
-            this.observacao.ReadOnly = true;
-            // 
             // txtpesquisar
             // 
             this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -321,6 +300,28 @@
             this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.FillWeight = 60F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // observacao
+            // 
+            this.observacao.DataPropertyName = "observacao";
+            this.observacao.HeaderText = "Observação";
+            this.observacao.Name = "observacao";
+            this.observacao.ReadOnly = true;
+            // 
             // FrmSeguro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -365,13 +366,13 @@
         private System.Windows.Forms.Button btnalt;
         private System.Windows.Forms.Button btnnovo;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvseguros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacao;
         private JTextBox2.JTextBox txtpesquisar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdbobservacao;
         private System.Windows.Forms.RadioButton rdbdescricao;
         private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacao;
     }
 }

@@ -119,10 +119,6 @@ namespace PIM3.Desktop
                         MessageBox.Show("Error during insert: " + a.Message);
                     }
                 }
-
-
-
-
             }
         }
 

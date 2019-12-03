@@ -51,6 +51,7 @@
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Lembrar-me";
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label3
             // 
@@ -65,6 +66,7 @@
             this.label3.Size = new System.Drawing.Size(155, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Esqueci minha senha";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnlogin
             // 

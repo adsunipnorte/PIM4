@@ -47,17 +47,17 @@
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dgvfinanceiro = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbvencimento = new System.Windows.Forms.RadioButton();
             this.rdbcliente = new System.Windows.Forms.RadioButton();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.msktxtpesquisa = new System.Windows.Forms.MaskedTextBox();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfinanceiro)).BeginInit();
@@ -230,41 +230,6 @@
             this.dgvfinanceiro.Size = new System.Drawing.Size(984, 569);
             this.dgvfinanceiro.TabIndex = 1004;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cliente";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cliente";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // CNH
-            // 
-            this.CNH.DataPropertyName = "valor";
-            this.CNH.HeaderText = "Valor";
-            this.CNH.Name = "CNH";
-            this.CNH.ReadOnly = true;
-            // 
-            // vencimento
-            // 
-            this.vencimento.DataPropertyName = "vencimento";
-            this.vencimento.HeaderText = "Vencimento";
-            this.vencimento.Name = "vencimento";
-            this.vencimento.ReadOnly = true;
-            // 
             // txtpesquisar
             // 
             this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -361,6 +326,42 @@
             this.msktxtpesquisa.ValidatingType = typeof(System.DateTime);
             this.msktxtpesquisa.Visible = false;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn2.FillWeight = 60F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cliente";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cliente";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // CNH
+            // 
+            this.CNH.DataPropertyName = "valor";
+            this.CNH.HeaderText = "Valor";
+            this.CNH.Name = "CNH";
+            this.CNH.ReadOnly = true;
+            // 
+            // vencimento
+            // 
+            this.vencimento.DataPropertyName = "vencimento";
+            this.vencimento.HeaderText = "Vencimento";
+            this.vencimento.Name = "vencimento";
+            this.vencimento.ReadOnly = true;
+            // 
             // FrmFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -408,16 +409,16 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvfinanceiro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
         private JTextBox2.JTextBox txtpesquisar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdbvencimento;
         private System.Windows.Forms.RadioButton rdbcliente;
         private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
         private System.Windows.Forms.MaskedTextBox msktxtpesquisa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
     }
 }

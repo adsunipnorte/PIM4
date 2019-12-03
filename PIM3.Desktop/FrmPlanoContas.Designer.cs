@@ -47,14 +47,14 @@
             this.btnnovo = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dgvplanocontas = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbsituacao = new System.Windows.Forms.RadioButton();
             this.rdbdescricao = new System.Windows.Forms.RadioButton();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvplanocontas)).BeginInit();
@@ -224,27 +224,6 @@
             this.dgvplanocontas.Size = new System.Drawing.Size(756, 398);
             this.dgvplanocontas.TabIndex = 1011;
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // descricao
-            // 
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            // 
-            // situacao
-            // 
-            this.situacao.DataPropertyName = "situacao";
-            this.situacao.HeaderText = "Situação";
-            this.situacao.Name = "situacao";
-            this.situacao.ReadOnly = true;
-            // 
             // txtpesquisar
             // 
             this.txtpesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -325,6 +304,28 @@
             this.btnpesquisar.TabIndex = 1019;
             this.btnpesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.FillWeight = 60F;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            // 
+            // situacao
+            // 
+            this.situacao.DataPropertyName = "situacao";
+            this.situacao.HeaderText = "Situação";
+            this.situacao.Name = "situacao";
+            this.situacao.ReadOnly = true;
             // 
             // FrmPlanoContas
             // 

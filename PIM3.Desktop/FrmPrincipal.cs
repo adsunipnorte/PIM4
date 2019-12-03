@@ -293,5 +293,11 @@ namespace PIM3.Desktop
             FrmPecas formpeca = new FrmPecas();
             formpeca.Show();
         }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelusuarios ftm = new FrmRelusuarios();
+            ftm.Show();
+        }
     }
 }

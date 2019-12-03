@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManutencao));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +49,7 @@
             this.dgvmanutencao = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txtpesquisar = new JTextBox2.JTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbplacaveiculo = new System.Windows.Forms.RadioButton();
             this.rdbveiculo = new System.Windows.Forms.RadioButton();
             this.rdbmanutencao = new System.Windows.Forms.RadioButton();
             this.btnpesquisar = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -57,7 +58,6 @@
             this.situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rdbplacaveiculo = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmanutencao)).BeginInit();
@@ -170,8 +170,8 @@
             // 
             this.dgvmanutencao.AllowUserToAddRows = false;
             this.dgvmanutencao.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.dgvmanutencao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvmanutencao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvmanutencao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvmanutencao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -179,14 +179,14 @@
             this.dgvmanutencao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvmanutencao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvmanutencao.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvmanutencao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvmanutencao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvmanutencao.ColumnHeadersHeight = 50;
             this.dgvmanutencao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -194,14 +194,14 @@
             this.situacao,
             this.veiculo,
             this.Column1});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvmanutencao.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvmanutencao.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvmanutencao.DoubleBuffered = true;
             this.dgvmanutencao.EnableHeadersVisualStyles = false;
             this.dgvmanutencao.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
@@ -211,16 +211,16 @@
             this.dgvmanutencao.Name = "dgvmanutencao";
             this.dgvmanutencao.ReadOnly = true;
             this.dgvmanutencao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvmanutencao.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvmanutencao.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvmanutencao.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvmanutencao.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvmanutencao.RowTemplate.DividerHeight = 1;
             this.dgvmanutencao.RowTemplate.Height = 40;
             this.dgvmanutencao.RowTemplate.ReadOnly = true;
@@ -260,6 +260,18 @@
             this.groupBox2.TabIndex = 1016;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipo de pesquisa";
+            // 
+            // rdbplacaveiculo
+            // 
+            this.rdbplacaveiculo.AutoSize = true;
+            this.rdbplacaveiculo.Location = new System.Drawing.Point(16, 79);
+            this.rdbplacaveiculo.Name = "rdbplacaveiculo";
+            this.rdbplacaveiculo.Size = new System.Drawing.Size(71, 23);
+            this.rdbplacaveiculo.TabIndex = 2;
+            this.rdbplacaveiculo.TabStop = true;
+            this.rdbplacaveiculo.Text = "Placa";
+            this.rdbplacaveiculo.UseVisualStyleBackColor = true;
+            this.rdbplacaveiculo.CheckedChanged += new System.EventHandler(this.rdbplacaveiculo_CheckedChanged);
             // 
             // rdbveiculo
             // 
@@ -314,6 +326,7 @@
             // id
             // 
             this.id.DataPropertyName = "id";
+            this.id.FillWeight = 60F;
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
@@ -345,18 +358,6 @@
             this.Column1.HeaderText = "Placa veículo";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            // 
-            // rdbplacaveiculo
-            // 
-            this.rdbplacaveiculo.AutoSize = true;
-            this.rdbplacaveiculo.Location = new System.Drawing.Point(16, 79);
-            this.rdbplacaveiculo.Name = "rdbplacaveiculo";
-            this.rdbplacaveiculo.Size = new System.Drawing.Size(71, 23);
-            this.rdbplacaveiculo.TabIndex = 2;
-            this.rdbplacaveiculo.TabStop = true;
-            this.rdbplacaveiculo.Text = "Placa";
-            this.rdbplacaveiculo.UseVisualStyleBackColor = true;
-            this.rdbplacaveiculo.CheckedChanged += new System.EventHandler(this.rdbplacaveiculo_CheckedChanged);
             // 
             // FrmManutencao
             // 
@@ -409,11 +410,11 @@
         private System.Windows.Forms.RadioButton rdbveiculo;
         private System.Windows.Forms.RadioButton rdbmanutencao;
         private Bunifu.Framework.UI.BunifuThinButton2 btnpesquisar;
+        private System.Windows.Forms.RadioButton rdbplacaveiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn situacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.RadioButton rdbplacaveiculo;
     }
 }

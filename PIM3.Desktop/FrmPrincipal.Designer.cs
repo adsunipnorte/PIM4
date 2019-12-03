@@ -53,6 +53,7 @@
             this.clientesInadimplentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesBloqueadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesCanceladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -208,21 +209,21 @@
             // tipoVeículoToolStripMenuItem
             // 
             this.tipoVeículoToolStripMenuItem.Name = "tipoVeículoToolStripMenuItem";
-            this.tipoVeículoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tipoVeículoToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.tipoVeículoToolStripMenuItem.Text = "Tipo veículo";
             this.tipoVeículoToolStripMenuItem.Click += new System.EventHandler(this.tipoVeículoToolStripMenuItem_Click);
             // 
             // montadoraToolStripMenuItem
             // 
             this.montadoraToolStripMenuItem.Name = "montadoraToolStripMenuItem";
-            this.montadoraToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.montadoraToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.montadoraToolStripMenuItem.Text = "Montadora";
             this.montadoraToolStripMenuItem.Click += new System.EventHandler(this.montadoraToolStripMenuItem_Click);
             // 
             // veículoToolStripMenuItem1
             // 
             this.veículoToolStripMenuItem1.Name = "veículoToolStripMenuItem1";
-            this.veículoToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.veículoToolStripMenuItem1.Size = new System.Drawing.Size(170, 26);
             this.veículoToolStripMenuItem1.Text = "Veículo";
             this.veículoToolStripMenuItem1.Click += new System.EventHandler(this.veículoToolStripMenuItem1_Click);
             // 
@@ -255,7 +256,8 @@
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesInadimplentesToolStripMenuItem,
             this.clientesBloqueadosToolStripMenuItem,
-            this.clientesCanceladosToolStripMenuItem});
+            this.clientesCanceladosToolStripMenuItem,
+            this.usuáriosToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 10.2F);
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
@@ -282,6 +284,13 @@
             this.clientesCanceladosToolStripMenuItem.Name = "clientesCanceladosToolStripMenuItem";
             this.clientesCanceladosToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.clientesCanceladosToolStripMenuItem.Text = "Clientes Cancelados";
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // financeiroToolStripMenuItem
             // 
@@ -550,5 +559,6 @@
         private System.Windows.Forms.ToolStripMenuItem montadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
     }
 }
